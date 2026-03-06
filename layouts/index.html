@@ -1,0 +1,63 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ .Site.Title }}</h1>
+        <p class="tagline">{{ .Site.Params.tagline }}</p>
+        <p>People Focused. Growth Oriented. Results Driven.</p>
+        <a href="#contact" class="cta-button">Get a Free 30-Minute Consultation</a>
+    </div>
+</section>
+
+<section class="services">
+    <div class="section-header">
+        <h2>Our Services</h2>
+    </div>
+    
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Leadership Coaching</h3>
+            <p>Individual and team coaching programs designed to unlock your leadership potential.</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>Change Management</h3>
+            <p>Strategic guidance for navigating organizational change with confidence and clarity.</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>Women's Leadership</h3>
+            <p>Specialized programs to leverage untapped female talent in your organization.</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>Corporate Development</h3>
+            <p>Comprehensive consulting for organizational growth and leadership development.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about-preview">
+    <h2>The Integral Leadership Design Approach</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <h3>Enquire. Engage. Innovate. Impact.</h3>
+            <p>The key to our approach is helping you see different perspectives and take a step back to look at the bigger picture. It's about doing the right thing and working to understand your world so we can recommend and implement the right solutions, consistently.</p>
+            <p>Let's work together to cut through the noise to find the clarity needed to get the results you're looking for.</p>
+        </div>
+    </div>
+</section>
+
+<section class="recent-posts">
+    <h2>Recent Blog Posts</h2>
+    <div class="posts-grid">
+        {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+        <article class="post-card">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p class="post-date">{{ .Date.Format "January 2, 2006" }}</p>
+            <p>{{ .Summary }}</p>
+            <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

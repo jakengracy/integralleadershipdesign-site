@@ -1,0 +1,49 @@
+baseURL = "https://integralleadershipdesign.com/"
+languageCode = "en-ca"
+title = "Integral Leadership Design"
+
+[params]
+    description = "People Focused. Growth Oriented. Results Driven."
+    tagline = "Develop Your Talent and Realize Your Potential"
+    email = "alexandra@integralleadershipdesign.com"
+    phone = "+1-613-795-9357"
+    logo = "/img/logo.png"
+
+[outputs]
+    home = ["HTML"]
+
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 10
+    
+    [[menu.main]]
+        name = "Leadership Coaching"
+        url = "/coaching"
+        weight = 20
+    
+    [[menu.main]]
+        name = "Change Management"
+        url = "/change-management"
+        weight = 30
+    
+    [[menu.main]]
+        name = "Corporate Development"
+        url = "/corporate"
+        weight = 40
+    
+    [[menu.main]]
+        name = "Blog"
+        url = "/blog"
+        weight = 50
+    
+    [[menu.main]]
+        name = "About"
+        url = "/about"
+        weight = 60
+    
+    [[menu.main]]
+        name = "Contact"
+        url = "/contact"
+        weight = 70

@@ -1,0 +1,32 @@
+<header class="l-header">
+    <div class="header-top">
+        <div class="header-contact">
+            {{ if .Site.Params.email }}
+            <span class="contact-item">
+                <i class="icon-email"></i>
+                <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+            </span>
+            {{ end }}
+            {{ if .Site.Params.phone }}
+            <span class="contact-item">
+                <i class="icon-phone"></i>
+                <a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+            </span>
+            {{ end }}
+        </div>
+    </div>
+    
+    <div class="header-main">
+        <div class="logo">
+            <a href="{{ .Site.BaseURL }}">
+                {{ if .Site.Params.logo }}
+                <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+                {{ else }}
+                <span class="logo-text">{{ .Site.Title }}</span>
+                {{ end }}
+            </a>
+        </div>
+        
+        {{ partial "nav.html" . }}
+    </div>
+</header>

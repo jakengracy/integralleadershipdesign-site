@@ -1,0 +1,32 @@
+<footer class="l-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>{{ .Site.Title }}</h3>
+            <p>{{ .Site.Params.tagline }}</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contact</h4>
+            {{ if .Site.Params.email }}
+            <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+            {{ end }}
+            {{ if .Site.Params.phone }}
+            <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+            {{ end }}
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+    </div>
+</footer>

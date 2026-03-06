@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="author" content="Alexandra Salamis">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+    
+    <!-- Favicon -->
+    {{ if .Site.Params.favicon }}<link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon }}">{{ end }}
+</head>
+<body>
+    {{ partial "header.html" . }}
+    
+    <main class="l-main">
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ partial "footer.html" . }}
+    
+    <script src="{{ .Site.BaseURL }}js/script.js"></script>
+</body>
+</html>
