@@ -12,6 +12,11 @@ title = "Integral Leadership Design"
 [outputs]
     home = ["HTML"]
 
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
 [menu]
     [[menu.main]]
         name = "Home"
