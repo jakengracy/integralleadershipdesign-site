@@ -1,19 +1,45 @@
+{{/*
+    header.html — Sticky site header partial.
+    
+    Renders the dark sticky header bar that appears at the top of every page.
+    Contains the ILD logo (image if available, text fallback if not) and the
+    navigation partial. The hamburger button appears on mobile — its behaviour
+    is controlled by the JS in baseof.html and CSS in style.css.
+    
+    Logo source is set in hugo.toml under [params] as:
+        logo = "/img/logo.png"
+    If that param is missing or the image fails, the site title text shows instead.
+*/}}
 <header class="l-header">
     <div class="header-inner">
+
+        {{/* Logo — links back to homepage */}}
         <div class="logo">
             <a href="{{ .Site.BaseURL }}">
+                {{/* Show logo image if the path is configured in hugo.toml params */}}
                 {{ if .Site.Params.logo }}
                 <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
                 {{ else }}
+                {{/* Fallback: display the site title as text if no logo image is set */}}
                 <span class="logo-name">{{ .Site.Title }}</span>
                 {{ end }}
             </a>
         </div>
+
+        {{/* Navigation wrapper */}}
         <nav class="w-nav">
+
+            {{/* Hamburger button — hidden on desktop, visible on mobile via CSS.
+                 Clicking this toggles the .active class on .nav-menu (see baseof.html JS) */}}
             <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+
+            {{/* Main navigation list — defined in layouts/partials/nav.html */}}
             {{ partial "nav.html" . }}
+
         </nav>
     </div>
 </header>

@@ -1,5 +1,30 @@
+{{/*
+    nav.html — Main site navigation menu.
+    
+    Renders the horizontal navigation list inside the header.
+    Top-level items with dropdowns use the .nav-dropdown class —
+    CSS shows the .submenu on hover (no JavaScript required).
+    
+    Structure:
+    - Change Management (direct link)
+    - Leadership Coaching ▾ (dropdown: Women's Program, Individual Coaching, Single Session)
+    - Corporate ▾ (dropdown: Women's Leadership, Corporate Leadership, Team Coaching)
+    - Blog (direct link)
+    - About ▾ (dropdown: Meet Alexandra, Testimonials, Contact)
+    - Book a Call (gold CTA button, links to /contact)
+    
+    Dropdown anchor links (#womens, #individual etc.) assume the target service
+    pages will have matching id="" attributes on their sections.
+    
+    To add or remove nav items, edit this file directly.
+    To change dropdown behaviour (hover vs click), update style.css nav section.
+*/}}
 <ul class="nav-menu">
+
+    {{/* Direct link — no dropdown */}}
     <li><a href="/change-management" class="nav-link">Change Management</a></li>
+
+    {{/* Leadership Coaching with dropdown submenu */}}
     <li class="nav-dropdown">
         <a href="/coaching" class="nav-link">Leadership Coaching ▾</a>
         <ul class="submenu">
@@ -8,6 +33,8 @@
             <li><a href="/coaching#single-session" class="nav-link">Single Session</a></li>
         </ul>
     </li>
+
+    {{/* Corporate with dropdown submenu */}}
     <li class="nav-dropdown">
         <a href="/corporate" class="nav-link">Corporate ▾</a>
         <ul class="submenu">
@@ -16,7 +43,12 @@
             <li><a href="/corporate#team" class="nav-link">Team Coaching</a></li>
         </ul>
     </li>
+
+    {{/* Direct link — no dropdown */}}
     <li><a href="/blog" class="nav-link">Blog</a></li>
+
+    {{/* About with dropdown — Testimonials and Contact live here rather than top-level
+         to keep the nav uncluttered. A dedicated /testimonials page still exists. */}}
     <li class="nav-dropdown">
         <a href="/about" class="nav-link">About ▾</a>
         <ul class="submenu">
@@ -25,5 +57,8 @@
             <li><a href="/contact" class="nav-link">Contact</a></li>
         </ul>
     </li>
+
+    {{/* CTA button — styled gold via .nav-cta class, always visible */}}
     <li><a href="/contact" class="nav-link nav-cta">Book a Call</a></li>
+
 </ul>

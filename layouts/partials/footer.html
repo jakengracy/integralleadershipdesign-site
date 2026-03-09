@@ -1,20 +1,42 @@
+{{/*
+    footer.html — Site footer partial.
+    
+    Renders the dark three-column footer that appears at the bottom of every page.
+    
+    Columns:
+    1. Brand — logo (or text fallback), tagline, email, phone
+    2. Services — links to main service pages
+    3. Company — About, Blog, Testimonials, Contact, Privacy Policy
+    
+    Contact details (email, phone, tagline) are pulled from hugo.toml [params]
+    so they only need to be updated in one place if they change.
+    
+    The copyright year uses Hugo's {{ now.Year }} so it never needs manual updating.
+*/}}
 <footer class="l-footer">
     <div class="footer-content">
+
+        {{/* Column 1: Brand identity and contact info */}}
         <div class="footer-brand">
             <div class="logo">
                 <a href="{{ .Site.BaseURL }}">
+                    {{/* Logo image — inverted to white via CSS filter */}}
                     {{ if .Site.Params.logo }}
                     <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
                     {{ else }}
+                    {{/* Text fallback if no logo image is configured */}}
                     <span class="logo-text">{{ .Site.Title }}</span>
                     {{ end }}
                 </a>
             </div>
+
+            {{/* Tagline, email, and phone pulled from hugo.toml [params] */}}
             <p>{{ .Site.Params.tagline }}<br>
             {{ if .Site.Params.email }}<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>{{ end }}<br>
             {{ if .Site.Params.phone }}<a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>{{ end }}</p>
         </div>
 
+        {{/* Column 2: Service page links */}}
         <div class="footer-col">
             <h4>Services</h4>
             <ul>
@@ -25,6 +47,7 @@
             </ul>
         </div>
 
+        {{/* Column 3: Company / site navigation links */}}
         <div class="footer-col">
             <h4>Company</h4>
             <ul>
@@ -35,8 +58,10 @@
                 <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
         </div>
+
     </div>
 
+    {{/* Copyright bar — now.Year auto-updates every year, no manual changes needed */}}
     <div class="footer-bottom">
         <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
     </div>
