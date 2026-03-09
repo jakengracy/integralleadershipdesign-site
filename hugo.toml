@@ -26,6 +26,16 @@ title = "Integral Leadership Design"
         url = "/coaching"
         weight = 10
     [[menu.main]]
+        name = "Individual Coaching"
+        url = "/coaching/individual"
+        parent = "Leadership Coaching"
+        weight = 11
+    [[menu.main]]
+        name = "Single Strategy Session"
+        url = "/coaching/single-session"
+        parent = "Leadership Coaching"
+        weight = 12
+    [[menu.main]]
         name = "Change Management"
         url = "/change-management"
         weight = 20
