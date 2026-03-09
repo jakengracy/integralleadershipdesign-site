@@ -67,7 +67,7 @@ p { margin-bottom: 1rem; }
 
 /* Hero */
 .hero { position: relative; min-height: 580px; display: flex; align-items: center; background: var(--color-dark); overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background-image: url('/img/hero.jpg'); background-size: cover; background-position: left center; opacity: 0.6; }
+.hero-bg { position: absolute; inset: 0; background-image: url('/img/hero.jpg'); background-size: cover; background-position: right center; opacity: 0.6; }
 .hero-content { position: relative; z-index: 1; width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 5rem 1.5rem; display: flex; justify-content: flex-start; }
 .hero-text { max-width: 480px; background: rgba(26,26,46,0.85); padding: 2.5rem; border-radius: 2px; }
 .hero-text h1 { color: #fff; margin-bottom: 0.75rem; }
