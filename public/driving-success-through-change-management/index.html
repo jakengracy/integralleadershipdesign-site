@@ -3,41 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Management &amp;#8211; Integral Leadership Design - Integral Leadership Design</title>
-    
-    
+    <title>Change Management &amp;#8211; Integral Leadership Design — Integral Leadership Design</title>
     <meta name="description" content="People Focused. Growth Oriented. Results Driven.">
     <meta name="author" content="Alexandra Salamis">
-    
-    
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
-    
     <link rel="stylesheet" href="https://integralleadershipdesign.com/css/style.css">
-    
-    
     
 </head>
 <body>
     <header class="l-header">
-    <div class="header-top">
-        <div class="header-contact">
-            
-            <span class="contact-item">
-                <i class="icon-email"></i>
-                <a href="mailto:alexa@integralleadershipdesign.com">alexa@integralleadershipdesign.com</a>
-            </span>
-            
-            
-            <span class="contact-item">
-                <i class="icon-phone"></i>
-                <a href="tel:&#43;1-613-795-9357">&#43;1-613-795-9357</a>
-            </span>
-            
-        </div>
-    </div>
-    
-    <div class="header-main">
+    <div class="header-inner">
         <div class="logo">
             <a href="https://integralleadershipdesign.com/">
                 
@@ -45,8 +19,12 @@
                 
             </a>
         </div>
-        
+
         <nav class="w-nav">
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="w-nav">
     <button class="nav-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -83,12 +61,13 @@
     </ul>
 </nav>
 
+        </nav>
     </div>
 </header>
 
+
     
     <main class="l-main">
-        
 <article class="page-content">
     <div class="page-header">
         <h1>Change Management &amp;#8211; Integral Leadership Design</h1>
@@ -144,43 +123,57 @@ Momentum: Connect change initiatives to your organization&rsquo;s culture and va
     </nav>
     
 </article>
-
-    </main>
+</main>
     
+
     <footer class="l-footer">
     <div class="footer-content">
-        <div class="footer-section">
-            <h3>Integral Leadership Design</h3>
-            <p>Develop Your Talent and Realize Your Potential</p>
+        <div class="footer-brand">
+            <div class="logo">
+                <a href="https://integralleadershipdesign.com/">
+                    
+                    <img src="/img/logo.png" alt="Integral Leadership Design">
+                    
+                </a>
+            </div>
+            <p>Develop Your Talent and Realize Your Potential<br>
+            <a href="mailto:alexa@integralleadershipdesign.com">alexa@integralleadershipdesign.com</a><br>
+            <a href="tel:&#43;1-613-795-9357">&#43;1-613-795-9357</a></p>
         </div>
-        
-        <div class="footer-section">
-            <h4>Quick Links</h4>
+
+        <div class="footer-col">
+            <h4>Services</h4>
             <ul>
-                <li><a href="https://integralleadershipdesign.com/">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/coaching">Leadership Coaching</a></li>
+                <li><a href="/change-management">Change Management</a></li>
+                <li><a href="/corporate">Corporate Development</a></li>
+                <li><a href="/coaching#women">Women's Leadership</a></li>
             </ul>
         </div>
-        
-        <div class="footer-section">
-            <h4>Contact</h4>
-            
-            <p><a href="mailto:alexa@integralleadershipdesign.com">alexa@integralleadershipdesign.com</a></p>
-            
-            
-            <p><a href="tel:&#43;1-613-795-9357">&#43;1-613-795-9357</a></p>
-            
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/about">About Alexandra</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
         </div>
     </div>
-    
+
     <div class="footer-bottom">
         <p>&copy; 2026 Integral Leadership Design. All rights reserved.</p>
     </div>
 </footer>
 
+
+    <script>
     
-    <script src="https://integralleadershipdesign.com/js/script.js"></script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    });
+    </script>
 </body>
 </html>
