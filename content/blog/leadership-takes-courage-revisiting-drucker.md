@@ -8,7 +8,7 @@ It takes different kinds of courage to lead courageously. Peter Drucker is one o
 
 ### Management is doing things right; Leadership is doing the right things.
 
-&#8230; Is all about courage. That is, having the courage to do the right thing even if it is not popular. Good leadership requires the courage and conviction to stand for what you think the right thing is to do and to then do it. According to Drucker:
+… Is all about courage. That is, having the courage to do the right thing even if it is not popular. Good leadership requires the courage and conviction to stand for what you think the right thing is to do and to then do it. According to Drucker:
 
 ### Whenever you see a successful business, someone once made a courageous decision.
 
@@ -25,7 +25,7 @@ From Drucker:
 
 ### It is more productive to convert an opportunity into results than to solve a problem - which only restores the equilibrium of yesterday.
 
-Exploiting opportunities takes courage because opportunities are not guarantees. Without guarantees comes risk, without some risk-taking again leaders risk obsolescence. Maintaining the &#8220;equilibrium of yesterday&#8221; is a potential recipe for failure.
+Exploiting opportunities takes courage because opportunities are not guarantees. Without guarantees comes risk, without some risk-taking again leaders risk obsolescence. Maintaining the “equilibrium of yesterday” is a potential recipe for failure.
 
 Leaders need to be courageous enough to lead even when they don't know what the future holds. Drucker:
 

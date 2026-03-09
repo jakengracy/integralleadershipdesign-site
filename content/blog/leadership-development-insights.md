@@ -48,4 +48,4 @@ January 23, 2026Alexandra SalamisUncategorizedSisällysluettelo Tunteiden Tunnis
 ### Discover how Integral Leadership Design can help you to unlock your true potential, by booking a free thirty-minute initial consultation with our award-winning founder and president, Alex will recommend the right approach to help you achieve your goals and overcome those things that have been holding you, your team or your organization back.
 
 ### Book a FREE 30-Minute Consultation with Alex
-[wpforms id=&#8221;6135&#8243; title=&#8221;false&#8221; description=&#8221;false&#8221;]
+[wpforms id=”6135&#8243; title=”false” description=”false”]

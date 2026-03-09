@@ -6,7 +6,7 @@ draft: false
 
 ### Making Your Culture Explicit
 
-Culture sets the tone of &#8216;how we do things around here'.&nbsp;Culture defines and explains the way an organization or team operates.
+Culture sets the tone of ‘how we do things around here'.&nbsp;Culture defines and explains the way an organization or team operates.
 
 ### Culture is Like an Iceberg
 

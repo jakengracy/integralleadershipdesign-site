@@ -28,7 +28,7 @@ Albert Einstein was a physicist who among other things developed the theory of r
 
 ### We have to learn to think in a new way. Applying methods from an earlier age is insufficient. We must have the courage and leadership to revolutionize our thinking and our actions.
 
-Einstein is calling on us to think and act in different ways because things are &#8220;out-of-the-box&#8221; different. He is saying that our current paradigms of how to think and how to do things are no longer serving us well. Out-of-the-box thinking and action is the need de jour. Einstein is asking us to be revolutionary change leaders by thinking and venturing out into new territory in untried ways. Someone said the definition of insanity is doing the same thing over and over again and expecting a different result.
+Einstein is calling on us to think and act in different ways because things are “out-of-the-box” different. He is saying that our current paradigms of how to think and how to do things are no longer serving us well. Out-of-the-box thinking and action is the need de jour. Einstein is asking us to be revolutionary change leaders by thinking and venturing out into new territory in untried ways. Someone said the definition of insanity is doing the same thing over and over again and expecting a different result.
 
 Think about where your personal revolutionary edges are in the way you understand and do things now. What will help you get out of your comfort zone so that you can start seeing and doing things differently? If we are going to ask others to step out of their comfort zone, we need to courageously step out of ours first. This is how we, as change leaders, can lead the way for others.
 

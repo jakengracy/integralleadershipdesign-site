@@ -1,5 +1,5 @@
 ---
-title: "Nice People Finish Last&#8230; Or Do They?"
+title: "Nice People Finish Last… Or Do They?"
 date: 2019-01-01
 draft: false
 ---
@@ -8,7 +8,7 @@ draft: false
 
 Over the years I have networked with many great people, people who seem to be predisposed to giving value - be it their time, their resources, their knowledge, their support, their ear, their collaboration, their expertise. Then there are others. Those people who show up, and in the first 5 minutes you begin to realize that this conversation is going to be all about them and what value I can bring to them. These people are often largely motivated by self-interest and feel entitled to pursue self-serving goals. They measure our value by how much we can give them.
 
-In his landmark book Give and Take, Adam Grant illuminates the importance of how we interact with others when exchanging value. His book, changes our fundamental understanding of why we succeed, offering a new model for our relationships with colleagues, clients and competitors. It demolishes the argument of the &#8216;me first' worldview and shows that the best way to get to the top is to focus not on your solo journey but on bringing others with you.
+In his landmark book Give and Take, Adam Grant illuminates the importance of how we interact with others when exchanging value. His book, changes our fundamental understanding of why we succeed, offering a new model for our relationships with colleagues, clients and competitors. It demolishes the argument of the ‘me first' worldview and shows that the best way to get to the top is to focus not on your solo journey but on bringing others with you.
 
 When we look at successful people, what are their common characteristics? According to Grant, highly successful people have three things in common: motivation, ability, and opportunity. But how does this come about? What is the essence of success? Grant suggests that success depends on how we interact with other people. Every time we make an exchange with another person we can approach the interaction with a competitive or collaborative approach. It is this approach which makes some people succeed and others fail.
 

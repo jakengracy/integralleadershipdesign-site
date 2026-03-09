@@ -1,5 +1,5 @@
 ---
-title: "A Lesson Learned &#8211; Boosting Leadership Accountability For Change"
+title: "A Lesson Learned – Boosting Leadership Accountability For Change"
 date: 2019-01-01
 draft: false
 ---
@@ -8,7 +8,7 @@ draft: false
 
 A number of years ago I was involved in an organization-wide transformation project that included a total reorganization, job role changes, new processes and the introduction of new technology. Me and my change management team naively assumed that all senior leaders would be automatically on board because; they initiated the transformation project, it would add value to our customer service and save us a lot of money over time without job loss.
 
-We assumed that the leadership who were integral to our success, would be aligned with achieving these transformation goals. This was not the case. In hindsight, it was clear that many of our senior leaders were threatened by the new direction and were ill-equipped to lead the transformation. I learned that its not just employees who need to know &#8220;What's in it for me&#8221; (WIIFM) - leaders need that too!
+We assumed that the leadership who were integral to our success, would be aligned with achieving these transformation goals. This was not the case. In hindsight, it was clear that many of our senior leaders were threatened by the new direction and were ill-equipped to lead the transformation. I learned that its not just employees who need to know “What's in it for me” (WIIFM) - leaders need that too!
 
 ### Leadership alignment
 

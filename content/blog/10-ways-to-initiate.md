@@ -1,5 +1,5 @@
 ---
-title: "10 Ways To Initiate A Positive Change At Work Even If You&#8217;re Not The One In Charge"
+title: "10 Ways To Initiate A Positive Change At Work Even If You’re Not The One In Charge"
 date: 2019-01-01
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Developing Better Change Leaders | McKinsey &#038; Company"
+title: "Developing Better Change Leaders | McKinsey & Company"
 date: 2019-01-01
 draft: false
 ---

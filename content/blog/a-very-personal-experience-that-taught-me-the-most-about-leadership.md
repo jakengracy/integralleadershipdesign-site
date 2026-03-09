@@ -12,7 +12,7 @@ Women were not getting promoted at the same rate as the men. When I did the math
 
 ### Crashing into the glass ceiling
 
-I began to realize that my own prospects for advancement as an Assistant VP were slim. And as I listened to the women’s stories, it started to sink in that they and I were working in a company culture that equated leadership with power-plays, one-upmanship, competitiveness and aggressiveness. Some would call this &#8220;the old boys club&#8221;.&nbsp;&nbsp;I knew I had reached the proverbial “glass ceiling”.&nbsp;
+I began to realize that my own prospects for advancement as an Assistant VP were slim. And as I listened to the women’s stories, it started to sink in that they and I were working in a company culture that equated leadership with power-plays, one-upmanship, competitiveness and aggressiveness. Some would call this “the old boys club”.&nbsp;&nbsp;I knew I had reached the proverbial “glass ceiling”.&nbsp;
 
 Even though the company prided itself in wanting to have more women in senior executive positions, the reality was that it was closed to accepting new forms of leadership practices like collaboration and cooperation. It was an extremely stressful time in my life as I felt super shaky at work, I was in debt and I was going through a messy marital break-up all at the same time.
 
