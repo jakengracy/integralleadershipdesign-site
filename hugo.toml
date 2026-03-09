@@ -19,35 +19,29 @@ title = "Integral Leadership Design"
 
 [menu]
     [[menu.main]]
-        name = "Home"
-        url = "/"
-        weight = 10
-    
-    [[menu.main]]
         name = "Leadership Coaching"
         url = "/coaching"
-        weight = 20
-    
+        weight = 10
     [[menu.main]]
         name = "Change Management"
         url = "/change-management"
-        weight = 30
-    
+        weight = 20
     [[menu.main]]
         name = "Corporate Development"
         url = "/corporate"
-        weight = 40
-    
+        weight = 30
     [[menu.main]]
         name = "Blog"
         url = "/blog"
-        weight = 50
-    
+        weight = 40
     [[menu.main]]
         name = "About"
         url = "/about"
+        weight = 50
+    [[menu.main]]
+        name = "Testimonials"
+        url = "/testimonials"
         weight = 60
-    
     [[menu.main]]
         name = "Contact"
         url = "/contact"

@@ -1,31 +1,42 @@
 <footer class="l-footer">
     <div class="footer-content">
-        <div class="footer-section">
-            <h3>{{ .Site.Title }}</h3>
-            <p>{{ .Site.Params.tagline }}</p>
+        <div class="footer-brand">
+            <div class="logo">
+                <a href="{{ .Site.BaseURL }}">
+                    {{ if .Site.Params.logo }}
+                    <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+                    {{ else }}
+                    <span class="logo-text">{{ .Site.Title }}</span>
+                    {{ end }}
+                </a>
+            </div>
+            <p>{{ .Site.Params.tagline }}<br>
+            {{ if .Site.Params.email }}<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>{{ end }}<br>
+            {{ if .Site.Params.phone }}<a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>{{ end }}</p>
         </div>
-        
-        <div class="footer-section">
-            <h4>Quick Links</h4>
+
+        <div class="footer-col">
+            <h4>Services</h4>
             <ul>
-                <li><a href="{{ .Site.BaseURL }}">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/coaching">Leadership Coaching</a></li>
+                <li><a href="/change-management">Change Management</a></li>
+                <li><a href="/corporate">Corporate Development</a></li>
+                <li><a href="/coaching#women">Women's Leadership</a></li>
             </ul>
         </div>
-        
-        <div class="footer-section">
-            <h4>Contact</h4>
-            {{ if .Site.Params.email }}
-            <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
-            {{ end }}
-            {{ if .Site.Params.phone }}
-            <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
-            {{ end }}
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/about">About Alexandra</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
         </div>
     </div>
-    
+
     <div class="footer-bottom">
         <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
     </div>
