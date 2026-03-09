@@ -1,0 +1,134 @@
+{{ define "main" }}
+{{/*
+    contact.html — Layout for the Contact page (/contact)
+    
+    Structure:
+    1. Page banner
+    2. Two-column body:
+       Left  — intro text, what to expect, contact details
+       Right — Formspree contact form
+    
+    FORMSPREE SETUP:
+    The form action URL points to Formspree. The form ID is stored
+    in hugo.toml under [params] as:
+        formspree_id = "your_id_here"
+    
+    This means you update the ID in one place (hugo.toml) and it
+    applies site-wide. If .Site.Params.formspree_id is not set,
+    the form falls back to a placeholder action.
+    
+    Formspree handles:
+    - Receiving the POST submission
+    - Sending the email notification to Alexandra
+    - Spam filtering
+    - Redirect to a thank-you confirmation
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <span>Contact</span>
+        </div>
+        <h1>Let's Talk</h1>
+        <p class="page-banner-desc">Book your free 30-minute discovery call</p>
+    </div>
+</div>
+
+
+{{/* ── CONTACT BODY ─────────────────────────────────────────── */}}
+<section class="contact-page">
+    <div class="contact-page-inner">
+
+        {{/* LEFT: Intro and contact details */}}
+        <div class="contact-info">
+            <h2>Start the Conversation</h2>
+            <p>Whether you know exactly what you need or you're still figuring it out, the best first step is a conversation. A free 30-minute discovery call gives us both a chance to understand your situation and explore whether working together makes sense.</p>
+            <p>There's no obligation and no sales pitch — just an honest conversation about where you are and where you want to go.</p>
+
+            <p style="margin-top: 2rem; font-weight: 600; color: var(--color-dark);">What happens next:</p>
+            <ul style="color: var(--color-muted); padding-left: 1.25rem; line-height: 2;">
+                <li>Fill out the form and submit</li>
+                <li>Alexandra will respond within one business day</li>
+                <li>You'll receive a calendar link to book your discovery call</li>
+                <li>The 30-minute call is free, confidential, and without obligation</li>
+            </ul>
+
+            {{/* Direct contact details */}}
+            <div class="contact-detail">
+                <span>✉</span>
+                <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+            </div>
+            <div class="contact-detail">
+                <span>☎</span>
+                <a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+            </div>
+        </div>
+
+
+        {{/* RIGHT: Formspree contact form */}}
+        <div class="contact-form">
+            <h3>Book Your Discovery Call</h3>
+
+            {{/*
+                Form action points to Formspree using the ID from hugo.toml.
+                Replace YOUR_FORM_ID in hugo.toml with your actual Formspree ID.
+                Formspree endpoint format: https://formspree.io/f/{your_id}
+            */}}
+            <form
+                action="https://formspree.io/f/{{ .Site.Params.formspree_id }}"
+                method="POST"
+            >
+                {{/* Name */}}
+                <div class="form-group">
+                    <label for="name">Full Name <span style="color:var(--color-accent)">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                </div>
+
+                {{/* Email — Formspree uses _replyto to set the reply-to address */}}
+                <div class="form-group">
+                    <label for="email">Email Address <span style="color:var(--color-accent)">*</span></label>
+                    <input type="email" id="email" name="_replyto" required placeholder="your@email.com">
+                </div>
+
+                {{/* Organization — optional context */}}
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization" name="organization" placeholder="Company or organization (optional)">
+                </div>
+
+                {{/* What they're interested in */}}
+                <div class="form-group">
+                    <label for="interest">What are you interested in? <span style="color:var(--color-accent)">*</span></label>
+                    <select id="interest" name="interest" required>
+                        <option value="" disabled selected>Select a service area</option>
+                        <option value="Leadership Coaching">Leadership Coaching</option>
+                        <option value="Change Management">Change Management</option>
+                        <option value="Corporate Development">Corporate Development</option>
+                        <option value="Women's Leadership">Women's Leadership Program</option>
+                        <option value="Not Sure">Not Sure Yet</option>
+                    </select>
+                </div>
+
+                {{/* Message */}}
+                <div class="form-group">
+                    <label for="message">Tell me a little about your situation</label>
+                    <textarea id="message" name="message" placeholder="What's on your mind? What would you like to work on?"></textarea>
+                </div>
+
+                {{/* Formspree honeypot field — hidden from humans, catches bots */}}
+                <input type="text" name="_gotcha" style="display:none">
+
+                {{/* Submit */}}
+                <button type="submit" class="btn btn-primary form-submit">Send My Message</button>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{{ end }}

@@ -9,7 +9,7 @@ draft: false
 Alexandra Salamis, our founder and president, has been positively impacting individuals, teams and organizations for over twenty-five years. During this long and wonderful journey, she has had the pleasure of helping businesses to succeed, managers and executives to become better leaders and women to build a level of confidence that matches their capability. Don’t just take our word for it, here’s what Alex’s clients have to say.
 
 ### Book Your FREE 30-Minute Consultation Now and Discover Your True Potential
-[wpforms id=&#8221;6135&#8243; title=&#8221;false&#8221; description=&#8221;false&#8221;]
+[wpforms id=”6135&#8243; title=”false” description=”false”]
 ### Client Testimonials
 
 I had the privilege to be coached by Alexandra as part of her Purpose, Passion and Presence for Women Rising coaching program. My work with her has increased my awareness of my environment and behaviours and helped me gain confidence in expressing my true and feminine leadership presence. Thanks to her dedication in helping women rise, I feel not only empowered to be more authentic and lead with my best self, but also supported by a network of empowered women that Alexandra champions. Her dedication and passion are definitively contagious.
@@ -46,7 +46,7 @@ At the beginning, I was quite self-conscious. She was great at putting me at eas
 This has turned out to be a game changer! I highly recommend Alexandra as a coach for people who are interested in making some real changes.
 
 
-Alexandra was able to open my eyes as to how I was going to approach my goals, how I would &#8220;lead my life&#8221;, and in what ways I could incorporate all of my passions into a career that I would love after just one session. She listened to me so carefully, and offered feedback that tied into her own life experiences and creative philosophies. She is charismatic, strong, positive, and so funny! We laughed and connected within such a short time. Since seeing Alexandra I have been able to organize my thoughts and goals. I have since applied to grad school and been accepted! I want to thank her for her positive leadership and strong feminine influence. I hope that she never stops helping women reach their full potential.
+Alexandra was able to open my eyes as to how I was going to approach my goals, how I would “lead my life”, and in what ways I could incorporate all of my passions into a career that I would love after just one session. She listened to me so carefully, and offered feedback that tied into her own life experiences and creative philosophies. She is charismatic, strong, positive, and so funny! We laughed and connected within such a short time. Since seeing Alexandra I have been able to organize my thoughts and goals. I have since applied to grad school and been accepted! I want to thank her for her positive leadership and strong feminine influence. I hope that she never stops helping women reach their full potential.
 
 
 My experience with Alex was phenomenal. Working with Alex was a relief and a time set aside to reflect and to do strategic work on myself as a leader. Part of this lack of stress and aura of positivity around our work came from Alex’s personality and demeanour.  Alex is wonderfully flexible, she also is a master at helping you see hard truths with a soft touch, making them fairly painless to hear.

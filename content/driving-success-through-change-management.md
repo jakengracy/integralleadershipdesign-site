@@ -1,5 +1,5 @@
 ---
-title: "Change Management &#8211; Integral Leadership Design"
+title: "Change Management – Integral Leadership Design"
 date: 2019-01-01
 draft: false
 ---
@@ -22,7 +22,7 @@ By adopting these approaches, organizations can ensure that their employees rema
 
 Co-creation fosters stronger relationships among stakeholders as it encourages active participation. It also builds greater employee loyalty towards the organization. This is not only because co-creation encourages positive interaction but also because it results in a work environment that better aligns with the needs and expectations of employees.
 
-[wpforms id=&#8221;6102&#8243; title=&#8221;false&#8221; description=&#8221;true&#8221;]
+[wpforms id=”6102&#8243; title=”false” description=”true”]
 
 ### Optimize Your Success
 

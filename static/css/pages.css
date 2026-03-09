@@ -1,0 +1,397 @@
+/*
+ * ============================================================
+ * SERVICE PAGE ADDITIONS — appended to style.css
+ * Covers: page banner (interior hero), service page layout,
+ * about page, testimonials page, contact form, blog listing
+ * ============================================================
+ */
+
+
+/* ------------------------------------------------------------
+   PAGE BANNER
+   Used on all interior pages (service pages, about, contact etc.)
+   Shorter and simpler than the homepage hero — dark navy background,
+   no photo. Orients users who arrive directly from search or links
+   without having seen the homepage first.
+   
+   Three-tier visual hierarchy:
+   1. Homepage  → full hero with photo (maximum weight)
+   2. Service pages → page banner, ~240px tall (this)
+   3. Sub-pages → minimal or no banner
+   ------------------------------------------------------------ */
+.page-banner {
+    background: var(--color-dark);
+    padding: 4rem 1.5rem;               /* Roughly half the height of the homepage hero */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle diagonal texture overlay — adds depth without a photo */
+.page-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200,151,58,0.08) 0%, transparent 60%);
+    pointer-events: none;               /* Doesn't interfere with any clicks */
+}
+
+.page-banner-inner {
+    position: relative;
+    z-index: 1;                         /* Sits above the ::before texture layer */
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/* Page title — white serif, slightly smaller than homepage h1 */
+.page-banner h1 {
+    color: #fff;
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);   /* Slightly smaller than homepage hero */
+}
+
+/* One-line gold descriptor beneath the page title */
+.page-banner-desc {
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+/* Breadcrumb trail — e.g. "Home → Leadership Coaching" */
+.page-breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+}
+.page-breadcrumb a { color: rgba(255,255,255,0.55); }
+.page-breadcrumb a:hover { color: var(--color-accent); }
+
+
+/* ------------------------------------------------------------
+   INTERIOR PAGE WRAPPER
+   Used by single.html default layout — adds top/bottom padding
+   so content doesn't start immediately below the sticky header
+   ------------------------------------------------------------ */
+.l-main {
+    min-height: 60vh;                   /* Prevents very short pages from looking sparse */
+}
+
+
+/* ------------------------------------------------------------
+   SERVICE PAGE LAYOUT
+   Two-column layout: main content left, sidebar right.
+   The sidebar holds the CTA box and related service links.
+   ------------------------------------------------------------ */
+.service-page {
+    padding: var(--section-pad);
+    background: var(--color-bg);
+}
+
+.service-page-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 320px;  /* Content column + fixed sidebar */
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Main content area */
+.service-content h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+.service-content h2:first-child { margin-top: 0; }
+
+.service-content p {
+    color: var(--color-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Styled list items within service page content */
+.service-content ul {
+    margin: 0 0 1.5rem 0;
+    padding-left: 1.25rem;
+}
+.service-content ul li {
+    color: var(--color-muted);
+    margin-bottom: 0.6rem;
+    line-height: 1.7;
+}
+
+/* Highlight box — used for key stats or callout quotes */
+.service-highlight {
+    border-left: 4px solid var(--color-accent);
+    padding: 1.25rem 1.5rem;
+    background: var(--color-bg-alt);
+    border-radius: 0 3px 3px 0;
+    margin: 2rem 0;
+}
+.service-highlight p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    font-family: var(--font-serif);
+}
+
+
+/* ------------------------------------------------------------
+   SERVICE SIDEBAR
+   Sticky sidebar that stays visible as the user scrolls through
+   long service page content. Contains the CTA box and related links.
+   ------------------------------------------------------------ */
+.service-sidebar {
+    position: sticky;
+    top: 92px;                          /* 72px header + 20px breathing room */
+}
+
+/* Primary CTA box — gold background, drives bookings */
+.sidebar-cta {
+    background: var(--color-accent);
+    padding: 2rem;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.sidebar-cta h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+.sidebar-cta p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+.sidebar-cta .btn {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    color: var(--color-accent);
+    border-color: #fff;
+    font-size: 0.85rem;
+}
+.sidebar-cta .btn:hover {
+    background: var(--color-dark);
+    color: #fff;
+    border-color: var(--color-dark);
+}
+
+/* Related services box — links to other service pages */
+.sidebar-related {
+    background: var(--color-bg-alt);
+    padding: 1.75rem;
+    border-radius: 3px;
+}
+.sidebar-related h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+.sidebar-related ul { list-style: none; }
+.sidebar-related ul li {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.6rem 0;
+}
+.sidebar-related ul li:last-child { border-bottom: none; }
+.sidebar-related ul a {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.sidebar-related ul a:hover { color: var(--color-accent); }
+
+
+/* ------------------------------------------------------------
+   TESTIMONIALS PAGE
+   Full-width testimonial cards with more detail than homepage.
+   Uses a two-column grid on wider screens.
+   ------------------------------------------------------------ */
+.testimonials-page { padding: var(--section-pad); background: var(--color-bg); }
+
+.testimonials-page-grid {
+    max-width: var(--max-w);
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+/* Full testimonial card — more padding than the homepage cards */
+.testimonial-full {
+    background: var(--color-bg-alt);
+    padding: 2.5rem;
+    border-radius: 3px;
+    position: relative;
+    border-top: 4px solid var(--color-accent);
+}
+.testimonial-full::before {
+    content: '\201C';
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    color: var(--color-accent);
+    opacity: 0.2;
+    position: absolute;
+    top: 0.5rem;
+    left: 1.5rem;
+    line-height: 1;
+}
+.testimonial-full p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.testimonial-full-author { font-weight: 700; color: var(--color-dark); font-size: 0.9rem; }
+.testimonial-full-role { color: var(--color-muted); font-size: 0.8rem; margin-top: 0.2rem; }
+
+
+/* ------------------------------------------------------------
+   CONTACT PAGE
+   Two-column layout: intro/info on left, Formspree form on right.
+   ------------------------------------------------------------ */
+.contact-page { padding: var(--section-pad); background: var(--color-bg); }
+
+.contact-page-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;    /* Equal columns: info left, form right */
+    gap: 5rem;
+    align-items: start;
+}
+
+.contact-info h2 { margin-bottom: 1rem; }
+.contact-info p { color: var(--color-muted); line-height: 1.8; }
+
+/* Contact detail lines — email, phone */
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+.contact-detail a { color: var(--color-dark); font-weight: 600; }
+.contact-detail a:hover { color: var(--color-accent); }
+
+/* The Formspree form itself */
+.contact-form { background: var(--color-bg-alt); padding: 2.5rem; border-radius: 3px; }
+.contact-form h3 { margin-bottom: 1.5rem; font-size: 1.3rem; }
+
+/* Form field groups */
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
+}
+
+/* All text inputs and textarea share this base style */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    background: #fff;
+    transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-accent);  /* Gold border highlight on focus */
+}
+.form-group textarea { min-height: 140px; resize: vertical; }
+
+/* Full-width submit button */
+.form-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
+/* ------------------------------------------------------------
+   ABOUT PAGE
+   Wider bio section with credentials, fuller photo treatment
+   ------------------------------------------------------------ */
+.about-page { padding: var(--section-pad); background: var(--color-bg); }
+
+.about-page-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 380px 1fr;  /* Slightly wider photo column than homepage */
+    gap: 5rem;
+    align-items: start;
+}
+
+.about-page-photo img {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Credentials strip below the photo */
+.about-credentials {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: var(--color-bg-alt);
+    border-radius: 3px;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.about-page-text h2 { margin-bottom: 1.25rem; }
+.about-page-text p { color: var(--color-muted); line-height: 1.85; margin-bottom: 1.25rem; }
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE — interior pages
+   ------------------------------------------------------------ */
+@media (max-width: 900px) {
+    /* Service page sidebar drops below content on tablet */
+    .service-page-inner { grid-template-columns: 1fr; }
+    .service-sidebar { position: static; }
+
+    /* Contact columns stack */
+    .contact-page-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+    /* About page photo stacks above text */
+    .about-page-inner { grid-template-columns: 1fr; }
+    .about-page-photo { max-width: 380px; }
+}
+
+@media (max-width: 600px) {
+    /* Testimonials go single column on phones */
+    .testimonials-page-grid { grid-template-columns: 1fr; }
+    .page-banner { padding: 3rem 1.5rem; }
+}

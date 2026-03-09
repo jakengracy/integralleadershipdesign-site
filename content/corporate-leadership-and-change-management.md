@@ -19,7 +19,7 @@ Integral Leadership Design's approach to corporate leadership and change managem
 Designed by award-winning leadership development consultant Alexandra Salamis, our corporate programs deliver insights and results. Find out how we can help your organization’s leaders thrive by requesting your FREE 30-minute consultation.
 
 ### Book a FREE 30-Minute Discovery Call to Learn More
-[wpforms id=&#8221;6135&#8243; title=&#8221;false&#8221; description=&#8221;false&#8221;]
+[wpforms id=”6135&#8243; title=”false” description=”false”]
 ### Why Choose Integral Leadership Design?
 
 ### A Custom Approach to Corporate Leadership Development  and Change Management

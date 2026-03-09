@@ -1,12 +1,12 @@
 ---
-title: "Privacy Policy &#8211; Integral Leadership Design"
+title: "Privacy Policy – Integral Leadership Design"
 date: 2019-01-01
 draft: false
 ---
 
 ### Cookie Usage & Privacy Policy
 
-### We use cookies in more or less the same way as any other website&#8230;
+### We use cookies in more or less the same way as any other website…
 
 
 Cookies are small files that are put onto your device when you visit websites like ours. We use cookies in order to collect information that helps us improve your user experience.

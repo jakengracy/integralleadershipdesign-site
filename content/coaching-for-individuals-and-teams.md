@@ -12,7 +12,7 @@ Great leaders are continuous learners. Consequently, they persistently challenge
 
 Although reading leadership books and listening to podcasts can be beneficial, real breakthroughs require more than just consuming new information. Additionally, they also demand exploration and action that can be accelerated through leadership coaching individuals and teams.
 
-The essence of effective leadership involves from &#8220;knowing&#8221; &#8216;being' and &#8216;doing'. Hence, we believe that leadership doesn't stem from a particular position or a certain personality style. Instead, it evolves from personal and interpersonal development. Consequently, we shift the focus from a set of leadership styles to cultivating mindful personal and interpersonal growth through leadership coaching.
+The essence of effective leadership involves from “knowing” ‘being' and ‘doing'. Hence, we believe that leadership doesn't stem from a particular position or a certain personality style. Instead, it evolves from personal and interpersonal development. Consequently, we shift the focus from a set of leadership styles to cultivating mindful personal and interpersonal growth through leadership coaching.
 
 ### In this light, we guide individuals and teams to
 
@@ -36,7 +36,7 @@ Regardless of whether you join our program as an individual, part of a team, or 
 
 Schedule your FREE discovery call today. Witness firsthand how Alex's distinctive coaching approach differentiates her from others. As your coach, Alex serves as your cheerleader, accountability partner, and advocate, offering focused support and constructive challenges, customized to your personal leadership journey.
 
-[wpforms id=&#8221;6102&#8243; title=&#8221;false&#8221; description=&#8221;true&#8221;]
+[wpforms id=”6102&#8243; title=”false” description=”true”]
 
 ### Why Choose Integral Leadership Design?
 

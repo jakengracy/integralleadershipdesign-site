@@ -8,6 +8,9 @@ title = "Integral Leadership Design"
     email = "alexa@integralleadershipdesign.com"
     phone = "+1-613-795-9357"
     logo = "/img/logo.png"
+    # Formspree form ID — replace YOUR_FORM_ID with the ID from your Formspree dashboard
+    # Full endpoint will be: https://formspree.io/f/{formspree_id}
+    formspree_id = "YOUR_FORM_ID"
 
 [outputs]
     home = ["HTML"]

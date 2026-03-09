@@ -1,0 +1,80 @@
+{{ define "main" }}
+{{/*
+    service.html — Reusable layout for all service pages.
+    Used by: /coaching, /change-management, /corporate
+    
+    Structure:
+    1. Page banner — dark navy strip with page title and gold descriptor
+    2. Two-column body — main content left, sticky sidebar right
+    
+    The sidebar contains:
+    - Gold CTA box linking to /contact
+    - Related services links
+    
+    Front matter params this template reads (set in each content .md file):
+    - title       — page title, shown in banner h1
+    - description — one-line gold descriptor shown below h1
+    - weight      — controls sort order if needed
+    
+    Content is rendered via {{ .Content }} from the markdown file.
+    This means copy changes happen in the .md file, not here.
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+
+        {{/* Breadcrumb — orients users who arrive from search */}}
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <span>{{ .Title }}</span>
+        </div>
+
+        <h1>{{ .Title }}</h1>
+
+        {{/* Gold descriptor line — set via 'description' in front matter */}}
+        {{ with .Params.description }}
+        <p class="page-banner-desc">{{ . }}</p>
+        {{ end }}
+
+    </div>
+</div>
+
+
+{{/* ── TWO-COLUMN SERVICE BODY ─────────────────────────────── */}}
+<section class="service-page">
+    <div class="service-page-inner">
+
+        {{/* LEFT: Main page content rendered from the .md file */}}
+        <div class="service-content">
+            {{ .Content }}
+        </div>
+
+        {{/* RIGHT: Sticky sidebar */}}
+        <aside class="service-sidebar">
+
+            {{/* Primary CTA box */}}
+            <div class="sidebar-cta">
+                <h3>Ready to Get Started?</h3>
+                <p>Book a free 30-minute discovery call with Alexandra.</p>
+                <a href="/contact" class="btn">Book a Free Call</a>
+            </div>
+
+            {{/* Related services — links to other service pages */}}
+            <div class="sidebar-related">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/change-management">Change Management</a></li>
+                    <li><a href="/coaching">Leadership Coaching</a></li>
+                    <li><a href="/corporate">Corporate Development</a></li>
+                    <li><a href="/coaching#womens">Women's Leadership</a></li>
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+</section>
+
+{{ end }}

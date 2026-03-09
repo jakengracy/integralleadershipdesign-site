@@ -34,7 +34,7 @@ Vastuullinen Toiminta
 Jatkaa pelaamista liikaa
 Asettaa ajastimen tai lopettaa huippuhetkellä
 
-Yrittää &#8220;paikata&#8221; häviöitä
+Yrittää “paikata” häviöitä
 Pitää tauon, tarkistaa budjetin
 
 Pelaa rentoutuen

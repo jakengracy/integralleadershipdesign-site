@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{/*
+    about.html — Layout for the About Alexandra page (/about)
+    
+    Structure:
+    1. Page banner — dark navy strip with title
+    2. Two-column bio section — photo left, text right
+    3. Credentials strip below photo
+    4. Testimonial pull-quote (optional, for social proof on the about page)
+    
+    Photo source: /static/img/alexandra-headshot.jpg
+    Content: rendered from /content/about.md
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <span>About Alexandra</span>
+        </div>
+        <h1>Meet Alexandra</h1>
+        <p class="page-banner-desc">Award-Winning Leadership Coach &amp; Change Consultant</p>
+    </div>
+</div>
+
+
+{{/* ── ABOUT BODY ───────────────────────────────────────────── */}}
+<section class="about-page">
+    <div class="about-page-inner">
+
+        {{/* LEFT: Photo and credentials */}}
+        <div class="about-page-photo">
+            <img src="/img/alexandra-headshot.jpg" alt="Alexandra Salamis">
+
+            {{/* Credentials strip — qualifications displayed beneath the photo */}}
+            <div class="about-credentials">
+                M.A. · M.S.W. · ICF · EMCC · CEC · CCMP™<br>
+                Forbes Coaches Council Member<br>
+                Top 21 Coaches in Ottawa — Influence Digest<br>
+                Top Leadership Coach — Coach Foundation
+            </div>
+        </div>
+
+        {{/* RIGHT: Bio content rendered from about.md */}}
+        <div class="about-page-text">
+            {{ .Content }}
+        </div>
+
+    </div>
+</section>
+
+{{ end }}
