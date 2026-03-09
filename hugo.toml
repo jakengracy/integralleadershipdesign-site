@@ -36,6 +36,11 @@ title = "Integral Leadership Design"
         parent = "Leadership Coaching"
         weight = 12
     [[menu.main]]
+        name = "Women's Leadership Program"
+        url = "/coaching/womens-program"
+        parent = "Leadership Coaching"
+        weight = 13
+    [[menu.main]]
         name = "Change Management"
         url = "/change-management"
         weight = 20
