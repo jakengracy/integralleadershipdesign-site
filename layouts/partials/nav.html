@@ -1,36 +1,23 @@
-<nav class="w-nav">
-    <button class="nav-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    
-    <ul class="nav-menu">
-        <li><a href="{{ .Site.BaseURL }}" class="nav-link">Home</a></li>
-        
-        <li class="nav-dropdown">
-            <a href="#" class="nav-link">Leadership Coaching</a>
-            <ul class="submenu">
-                <li><a href="#" class="nav-link">Women's Program</a></li>
-                <li><a href="#" class="nav-link">Individual Coaching</a></li>
-                <li><a href="#" class="nav-link">Single Session</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="#" class="nav-link">Change Management</a></li>
-        
-        <li class="nav-dropdown">
-            <a href="#" class="nav-link">Corporate Development</a>
-            <ul class="submenu">
-                <li><a href="#" class="nav-link">Women's Corporate Leadership</a></li>
-                <li><a href="#" class="nav-link">Corporate Leadership</a></li>
-                <li><a href="#" class="nav-link">Team Coaching</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="#" class="nav-link">Blog</a></li>
-        <li><a href="#" class="nav-link">Testimonials</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
-        <li><a href="#" class="nav-link">Contact</a></li>
-    </ul>
-</nav>
+<ul class="nav-menu">
+    <li class="nav-dropdown">
+        <a href="/coaching" class="nav-link">Leadership Coaching ▾</a>
+        <ul class="submenu">
+            <li><a href="/coaching#womens" class="nav-link">Women's Program</a></li>
+            <li><a href="/coaching#individual" class="nav-link">Individual Coaching</a></li>
+            <li><a href="/coaching#single-session" class="nav-link">Single Session</a></li>
+        </ul>
+    </li>
+    <li><a href="/change-management" class="nav-link">Change Management</a></li>
+    <li class="nav-dropdown">
+        <a href="/corporate" class="nav-link">Corporate ▾</a>
+        <ul class="submenu">
+            <li><a href="/corporate#womens" class="nav-link">Women's Leadership</a></li>
+            <li><a href="/corporate#leadership" class="nav-link">Corporate Leadership</a></li>
+            <li><a href="/coaching#team" class="nav-link">Team Coaching</a></li>
+        </ul>
+    </li>
+    <li><a href="/blog" class="nav-link">Blog</a></li>
+    <li><a href="/testimonials" class="nav-link">Testimonials</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+    <li><a href="/contact" class="nav-link nav-cta">Book a Call</a></li>
+</ul>
