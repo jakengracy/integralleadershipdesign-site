@@ -49,6 +49,21 @@ title = "Integral Leadership Design"
         url = "/corporate"
         weight = 30
     [[menu.main]]
+        name = "Corporate Leadership"
+        url = "/corporate/corporate-leadership"
+        parent = "Corporate Development"
+        weight = 31
+    [[menu.main]]
+        name = "Women's Leadership"
+        url = "/corporate/womens-leadership"
+        parent = "Corporate Development"
+        weight = 32
+    [[menu.main]]
+        name = "Team Coaching"
+        url = "/corporate/team-coaching"
+        parent = "Corporate Development"
+        weight = 33
+    [[menu.main]]
         name = "Blog"
         url = "/blog"
         weight = 40
