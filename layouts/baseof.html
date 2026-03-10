@@ -23,6 +23,9 @@
 
     <meta name="author" content="Alexandra Salamis">
 
+    {{/* Open Graph + Twitter Card tags — controls link previews on LinkedIn, iMessage, Slack, etc. */}}
+    {{ partial "opengraph.html" . }}
+
     {{/* Main stylesheet — path uses .Site.BaseURL so it works at any subdirectory depth */}}
     <link rel="stylesheet" href="/css/style.css">
     {{/* Interior page styles — service pages, contact, about, testimonials */}}

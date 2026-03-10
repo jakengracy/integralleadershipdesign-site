@@ -1,0 +1,64 @@
+{{/*
+    opengraph.html — Open Graph and Twitter Card meta tags
+
+    Controls how pages appear when shared on LinkedIn, iMessage, Slack,
+    Facebook, Twitter/X, and any other platform that reads OG tags.
+
+    Priority logic for each field:
+    - og:title       → page title, falls back to site title
+    - og:description → page description, falls back to site description
+    - og:image       → page-level `image` param in front matter,
+                       falls back to site default (hero.jpg)
+    - og:url         → canonical permalink for this page
+    - og:type        → "article" for blog posts, "website" for everything else
+
+    To set a custom OG image on any page, add to its front matter:
+        image: "/img/your-image.jpg"
+
+    Twitter Card type is "summary_large_image" — shows a wide image preview,
+    which is what LinkedIn and iMessage also use.
+*/}}
+
+{{/* ── Resolve values with fallbacks ─────────────────────────────────── */}}
+
+{{/* Title: page title for interior pages, site title for homepage */}}
+{{ $title := .Title }}
+{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+
+{{/* Description: page front matter → homepage param → site default */}}
+{{ $desc := .Site.Params.description }}
+{{ if .IsHome }}
+    {{ $desc = .Site.Params.homepage_description }}
+{{ else if .Description }}
+    {{ $desc = .Description }}
+{{ end }}
+
+{{/* Image: page-level `image` param → site default hero */}}
+{{ $image := "/img/hero.jpg" }}
+{{ if .Params.image }}{{ $image = .Params.image }}{{ end }}
+{{ $imageAbsolute := printf "%s%s" .Site.BaseURL (strings.TrimPrefix "/" $image) }}
+
+{{/* ── Open Graph tags ─────────────────────────────────────────────── */}}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $imageAbsolute }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA">
+
+{{/* Article type for blog posts, website for everything else */}}
+{{ if eq .Section "blog" }}
+<meta property="og:type" content="article">
+{{ if not .Date.IsZero }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ else }}
+<meta property="og:type" content="website">
+{{ end }}
+
+{{/* ── Twitter / X Card tags ───────────────────────────────────────── */}}
+{{/* summary_large_image shows the wide-format preview LinkedIn also uses */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $imageAbsolute }}">
