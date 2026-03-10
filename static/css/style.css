@@ -321,7 +321,7 @@ p { margin-bottom: 1rem; }
     inset: 0;                               /* Shorthand for top/right/bottom/left: 0 */
     background-image: url('/img/hero.jpg');
     background-size: cover;
-    background-position: 65% center;        /* Shows Alexandra's face right-of-center; text box sits left */
+    background-position: 55% center;        /* 72d photo: Alexandra is right-of-center, this keeps her face visible */
     opacity: 0.75;                          /* Slightly higher than before so Alexandra is more visible */
 }
 
