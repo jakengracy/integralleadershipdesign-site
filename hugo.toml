@@ -23,7 +23,7 @@ title = "Integral Leadership Design"
 
     # Microsoft Clarity — get ID from clarity.microsoft.com after creating a project
     # Leave empty to disable
-    clarity_id = ""
+    clarity_id = "vtrvkqe47m"
 
 [outputs]
     home = ["HTML"]
