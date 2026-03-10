@@ -444,7 +444,7 @@
 
 /* Post title */
 .blog-card-title {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 0.85rem;
     color: var(--color-dark);
@@ -458,8 +458,23 @@
 
 /* Excerpt */
 .blog-card-excerpt {
-    font-size: 0.875rem;
+    font-size: 0.825rem;
     color: var(--color-muted);
+    line-height: 1.75;
+}
+
+/* Suppress headings that leak in from post body into the card excerpt.
+   The Hugo summary sometimes captures an h2 or h3 near the top of the post.
+   We demote them to match body text so they don't render as bold subheads. */
+.blog-card-excerpt h1,
+.blog-card-excerpt h2,
+.blog-card-excerpt h3,
+.blog-card-excerpt h4 {
+    font-size: 0.825rem;               /* Same as excerpt body text */
+    font-weight: 400;                  /* Strip bold weight */
+    font-family: var(--font-sans);     /* Use sans rather than serif heading style */
+    color: var(--color-muted);         /* Match surrounding text colour */
+    margin: 0 0 0.5rem;
     line-height: 1.75;
 }
 
