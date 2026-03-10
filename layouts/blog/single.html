@@ -1,0 +1,93 @@
+{{ define "main" }}
+{{/*
+    layouts/blog/single.html — Individual blog post layout
+    
+    Structure:
+    1. Page banner — dark navy, post title + date
+    2. Two-column body — post content left, sticky sidebar right
+    
+    Sidebar contains:
+    - Gold CTA box linking to /contact
+    - Recent posts list (up to 5, pulled from .Site.RegularPages)
+    
+    Date formatting uses Hugo's built-in .Date.Format.
+    All blog posts currently have date: 2019-01-01 from WordPress import —
+    these should be updated with real publish dates when known.
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+
+        {{/* Breadcrumb */}}
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <a href="/blog">Blog</a>
+            <span>→</span>
+            <span>{{ .Title | truncate 40 }}</span>
+        </div>
+
+        <h1>{{ .Title }}</h1>
+
+        {{/* Post date — gold descriptor line */}}
+        <p class="page-banner-desc">{{ .Date.Format "January 2, 2006" }}</p>
+
+    </div>
+</div>
+
+
+{{/* ── TWO-COLUMN POST BODY ────────────────────────────────── */}}
+<section class="service-page">
+    <div class="service-page-inner">
+
+        {{/* LEFT: Post content */}}
+        <article class="service-content blog-post-content">
+            {{ .Content }}
+
+            {{/* Post navigation — previous/next within blog section */}}
+            <nav class="blog-post-nav">
+                {{ with .PrevInSection }}
+                <a href="{{ .RelPermalink }}" class="blog-nav-link blog-nav-prev">
+                    <span class="blog-nav-label">← Previous</span>
+                    <span class="blog-nav-title">{{ .Title }}</span>
+                </a>
+                {{ end }}
+                {{ with .NextInSection }}
+                <a href="{{ .RelPermalink }}" class="blog-nav-link blog-nav-next">
+                    <span class="blog-nav-label">Next →</span>
+                    <span class="blog-nav-title">{{ .Title }}</span>
+                </a>
+                {{ end }}
+            </nav>
+        </article>
+
+        {{/* RIGHT: Sidebar */}}
+        <aside class="service-sidebar">
+
+            {{/* CTA box */}}
+            <div class="sidebar-cta">
+                <h3>Work With Alexandra</h3>
+                <p>Book a free 30-minute discovery call.</p>
+                <a href="/contact" class="btn">Book a Free Call</a>
+            </div>
+
+            {{/* Recent posts — pulls latest 5 blog posts from site */}}
+            <div class="sidebar-related">
+                <h4>Recent Posts</h4>
+                <ul>
+                    {{/* .Site.RegularPages filtered to blog section, sorted by date, limit 5 */}}
+                    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+</section>
+
+{{ end }}
