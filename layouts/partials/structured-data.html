@@ -1,0 +1,137 @@
+{{/*
+    structured-data.html — JSON-LD schema markup partial
+    
+    Outputs structured data for search engines and AI crawlers.
+    Three schemas are included:
+
+    1. Person — Alexandra Salamis as a named professional
+    2. LocalBusiness / ProfessionalService — the practice itself
+    3. WebSite — enables sitelinks search box potential in Google
+
+    Schema.org types used:
+      - Person: https://schema.org/Person
+      - ProfessionalService: https://schema.org/ProfessionalService
+      - WebSite: https://schema.org/WebSite
+
+    This partial is called once from baseof.html <head>.
+    It uses hugo.toml [params] for contact details so there's
+    one source of truth — update hugo.toml, schemas update automatically.
+*/}}
+
+{{/* ── 1. Person: Alexandra Salamis ──────────────────────────────────── */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alexandra Salamis",
+  "jobTitle": "Leadership Coach and Change Management Consultant",
+  "url": "{{ .Site.BaseURL }}about",
+  "email": "{{ .Site.Params.email }}",
+  "telephone": "{{ .Site.Params.phone }}",
+  "image": "{{ .Site.BaseURL }}img/alexandra-headshot.jpg",
+  "sameAs": [],
+  "worksFor": {
+    "@type": "ProfessionalService",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "knowsAbout": [
+    "Leadership Coaching",
+    "Executive Coaching",
+    "Change Management",
+    "Organizational Development",
+    "Women's Leadership",
+    "Team Coaching",
+    "Corporate Leadership Development"
+  ]
+}
+</script>
+
+{{/* ── 2. ProfessionalService: Integral Leadership Design ─────────────── */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ .Site.BaseURL }}img/logo.png",
+  "image": "{{ .Site.BaseURL }}img/hero.jpg",
+  "description": "{{ .Site.Params.description }}",
+  "email": "{{ .Site.Params.email }}",
+  "telephone": "{{ .Site.Params.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "CA",
+    "addressRegion": "ON"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Coaching and Consulting Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Individual Leadership Coaching",
+          "url": "{{ .Site.BaseURL }}coaching/individual"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Single Strategy Session",
+          "url": "{{ .Site.BaseURL }}coaching/single-session"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Women's Leadership Program",
+          "url": "{{ .Site.BaseURL }}coaching/womens-program"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Corporate Leadership Development",
+          "url": "{{ .Site.BaseURL }}corporate/corporate-leadership"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Team Coaching",
+          "url": "{{ .Site.BaseURL }}corporate/team-coaching"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Change Management Consulting",
+          "url": "{{ .Site.BaseURL }}change-management"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+{{/* ── 3. WebSite — enables potential sitelinks search in Google ───────── */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}"
+}
+</script>
