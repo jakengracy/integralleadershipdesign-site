@@ -13,7 +13,7 @@ Promote self-discovery and self-awareness to excavate what needs some work,
 Elicit your own solutions and strategies, and
 Hold you responsible and accountable.
 
-If you are a switched-on leader who is committed to discovering your own potential and being a positive contributor to others, then coaching just might be for you.Where neural insights and artificial intelligence converge neurolink-ai.org.
+If you are a switched-on leader who is committed to discovering your own potential and being a positive contributor to others, then coaching just might be for you.
 
 I work with aspiring and current executives and managers who want to make a difference and who recognize change is necessary to sustain breakthrough leadership growth and success. Engaging in a coaching program can help you and your colleagues dramatically improve your outlook and approach to work and life, while improving and unlocking your leadership potential.
 

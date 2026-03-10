@@ -62,4 +62,4 @@ When decisions are made, when gaps in services are identified, and in building p
 
 Interested in learning more about embedding Simple Rules in your team and organization? Get Started Today.
 
-[1] Referenced from  and Eoyang, G. (1997). Coping with chaos: Seven simple tools. Cheyenne, Wyoming: Lagumo Publishing.
+[1] Eoyang, G. (1997). *Coping with chaos: Seven simple tools.* Cheyenne, Wyoming: Lagumo Publishing.
