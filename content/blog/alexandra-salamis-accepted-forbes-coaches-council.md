@@ -14,4 +14,4 @@ I am very excited about becoming a member. Having access to Forbes resources, ex
 
 Scott Gerber, a founder of Forbes Councils, says, we are honored to welcome Alexandra Salamis into the community. Our mission with Forbes Councils is to curate successful professionals from every industry, creating a vetted, social capital-driven network that helps every member make an even greater impact on the business world.
 
-For more information about Forbes Coaches Council, visit [coaches.forbes.com](https://coaches.forbes.com). To learn more about Forbes Councils, visit [forbescouncils.com](https://www.forbescouncils.com).
+For more information about Forbes Coaches Council, visit [coaches.forbes.com](https://coaches.forbes.com). To learn more about Forbes Councils, visit [forbescouncils.com](https://www.forbescouncils.com). View [Alexandra's Forbes profile](https://www.forbes.com/councils/forbescoachescouncil/people/alexandrasalamis1/popular/).
