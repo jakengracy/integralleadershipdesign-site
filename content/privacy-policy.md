@@ -29,7 +29,13 @@ This information is submitted through Formspree, a third-party form processing s
 
 ### Information Collected Automatically
 
-This site is hosted on Cloudflare Pages. Cloudflare may collect standard server log data including IP addresses and browser information as part of its infrastructure and security operations. We do not use Google Analytics or any other third-party tracking or analytics service on this site.
+This site collects visitor analytics data through the following services:
+
+**Google Analytics 4** — We use Google Analytics to understand how visitors find and use our site. GA4 collects data including pages visited, time on site, geographic region, and device type. This data is associated with a pseudonymous identifier and processed by Google. You can opt out via [Google's opt-out tool](https://tools.google.com/dlpage/gaoptout).
+
+**Cloudflare Web Analytics** — We use Cloudflare's privacy-first analytics, which collects aggregate traffic data without cookies and without tracking you across other sites.
+
+**Microsoft Clarity** — We use Clarity to collect heatmap and session data that helps us understand how visitors interact with our pages. Clarity does not collect personally identifiable information. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement) for details.
 
 We do not use advertising cookies, retargeting pixels, or any form of behavioural tracking.
 
@@ -52,7 +58,9 @@ We retain contact form submissions and related correspondence for as long as is 
 This site uses the following third-party services, each with their own privacy policies:
 
 - **Formspree** — processes contact form submissions. See [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy)
-- **Cloudflare** — provides hosting, CDN, and DNS services. See [cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/)
+- **Cloudflare** — provides hosting, CDN, DNS, and web analytics. See [cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/)
+- **Google Analytics 4** — visitor analytics. See [policies.google.com/privacy](https://policies.google.com/privacy)
+- **Microsoft Clarity** — heatmap and session analytics. See [privacy.microsoft.com](https://privacy.microsoft.com/privacystatement)
 
 ## Your Rights
 

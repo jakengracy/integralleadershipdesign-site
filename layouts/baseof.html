@@ -29,6 +29,51 @@
 
     {{/* Favicon — only outputs the tag if a favicon path is set in hugo.toml params */}}
     {{ if .Site.Params.favicon }}<link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon }}">{{ end }}
+
+    {{/*
+        ── ANALYTICS ─────────────────────────────────────────────────────────
+        All analytics tags are controlled via hugo.toml [params].
+        Set the relevant ID in hugo.toml to activate each service.
+        Leave blank or omit to disable without touching this template.
+
+        Services wired up here:
+        1. Google Analytics 4  — ga4_id
+        2. Cloudflare Web Analytics — cloudflare_analytics_token
+        3. Microsoft Clarity   — clarity_id
+
+        NOTE: Privacy policy must be kept in sync with whichever services
+        are active. All three are currently disclosed in /privacy-policy.
+    */}}
+
+    {{/* 1. Google Analytics 4 — async, deferred so it doesn't block page render */}}
+    {{ if .Site.Params.ga4_id }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ .Site.Params.ga4_id }}');
+    </script>
+    {{ end }}
+
+    {{/* 2. Cloudflare Web Analytics — privacy-first, no cookies, no consent banner needed */}}
+    {{ if .Site.Params.cloudflare_analytics_token }}
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "{{ .Site.Params.cloudflare_analytics_token }}"}'>
+    </script>
+    {{ end }}
+
+    {{/* 3. Microsoft Clarity — heatmaps and session recordings, free */}}
+    {{ if .Site.Params.clarity_id }}
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "{{ .Site.Params.clarity_id }}");
+    </script>
+    {{ end }}
+
 </head>
 <body>
 

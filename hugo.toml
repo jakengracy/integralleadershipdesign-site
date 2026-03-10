@@ -12,6 +12,19 @@ title = "Integral Leadership Design"
     # Full endpoint will be: https://formspree.io/f/{formspree_id}
     formspree_id = "xzdjzbap"
 
+    # ── Analytics ─────────────────────────────────────────────────────────────
+    # Google Analytics 4 — Measurement ID from GA4 Data Stream
+    ga4_id = "G-TQTQ006SKQ"
+
+    # Cloudflare Web Analytics — get token from Cloudflare Dashboard
+    # → integralleadershipdesign.com → Analytics → Web Analytics → Add Site
+    # Leave empty to disable
+    cloudflare_analytics_token = ""
+
+    # Microsoft Clarity — get ID from clarity.microsoft.com after creating a project
+    # Leave empty to disable
+    clarity_id = ""
+
 [outputs]
     home = ["HTML"]
 
