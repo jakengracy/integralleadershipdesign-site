@@ -1,6 +1,6 @@
 ---
 title: "Women's Leadership Program"
-description: "Purpose, Passion, and Presence for Women Rising — a signature coaching program for women ready to lead."
+description: "Purpose, Passion, and Presence for Women Rising — Alexandra Salamis's signature coaching program for women stepping into authentic, confident leadership."
 layout: "service"
 date: 2019-01-01
 draft: false

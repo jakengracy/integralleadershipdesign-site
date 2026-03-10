@@ -1,5 +1,6 @@
 ---
 title: "About Alexandra"
+description: "Award-winning leadership coach and change consultant Alexandra Salamis — 20+ years developing executives and organizations across Canada."
 layout: "about"
 date: 2019-01-01
 draft: false

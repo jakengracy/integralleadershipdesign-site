@@ -1,6 +1,6 @@
 ---
 title: "Single Strategy Session"
-description: "One 90-minute session with Alexandra for immediate clarity on a specific challenge."
+description: "A focused 90-minute coaching session with Alexandra Salamis. Immediate clarity on a specific leadership challenge, decision, or career inflection point."
 layout: "service"
 date: 2019-01-01
 draft: false

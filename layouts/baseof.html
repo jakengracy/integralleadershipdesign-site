@@ -18,7 +18,8 @@
     <title>{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
 
     {{/* Meta description: use page-level description if set, otherwise fall back to site-wide default */}}
-    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{/* Meta description: homepage gets its own specific description, other pages use front matter, fallback to site default */}}
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.homepage_description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
     <meta name="author" content="Alexandra Salamis">
 

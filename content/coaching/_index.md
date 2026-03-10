@@ -1,6 +1,6 @@
 ---
 title: "Leadership Coaching"
-description: "Individual and team coaching programs designed to unlock leadership potential and drive meaningful growth."
+description: "Leadership coaching programs for executives and managers ready to grow — individual coaching, team coaching, and women's leadership development."
 layout: "service"
 date: 2019-01-01
 draft: false

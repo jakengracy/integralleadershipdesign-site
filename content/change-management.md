@@ -1,6 +1,6 @@
 ---
 title: "Change Management"
-description: "Strategic guidance for navigating organizational change with confidence, clarity, and lasting results."
+description: "Certified change management consulting that puts people at the centre — strategy, engagement, and lasting adoption for complex organizational transformation."
 layout: "service"
 date: 2019-01-01
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "Individual Leadership Coaching"
-description: "One-on-one coaching tailored to your goals, your context, and your pace."
+description: "One-on-one executive coaching with Alexandra Salamis — 6 to 12 month engagements for leaders who want clarity, confidence, and lasting growth."
 layout: "service"
 date: 2019-01-01
 draft: false

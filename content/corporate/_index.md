@@ -1,6 +1,6 @@
 ---
 title: "Corporate Leadership Development"
-description: "Action learning programs that build leadership capacity at every level of your organization."
+description: "Corporate leadership development programs that build real capability — from emerging managers to senior executives — using an action learning approach."
 layout: "service"
 date: 2019-01-01
 draft: false

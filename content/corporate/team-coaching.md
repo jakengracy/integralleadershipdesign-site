@@ -1,6 +1,6 @@
 ---
 title: "Team Coaching"
-description: "Targeted coaching for leadership teams that need to perform better together — not just individually."
+description: "Team coaching for leadership teams that are capable but underperforming together — building trust, accountability, and collective performance that sticks."
 layout: "service"
 date: 2019-01-01
 draft: false

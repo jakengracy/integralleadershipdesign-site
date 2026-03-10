@@ -4,6 +4,8 @@ title = "Integral Leadership Design"
 
 [params]
     description = "People Focused. Growth Oriented. Results Driven."
+    # Homepage meta description (more specific than the tagline)
+    homepage_description = "Leadership coaching and change management consulting with Alexandra Salamis — developing executives, teams, and organizations across Canada."
     tagline = "Develop Your Talent and Realize Your Potential"
     email = "alexa@integralleadershipdesign.com"
     phone = "+1-613-795-9357"

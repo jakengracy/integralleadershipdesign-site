@@ -1,6 +1,6 @@
 ---
 title: "Women's Corporate Leadership"
-description: "Programs that help organizations identify, develop, and retain their female leadership talent."
+description: "Corporate women's leadership programs that develop and retain female talent — addressing individual capability and the organizational conditions that matter."
 layout: "service"
 date: 2019-01-01
 draft: false

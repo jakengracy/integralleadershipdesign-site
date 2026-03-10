@@ -1,6 +1,6 @@
 ---
 title: "Corporate Leadership Development Program"
-description: "Structured programs that build leadership capacity from emerging managers to senior executives."
+description: "Structured leadership development programs tailored to your organization — building pipeline, performance culture, and lasting capability at every level."
 layout: "service"
 date: 2019-01-01
 draft: false
