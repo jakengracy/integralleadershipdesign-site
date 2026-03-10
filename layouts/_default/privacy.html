@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{/*
+    layouts/_default/privacy.html — Privacy Policy page layout
+    
+    Simple single-column layout — no sidebar needed for a legal/policy page.
+    Uses the standard page banner for visual consistency with the rest of the site.
+    Content is rendered from content/privacy-policy.md.
+    
+    Typography uses .prose-page class which gives long-form text more
+    breathing room than the service page content columns.
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <span>Privacy Policy</span>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="page-banner-desc">How we collect, use, and protect your information</p>
+    </div>
+</div>
+
+
+{{/* ── SINGLE-COLUMN CONTENT ───────────────────────────────── */}}
+<section class="prose-page">
+    <div class="prose-page-inner">
+        {{ .Content }}
+    </div>
+</section>
+
+{{ end }}

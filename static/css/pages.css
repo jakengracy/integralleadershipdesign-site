@@ -554,3 +554,65 @@
     .blog-post-nav { flex-direction: column; }
     .blog-nav-next { text-align: left; margin-left: 0; }
 }
+
+
+/* ------------------------------------------------------------
+   PROSE PAGE — single-column long-form layout
+   Used by privacy policy and any other standalone text-heavy pages.
+   Narrower max-width than service pages for better line length/readability.
+   ------------------------------------------------------------ */
+.prose-page {
+    padding: var(--section-pad);
+    background: var(--color-bg);
+}
+
+.prose-page-inner {
+    max-width: 780px;                   /* Optimal reading line length */
+    margin: 0 auto;
+}
+
+/* Headings within prose pages */
+.prose-page-inner h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-dark);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+.prose-page-inner h2:first-child { margin-top: 0; }
+
+.prose-page-inner h3 {
+    font-size: 1.05rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+/* Body text */
+.prose-page-inner p {
+    color: var(--color-muted);
+    line-height: 1.85;
+    margin-bottom: 1.1rem;
+}
+
+/* Lists */
+.prose-page-inner ul,
+.prose-page-inner ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.prose-page-inner li {
+    color: var(--color-muted);
+    line-height: 1.8;
+    margin-bottom: 0.4rem;
+}
+
+/* Last updated note */
+.prose-page-inner .policy-updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    opacity: 0.7;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}

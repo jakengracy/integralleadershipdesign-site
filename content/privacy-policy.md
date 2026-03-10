@@ -1,82 +1,83 @@
 ---
-title: "Privacy Policy – Integral Leadership Design"
-date: 2019-01-01
+title: "Privacy Policy"
+layout: "privacy"
+date: 2026-03-10
 draft: false
 ---
 
-### Cookie Usage & Privacy Policy
+<p class="policy-updated">Last updated: March 2026</p>
 
-### We use cookies in more or less the same way as any other website…
+## Overview
 
+Integral Leadership Design ("we", "our", or "us") is committed to protecting your privacy. This policy explains what personal information we collect, how we use it, and your rights with respect to it.
 
-Cookies are small files that are put onto your device when you visit websites like ours. We use cookies in order to collect information that helps us improve your user experience.
+This site is operated from Canada and is subject to the *Personal Information Protection and Electronic Documents Act* (PIPEDA) and applicable provincial privacy legislation.
 
-The cookies we use are not used identify you personally.
+## What Information We Collect
 
-We will not sell your information to any third parties.
+### Information You Provide
 
-If you don’t want cookies, you don’t have to have them! Here’s how to disable cookies in Chrome. You can also use free third-party programs like Spybot to block cookies.
+When you submit the contact form on this website, we collect:
 
-If you do block cookies, some elements of our site might not work so well :
+- Your name
+- Your email address
+- Your organization (optional)
+- The service area you are interested in
+- Any message you include
 
-We use cookies to do the following:
+This information is submitted through Formspree, a third-party form processing service, and delivered to us by email. We do not store your form submissions on this website's servers.
 
-Keep track of what’s in your shopping basket
-Remember your orders and enquiries
-Remember if you are logged in (or not)
-Offer live chat support
-See which of our pages you visit
-Enable retargeting adverts
-Allow you to share our pages through social networks such as Facebook
-Allow you to share pages through Add This
+### Information Collected Automatically
 
-By continuing to use our website, you agree to our cookie policy.
+This site is hosted on Cloudflare Pages. Cloudflare may collect standard server log data including IP addresses and browser information as part of its infrastructure and security operations. We do not use Google Analytics or any other third-party tracking or analytics service on this site.
 
+We do not use advertising cookies, retargeting pixels, or any form of behavioural tracking.
 
-We also have a privacy policy that you should be aware of.
+## How We Use Your Information
 
-We collect personal data when you use this website. Some of the personal data is freely provided by users, whilst some of it is collected automatically.
+We use the information you submit through our contact form solely to:
 
-The data that we collect includes the following:
+- Respond to your inquiry
+- Schedule and conduct a discovery call if you request one
+- Follow up on our coaching or consulting engagement with you
 
-Email address
-Phone number
-Company name
+We do not sell, rent, or share your personal information with third parties for marketing purposes.
 
-We use this data to do the following:
+## How Long We Keep Your Information
 
-Improve our website by analysing user behaviour
-Contact our users
-Interact with our users on external social networks and platforms
+We retain contact form submissions and related correspondence for as long as is reasonably necessary to manage our client relationships and meet any legal obligations. If you would like us to delete your information, please contact us and we will do so promptly.
 
-If any other data collection occurs, it will be described at that point. We are not responsible for any third-party data submitted by users.
+## Third-Party Services
 
-How and where your data is stored
+This site uses the following third-party services, each with their own privacy policies:
 
-We use and store your data according to the Data Protection Act (don’t say that the EU never did anything for you!) and take reasonable security measures to prevent your data being accessed by unauthorised individuals.
+- **Formspree** — processes contact form submissions. See [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy)
+- **Cloudflare** — provides hosting, CDN, and DNS services. See [cloudflare.com/privacypolicy](https://www.cloudflare.com/privacypolicy/)
 
-Your data will be stored on our secure servers. Your data may also be accessed by employees while they are not in Europe. Your data is stored for no longer than necessary.
+## Your Rights
 
-Keeping your data safe
+Under PIPEDA and applicable privacy law, you have the right to:
 
-The internet is not 100% free from security risks. While we take security very seriously, we cannot guarantee that your data is secure. Any data that is sent to us is done at the user’s own risk.
+- Request access to the personal information we hold about you
+- Request that we correct inaccurate information
+- Request that we delete your information
+- Withdraw consent to our use of your information at any time
 
-Any payments made through this website, however, will be encrypted.
+To exercise any of these rights, please contact us at [alexa@integralleadershipdesign.com](mailto:alexa@integralleadershipdesign.com).
 
-Your data and the government
+## Links to Other Websites
 
-We may be legally obligated to hand over your data to public authorities (not that the government doesn’t know everything about everyone already).
+This site contains links to external websites. This privacy policy applies only to integralleadershipdesign.com. We are not responsible for the privacy practices of any linked third-party sites.
 
-Your rights
+## Changes to This Policy
 
-You have the right to ask us what information we are storing about you. We may charge you for this service.
+We may update this policy from time to time. The date at the top of this page reflects the most recent revision. We encourage you to review this page periodically.
 
-Links to other websites
+## Contact
 
-This privacy policy only applies to this website. You should be aware that although we link to third-party websites, they have separate privacy policies unaffected by our own. If you come to the website via a link from a third party website, they may also send us personal information about you.
+If you have questions about this privacy policy or how we handle your information, please contact:
 
-Changes to our privacy policy
-
-We reserve the right to change our privacy policy at any time. Changes will be listed here and you are advised to check this page often for updates. If you do not approve of a change to our privacy policy, you should stop using our website immediately.
-
-By continuing to use our website and freely submitting your data to us, you agree to our privacy policy.
+**Alexandra Salamis**
+Integral Leadership Design
+[alexa@integralleadershipdesign.com](mailto:alexa@integralleadershipdesign.com)
++1-613-795-9357
