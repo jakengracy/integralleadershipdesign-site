@@ -500,6 +500,9 @@
    Mostly inherits from service-content; these add blog-specific
    typographic refinements for long-form reading.
    ------------------------------------------------------------ */
+.blog-post-content {
+    font-family: var(--font-sans);  /* Explicitly lock body text to sans — prevents serif bleed from blockquote or heading rules */
+}
 .blog-post-content h2 {
     font-size: clamp(1.5rem, 2.5vw, 1.9rem);  /* Larger than body text, smaller than page title */
     margin-top: 2.5rem;
