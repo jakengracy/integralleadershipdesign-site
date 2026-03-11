@@ -614,17 +614,36 @@ p { margin-bottom: 1rem; }
     /* Dropdowns flow inline (not floating) on mobile */
     .submenu { position: static; box-shadow: none; border: none; background: rgba(255,255,255,0.05); }
 
-    /* Reduce hero height on smaller screens */
-    .hero { min-height: 480px; }
+    /* Hero — reduce height and tighten padding on tablet */
+    .hero { min-height: 420px; }
+    .hero-content { padding: 3rem 1.25rem; }
 
     /* About photo and text stack vertically */
     .about .section-inner { grid-template-columns: 1fr; }
+    .about-photo { max-width: 320px; margin: 0 auto; }
 
     /* Services go to two columns on tablet */
     .services-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Testimonials single column on tablet */
+    .testimonials-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-    /* Services go single column on phones */
+
+    /* Hero — compact on phones, smaller text */
+    .hero { min-height: 360px; padding: 0; }
+    .hero-content { padding: 2.5rem 1rem; }
+    .hero-text h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); }  /* Override global clamp for phones */
+    .hero-tagline { font-size: 0.8rem; letter-spacing: 0.05em; }
+    .hero-description { font-size: 0.875rem; }
+
+    /* Services single column on phones */
     .services-grid { grid-template-columns: 1fr; }
+
+    /* Section padding tighter on phones */
+    :root { --section-pad: 3rem 1rem; }
+
+    /* Page banner tighter on phones */
+    .page-banner { padding: 2.5rem 1rem; }
 }
