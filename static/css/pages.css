@@ -637,3 +637,13 @@
     margin-bottom: 2.5rem;
     font-style: italic;
 }
+
+/* Blog post author name — right-justified, appears below the date in the page banner */
+.blog-post-author {
+    text-align: right;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
