@@ -21,4 +21,4 @@ Employees hear consistent and strong messages from leadership about the transfor
 
 Are you about to launch a significant change in your organization? If so, don't assume that your leadership team has what it takes to be fully aligned and committed to leading with you. Think about conducting a leadership alignment exercise so that you can pin point what is required in terms of awareness, desire and capacity to achieve and sustain the necessary level of support, leader by leader. Interested in learning more?
 
-Alexandra Salamis
+<span class="post-author">— Alexandra Salamis</span>

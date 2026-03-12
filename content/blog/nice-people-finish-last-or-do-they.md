@@ -24,4 +24,4 @@ Give and Take outlines how successful Givers have unique approaches to interacti
 
 Let there be more giving in the world!
 
-Alexandra Salamis
+<span class="post-author">— Alexandra Salamis</span>

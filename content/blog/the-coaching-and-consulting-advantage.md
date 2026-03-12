@@ -60,6 +60,6 @@ Now, wearing my consulting hat and based on their collective need to be more str
 
 Whether consultant or coach, being a facilitator of change involves not only helping leaders understand what needs to be done but also practical strategies for doing it. This means sharing knowledge and strategies, presenting frameworks for decision-making, and providing information necessary for leaders to evaluate alternative courses of action. Being a facilitator of change also involves supporting leaders in taking action on those decisions. This means assisting them in outlining specific implementation steps, establishing timelines, securing resources, and removing barriers.
 
-Alexandra Salamis
+<span class="post-author">— Alexandra Salamis</span>
 
 Interested in learning more? Contact us for more details.

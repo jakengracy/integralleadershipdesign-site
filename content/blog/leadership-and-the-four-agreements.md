@@ -16,4 +16,4 @@ The power of this book isn’t new or groundbreaking information. It’s a remin
 
 It’s up to you, but this book just might be what you need today to jumpstart your development and working with us could help accelerate that for you!
 
-Alexandra Salamis
+<span class="post-author">— Alexandra Salamis</span>

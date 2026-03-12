@@ -659,6 +659,15 @@
     margin: 0;               /* Remove default paragraph margin inside the quote */
 }
 
+/* Blog post article sign-off — right-justified author attribution at end of post */
+.blog-post-content .post-author {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: var(--color-muted);
+    margin-top: 2rem;
+}
+
 /* Blog post body — h3 subheadings within article content */
 .blog-post-content h3 {
     font-size: 1.4rem;

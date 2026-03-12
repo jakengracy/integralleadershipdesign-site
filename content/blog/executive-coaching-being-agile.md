@@ -48,6 +48,6 @@ Spurring personal and professional growth.
 
 As your coach, I serve as your unbiased resource partner and confidant with which to explore, bring projects to completion, or investigate new opportunities in a meaningful way.
 
-Alexandra Salamis
+<span class="post-author">— Alexandra Salamis</span>
 
 What to learn more? Contact us.

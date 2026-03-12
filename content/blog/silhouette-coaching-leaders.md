@@ -26,6 +26,6 @@ Explore the dynamics of critical situations.
 Discuss behavioural patterns.
 Identify micro-behaviours and body language that can make all the difference to success.
 
-Alexandra Salamis
+<span class="post-author">— Alexandra Salamis</span>
 
 Reach out and learn more about how Silhouette Coaching can accelerate change and support you in achieving sustainable results faster.
