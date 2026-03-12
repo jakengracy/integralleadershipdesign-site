@@ -34,8 +34,8 @@
         {{/* Post date and author line */}}
         <p class="page-banner-desc">{{ .Date.Format "January 2, 2006" }}</p>
 
-        {{/* Author name — right-justified below the date */}}
-        <p class="blog-post-author">{{ .Params.author | default .Site.Params.author }}</p>
+        {{/* Author byline — em dash + name, right-justified below the date */}}
+        <p class="blog-post-author">&#8212; {{ .Params.author | default .Site.Params.author }}</p>
 
     </div>
 </div>
