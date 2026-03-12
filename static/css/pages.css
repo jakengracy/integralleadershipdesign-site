@@ -712,6 +712,11 @@
     margin-bottom: 0.5rem;
 }
 
+/* Hide the ↩ footnote return arrow — glyph renders as garbage in some fonts */
+.blog-post-content .footnotes .footnote-backref {
+    display: none;
+}
+
 /* Blog post author name — right-justified, appears below the date in the page banner */
 .blog-post-author {
     text-align: right;
