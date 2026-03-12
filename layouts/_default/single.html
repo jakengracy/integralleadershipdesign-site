@@ -1,4 +1,18 @@
 {{ define "main" }}
+{{/*
+    _default/single.html — Generic single-page fallback layout.
+
+    Hugo uses this template for any content page that doesn't have a
+    more specific layout defined. It acts as a catch-all for content
+    types that don't yet have their own layout file.
+
+    Currently used by: any .md files in /content/ that aren't in a
+    section with a dedicated layout (blog uses blog/single.html,
+    service pages use _default/service.html, etc.).
+
+    If a new content type needs its own layout, create a dedicated
+    template file rather than expanding this one.
+*/}}
 <article class="page-content">
     <div class="page-header">
         <h1>{{ .Title }}</h1>
