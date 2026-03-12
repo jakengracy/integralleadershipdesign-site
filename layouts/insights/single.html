@@ -37,11 +37,11 @@
             <span>{{ .Title | truncate 40 }}</span>
         </div>
 
-        <h1>{{ .Title }}</h1>
-
-        {{/* Subtitle — rendered when present */}}
+        {{/* Title — appends subtitle with em dash when present */}}
         {{ with .Params.subtitle }}
-        <p class="page-banner-desc">{{ . }}</p>
+        <h1>{{ $.Title }} — {{ . }}</h1>
+        {{ else }}
+        <h1>{{ .Title }}</h1>
         {{ end }}
 
         {{/* Author byline intentionally omitted from insights banner */}}
