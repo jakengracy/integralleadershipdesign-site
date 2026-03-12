@@ -1,18 +1,18 @@
 {{ define "main" }}
 {{/*
-    layouts/blog/single.html — Individual blog post layout
+    layouts/blog/single.html — Individual insight article layout
     
     Structure:
-    1. Page banner — dark navy, post title + date
-    2. Two-column body — post content left, sticky sidebar right
+    1. Page banner — dark navy, article title only (no date — content is timeless)
+    2. Two-column body — article content left, sticky sidebar right
     
     Sidebar contains:
     - Gold CTA box linking to /contact
-    - Recent posts list (up to 5, pulled from .Site.RegularPages)
+    - More Insights list (up to 5, pulled from .Site.RegularPages)
     
-    Date formatting uses Hugo's built-in .Date.Format.
-    All blog posts currently have date: 2019-01-01 from WordPress import —
-    these should be updated with real publish dates when known.
+    Date field is kept in front matter for Hugo's internal use but is
+    intentionally not rendered — these are timeless insight articles,
+    not time-stamped blog posts.
 */}}
 
 
@@ -24,17 +24,14 @@
         <div class="page-breadcrumb">
             <a href="/">Home</a>
             <span>→</span>
-            <a href="/blog">Blog</a>
+            <a href="/blog">Insight</a>
             <span>→</span>
             <span>{{ .Title | truncate 40 }}</span>
         </div>
 
         <h1>{{ .Title }}</h1>
 
-        {{/* Post date and author line */}}
-        <p class="page-banner-desc">{{ .Date.Format "January 2, 2006" }}</p>
-
-        {{/* Author byline — em dash + name, right-justified below the date */}}
+        {{/* Author byline — em dash + name, right-justified. Date intentionally omitted — content is timeless. */}}
         <p class="blog-post-author">&#8212; {{ .Params.author | default .Site.Params.author }}</p>
 
     </div>
@@ -76,9 +73,9 @@
                 <a href="/contact" class="btn">Book a Free Call</a>
             </div>
 
-            {{/* Recent posts — pulls latest 5 blog posts from site */}}
+            {{/* More Insights — pulls 5 articles from the insight section */}}
             <div class="sidebar-related">
-                <h4>Recent Posts</h4>
+                <h4>More Insights</h4>
                 <ul>
                     {{/* .Site.RegularPages filtered to blog section, sorted by date, limit 5 */}}
                     {{ range first 5 (where .Site.RegularPages "Section" "blog") }}

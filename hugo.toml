@@ -79,7 +79,7 @@ title = "Integral Leadership Design"
         parent = "Corporate Development"
         weight = 33
     [[menu.main]]
-        name = "Blog"
+        name = "Insight"
         url = "/blog"
         weight = 40
     [[menu.main]]

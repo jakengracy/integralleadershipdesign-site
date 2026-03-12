@@ -205,30 +205,31 @@
 
 
 {{/* ============================================================
-     6. RECENT BLOG POSTS SECTION
+     6. INSIGHT SECTION
      Warm off-white background, three-column card grid.
-     Posts are pulled dynamically from /content/blog/ — no manual updates needed.
+     Articles are pulled dynamically from /content/blog/ — no manual updates needed.
+     Date is intentionally not displayed — content is timeless.
      
      Hugo template logic:
      - "range first 3" = loop over only the first 3 items
      - "where .Site.RegularPages 'Section' 'blog'" = filter to blog section only
-     - .Summary = auto-generated excerpt from the post content
+     - .Summary = auto-generated excerpt from the article content
      - truncate 120 = limits excerpt to 120 characters
-     - .Permalink = full URL for the post
+     - .Permalink = full URL for the article
      ============================================================ */}}
 <section class="recent-posts">
     <div class="section-inner">
 
         <div class="section-header">
-            <span class="section-label">Thought Leadership</span>
-            <h2>From the Blog</h2>
+            <span class="section-label">Insight</span>
+            <h2>From the Insight Archive</h2>
         </div>
 
         <div class="posts-grid">
             {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
             <article class="post-card">
                 <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                <p class="post-date">{{ .Date.Format "January 2, 2006" }}</p>
+                {{/* Date intentionally omitted — content is timeless */}}
                 <p>{{ .Summary | plainify | truncate 120 }}</p>
                 <a href="{{ .Permalink }}" class="read-more">Read more →</a>
             </article>
