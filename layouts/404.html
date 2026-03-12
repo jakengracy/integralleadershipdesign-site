@@ -1,0 +1,76 @@
+{{/*
+    404.html — Page not found template.
+
+    Hugo automatically uses this layout when a visitor requests a URL that
+    doesn't exist. Cloudflare Pages will serve this with a proper HTTP 404
+    status code, which tells search engines the page is gone and should be
+    removed from their index.
+
+    This layout does NOT extend baseof.html — it uses the same partials
+    (header, footer) for visual consistency but keeps the structure simple.
+*/}}
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{/* Tell search engines not to index this error page */}}
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Page Not Found — {{ .Site.Title }}</title>
+
+    <meta name="description" content="The page you're looking for doesn't exist. Return to the Integral Leadership Design homepage.">
+
+    {{/* Same stylesheets as the rest of the site for visual consistency */}}
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pages.css">
+
+    {{/* Favicon */}}
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+</head>
+<body>
+
+    {{/* Reuse the standard site header so navigation still works */}}
+    {{ partial "header.html" . }}
+
+    {{/*
+        404 content block.
+        Centred, minimal — gives the visitor a clear message and a way home.
+        The .l-main class provides standard page padding (defined in pages.css).
+    */}}
+    <main class="l-main">
+        <div class="page-header" style="text-align: center; padding: 4rem 1rem;">
+
+            {{/* Large status indicator — visual anchor, not a semantic heading */}}
+            <p style="font-size: 5rem; font-weight: 700; color: var(--color-accent); margin: 0 0 1rem;">404</p>
+
+            <h1>Page Not Found</h1>
+
+            <p style="max-width: 480px; margin: 1rem auto 2rem;">
+                The page you're looking for doesn't exist or has been moved.
+                Return to the homepage or use the navigation above to find what you need.
+            </p>
+
+            {{/* Primary CTA back to homepage */}}
+            <a href="/" class="btn btn-primary">Back to Homepage</a>
+
+        </div>
+    </main>
+
+    {{/* Reuse the standard site footer */}}
+    {{ partial "footer.html" . }}
+
+    <script>
+    /*
+        Mobile nav toggle — required on every page that includes the header partial.
+    */
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    });
+    </script>
+
+</body>
+</html>
