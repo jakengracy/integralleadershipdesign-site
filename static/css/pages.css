@@ -713,8 +713,9 @@
 }
 
 /* Hide the ↩ footnote return arrow — glyph renders as garbage in some fonts */
-.blog-post-content .footnotes .footnote-backref {
-    display: none;
+.blog-post-content .footnotes .footnote-backref,
+.footnote-backref {
+    display: none !important;
 }
 
 /* Blog post author name — right-justified, appears below the date in the page banner */
