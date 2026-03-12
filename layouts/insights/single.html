@@ -1,0 +1,149 @@
+{{ define "main" }}
+{{/*
+    layouts/insights/single.html — Individual insight article page (/insights/p3-1/)
+
+    Structure:
+    1. Page banner — dark navy, title + subtitle
+    2. Two-column body — article content left, sidebar right
+    3. Related articles nav — 5 typed relationship links at article bottom
+       (populated via nav_* front matter fields; shows placeholder when empty)
+
+    Sidebar:
+    - Gold CTA box linking to /contact
+    - More Insights list (5 articles from insights section)
+
+    Navigation link types (from front matter):
+    - nav_preceding   — sets up this article's argument (within theme)
+    - nav_subsequent  — where this article leads (within theme)
+    - nav_lateral     — same theme, different angle
+    - nav_cross_series — P-series ↔ C-series counterpart
+    - nav_construct   — shares primary construct, anywhere in the archive
+
+    Each nav_* field is a list of ref strings (e.g. ["P3.2", "C3.1"]).
+    The template looks up each ref against .Site.Pages to resolve title + URL.
+    Links are only rendered when the list is non-empty.
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <a href="/insights">Insight</a>
+            <span>→</span>
+            <span>{{ .Title | truncate 40 }}</span>
+        </div>
+
+        <h1>{{ .Title }}</h1>
+
+        {{/* Subtitle — rendered when present */}}
+        {{ with .Params.subtitle }}
+        <p class="page-banner-desc">{{ . }}</p>
+        {{ end }}
+
+        {{/* Author byline intentionally omitted from insights banner */}}
+
+    </div>
+</div>
+
+
+{{/* ── TWO-COLUMN BODY ─────────────────────────────────────── */}}
+<section class="service-page">
+    <div class="service-page-inner">
+
+        {{/* LEFT: Article content */}}
+        <article class="service-content blog-post-content">
+
+            {{ .Content }}
+
+            {{/* ── RELATED ARTICLES ─────────────────────────────────── */}}
+            {{/*
+                Build a lookup map of ref → page across the entire insights section.
+                We use this to resolve each nav_* ref string to a real page title + URL.
+            */}}
+            {{ $allInsights := where .Site.RegularPages "Section" "insights" }}
+            {{ $refMap := dict }}
+            {{ range $allInsights }}
+                {{ $refMap = merge $refMap (dict (.Params.ref) .) }}
+            {{ end }}
+
+            {{/*
+                Helper: given a slice of ref strings and a label, render a nav group.
+                Only rendered when the slice is non-empty.
+            */}}
+            {{ $navData := slice
+                (dict "key" "nav_preceding"   "label" "Preceding"    "refs" .Params.nav_preceding)
+                (dict "key" "nav_subsequent"  "label" "Subsequent"   "refs" .Params.nav_subsequent)
+                (dict "key" "nav_lateral"     "label" "Lateral"      "refs" .Params.nav_lateral)
+                (dict "key" "nav_cross_series" "label" "Cross-Series" "refs" .Params.nav_cross_series)
+                (dict "key" "nav_construct"   "label" "Construct"    "refs" .Params.nav_construct)
+            }}
+
+            {{/* Count how many nav groups have at least one ref */}}
+            {{ $hasLinks := false }}
+            {{ range $navData }}
+                {{ if .refs }}{{ $hasLinks = true }}{{ end }}
+            {{ end }}
+
+            <div class="insight-related">
+                <h3 class="insight-related-heading">Related Articles</h3>
+
+                {{ if $hasLinks }}
+
+                    {{ range $navData }}
+                        {{ if .refs }}
+                        <div class="insight-related-group">
+                            <span class="insight-related-type">{{ .label }}</span>
+                            <ul class="insight-related-list">
+                                {{ range .refs }}
+                                    {{ $page := index $refMap . }}
+                                    {{ if $page }}
+                                    <li>
+                                        <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+                                    </li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                    {{ end }}
+
+                {{ else }}
+
+                    {{/* Placeholder shown while nav_* fields are being populated */}}
+                    <p class="insight-related-placeholder">More articles coming.</p>
+
+                {{ end }}
+            </div>
+
+        </article>
+
+        {{/* RIGHT: Sidebar */}}
+        <aside class="service-sidebar">
+
+            <div class="sidebar-cta">
+                <h3>Work With Alexandra</h3>
+                <p>Book a free 30-minute discovery call.</p>
+                <a href="/contact" class="btn">Book a Free Call</a>
+            </div>
+
+            {{/* More Insights — 5 articles from insights section, alphabetical */}}
+            <div class="sidebar-related">
+                <h4>More Insights</h4>
+                <ul>
+                    {{ range first 5 (.Site.RegularPages.ByTitle) }}
+                        {{ if eq .Section "insights" }}
+                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+</section>
+
+{{ end }}

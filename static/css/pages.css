@@ -673,6 +673,43 @@
     font-size: 1.4rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
+    font-family: var(--font-heading, 'Bodoni Moda', Georgia, serif);
+}
+
+/* Bold paragraph subheadings within insight/blog article content.
+   Standalone subheads (entire paragraph is **text**) get size treatment.
+   Inline bold within a sentence is unaffected — no inline bold exists
+   in the articles after the strip pass, but the selector is safe regardless. */
+.blog-post-content strong {
+    font-family: var(--font-heading, 'Bodoni Moda', Georgia, serif);
+}
+.blog-post-content p > strong:only-child {
+    font-size: 1.25rem;     /* Larger than body text — visually distinct subhead */
+    display: block;         /* Own line, like a heading */
+    line-height: 1.4;
+}
+
+/* Hide hr elements in article body — footnote section has its own border */
+.blog-post-content hr {
+    display: none;
+}
+
+/* Footnotes — smaller type, muted colour, tight leading */
+.blog-post-content .footnotes {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    line-height: 1.6;
+}
+
+.blog-post-content .footnotes ol {
+    padding-left: 1.25rem;
+}
+
+.blog-post-content .footnotes li {
+    margin-bottom: 0.5rem;
 }
 
 /* Blog post author name — right-justified, appears below the date in the page banner */
@@ -683,4 +720,77 @@
     color: var(--color-accent);
     margin-top: 0.25rem;
     margin-bottom: 0;
+}
+
+
+/* ── Insights section ──────────────────────────────────────────────────────── */
+
+/* Subtitle line on insight archive cards */
+.blog-card-subtitle {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    font-style: italic;
+    margin-top: -0.25rem;   /* pull up close under the title */
+    margin-bottom: 0.5rem;
+}
+
+/* Related articles block at the bottom of each insight article */
+.insight-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    /* No border — footnotes section above already provides the rule */
+}
+
+.insight-related-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Each relationship type group (Preceding, Subsequent, etc.) */
+.insight-related-group {
+    margin-bottom: 1rem;
+}
+
+/* The relationship type label (e.g. "Preceding", "Cross-Series") */
+.insight-related-type {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: 0.35rem;
+}
+
+/* The list of linked articles within a group */
+.insight-related-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.insight-related-list li {
+    margin-bottom: 0.25rem;
+}
+
+.insight-related-list a {
+    color: var(--color-navy);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.insight-related-list a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Placeholder text shown while nav links are being populated */
+.insight-related-placeholder {
+    color: var(--color-muted);
+    font-style: italic;
+    font-size: 0.95rem;
 }

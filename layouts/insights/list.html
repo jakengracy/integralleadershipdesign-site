@@ -1,0 +1,63 @@
+{{ define "main" }}
+{{/*
+    layouts/insights/list.html — Insight archive listing page (/insights/)
+
+    Structure:
+    1. Page banner — dark navy
+    2. Article card grid — reuses blog-listing CSS classes
+
+    Sorted alphabetically by title.
+    All articles start as draft: true — publish individually by flipping to false.
+    Subtitle is displayed beneath the title when present in front matter.
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <span>Insight</span>
+        </div>
+        <h1>Insight</h1>
+        <p class="page-banner-desc">Perspectives on leadership, change, and organisational transformation</p>
+    </div>
+</div>
+
+
+{{/* ── ARTICLE GRID ─────────────────────────────────────────── */}}
+<section class="blog-listing">
+    <div class="blog-listing-inner">
+
+        {{ range .Pages.ByTitle }}
+        <article class="blog-card">
+
+            <div class="blog-card-body">
+
+                {{/* Title — links to full article */}}
+                <h2 class="blog-card-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h2>
+
+                {{/* Subtitle — rendered when present in front matter */}}
+                {{ with .Params.subtitle }}
+                <p class="blog-card-subtitle">{{ . }}</p>
+                {{ end }}
+
+                {{/* Auto-generated excerpt, truncated for card uniformity */}}
+                <p class="blog-card-excerpt">{{ .Summary | plainify | truncate 160 }}</p>
+
+            </div>
+
+            <div class="blog-card-footer">
+                <a href="{{ .RelPermalink }}" class="blog-card-link">Read More →</a>
+            </div>
+
+        </article>
+        {{ end }}
+
+    </div>
+</section>
+
+{{ end }}
