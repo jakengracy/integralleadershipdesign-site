@@ -509,10 +509,10 @@ p { margin-bottom: 1rem; }
     transition: box-shadow 0.2s;
 }
 .post-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
-.post-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.post-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
 .post-card h3 a { color: var(--color-dark); }
 .post-card h3 a:hover { color: var(--color-accent); }
-.post-date { font-size: 0.8rem; color: var(--color-muted); margin-bottom: 0.75rem; }
+.post-date { font-size: 0.8rem; color: var(--color-muted); margin-bottom: 0.75rem; text-align: right; }
 .post-card p { font-size: 0.9rem; color: var(--color-muted); }
 
 
