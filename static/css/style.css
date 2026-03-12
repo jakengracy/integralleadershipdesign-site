@@ -481,7 +481,7 @@ p { margin-bottom: 1rem; }
 
 /* padding-top pushes the text below the large decorative quote mark */
 .testimonial-text { font-size: 0.95rem; color: var(--color-muted); line-height: 1.8; margin-bottom: 1.25rem; padding-top: 1.5rem; }
-.testimonial-author { font-weight: 700; font-size: 0.875rem; color: var(--color-dark); }
+.testimonial-author { font-weight: 700; font-size: 0.875rem; color: var(--color-dark); text-align: right; }
 
 
 /* ------------------------------------------------------------
