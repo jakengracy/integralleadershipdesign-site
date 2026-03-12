@@ -34,6 +34,9 @@ title = "Integral Leadership Design"
     [markup.goldmark]
         [markup.goldmark.renderer]
             unsafe = true
+        [markup.goldmark.parser]
+            # Prevents parser errors on long footnote-heavy articles
+            wrapStandAloneImageWithinParagraph = false
 
 [menu]
     [[menu.main]]
