@@ -55,7 +55,7 @@
                     or content up to a <!--more--> divider if one exists in the post.
                     We truncate to keep cards uniform height.
                 */}}
-                <p class="blog-card-excerpt">{{ .Summary | truncate 160 }}</p>
+                <p class="blog-card-excerpt">{{ .Summary | plainify | truncate 160 }}</p>
 
             </div>
 
