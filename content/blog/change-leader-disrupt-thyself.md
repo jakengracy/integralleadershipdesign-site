@@ -16,7 +16,7 @@ Three very smart men who disrupted the prevailing mindsets in their time were Ch
 
 According to Wired magazine, many have likened disruption to digital Darwinism an era in which technology and society evolve faster than organizations and people adapt. Inspired by Darwin is the following quote:
 
-It is not the strongest species that survives, but the one that is best able to adapt to the changing environment.
+> It is not the strongest species that survives, but the one that is best able to adapt to the changing environment.
 
 Darwin’s theories about the natural world tell us that it is not about bigger, stronger or more intelligent, rather for organizations to survive, they need to be continuously adaptive to changing and emerging environments.
 
@@ -26,7 +26,7 @@ I invite you to think about how becoming more adaptive to what is coming around 
 
 Albert Einstein was a physicist who among other things developed the theory of relativity. In 1921 he received the Nobel Prize in Physics. Responding to the birth of the nuclear age Einstein noted:
 
-### We have to learn to think in a new way. Applying methods from an earlier age is insufficient. We must have the courage and leadership to revolutionize our thinking and our actions.
+> We have to learn to think in a new way. Applying methods from an earlier age is insufficient. We must have the courage and leadership to revolutionize our thinking and our actions.
 
 Einstein is calling on us to think and act in different ways because things are “out-of-the-box” different. He is saying that our current paradigms of how to think and how to do things are no longer serving us well. Out-of-the-box thinking and action is the need de jour. Einstein is asking us to be revolutionary change leaders by thinking and venturing out into new territory in untried ways. Someone said the definition of insanity is doing the same thing over and over again and expecting a different result.
 
@@ -36,7 +36,7 @@ Think about where your personal revolutionary edges are in the way you understan
 
 Alvin Toffler, a social scientist and futurist, is known for discussing the impact of the digital revolution on people and society. He is best known for his book Future Shock, published in 1970. Forty-seven years ago he inspired the following quote:
 
-### The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.
+> The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.
 
 Toffler is telling us that we need to be agile learners. Change leaders need to become more agile to continuous cycles of learning and the quick application of that new learning. This means a cycle of letting go of the old and applying the new. We need to do this for ourselves first so that we can support others in doing the same.
 
@@ -44,7 +44,7 @@ Think about ways that you can improve your own ability to learn, unlearn and rel
 
 As change leaders, we support and lead others in moving towards and not away from disruption. The most important task for leaders in the face of disruption is mobilizing people in their organizations to be transformation-ready. That needs to start with disrupting ourselves.
 
-### Be adaptive, be revolutionary and be an agile learner.
+**Be adaptive, be revolutionary and be an agile learner.**
 
 If we become those three things, it looks like we will be in good company!
 

@@ -22,7 +22,7 @@ Provides the basis for making the right decisions and taking the right actions.
 
 Essentially, it is what's below the water line that drives your organization's success or failure.
 
-### In a Deloitte Consulting study, 98% of executives and 88% of employees believe workplace culture is important to success. Organizations, with a strong culture, outperform organizations with weak cultures.
+> In a Deloitte Consulting study, 98% of executives and 88% of employees believe workplace culture is important to success. Organizations with a strong culture outperform organizations with weak cultures.
 
 ### What's Your Culture?
 
@@ -58,7 +58,7 @@ Inquire and seek to understand, don't blame.
 
 When decisions are made, when gaps in services are identified, and in building productive relationships, your people can return to these rules for guidance.
 
-###  Imagine how the power of Simple Rules could transform your organization.
+> Imagine how the power of Simple Rules could transform your organization.
 
 Interested in learning more about embedding Simple Rules in your team and organization? Get Started Today.
 

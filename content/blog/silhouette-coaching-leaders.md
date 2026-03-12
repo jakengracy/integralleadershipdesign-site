@@ -10,7 +10,7 @@ We all have a few blind spots. Few leaders are fortunate to get feedback from th
 
 Executives tend to be most susceptible to their unknown blind spots because employees may be fearful about telling them the truth about the impact of their behaviour. In fact, employees will shape their opinion of a leader and how much they will trust their leader based on the leader's behaviour – because that is all they have to go on! Sometimes, if these blind spots continue to go unchecked they can erode the very things (like trust) that the leader is trying to build. This is where Silhouette Coaching (a.k.a. Shadow Coaching) can come into play. Silhouette Coaching acts as a clear, authentic and compassionate reality check for a leader with both strengths and challenges being illuminated. It can work with individuals and teams. This type of coaching works particularly well where re-building leadership and team communications and confidence are vital.
 
-### The higher you go up in your organization the more difficult it is to get the kind of feedback you need to keep learning and growing.
+> The higher you go up in your organization the more difficult it is to get the kind of feedback you need to keep learning and growing.
 
 ### How it Works
 

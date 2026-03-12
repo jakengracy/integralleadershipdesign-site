@@ -4,7 +4,7 @@ date: 2019-01-01
 draft: false
 ---
 
-### Leadership accountability is integral for success.
+Leadership accountability is integral for success.
 
 A number of years ago I was involved in an organization-wide transformation project that included a total reorganization, job role changes, new processes and the introduction of new technology. Me and my change management team naively assumed that all senior leaders would be automatically on board because; they initiated the transformation project, it would add value to our customer service and save us a lot of money over time without job loss.
 

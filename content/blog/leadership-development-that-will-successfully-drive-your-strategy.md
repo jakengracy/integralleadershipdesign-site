@@ -21,7 +21,7 @@ As a leader and as a team of leaders you need to do more than one thing well. Wh
 
 We all want to make a difference. Plus we know that success comes when we take action. So how do we go about developing the leader within us? Maybe its time&nbsp;to set your leadership development plans in motion? According to Peter Drucker:
 
-### Management is about doing things right. Leadership is about doing the right things.
+> Management is about doing things right. Leadership is about doing the right things.
 
 Integral Leadership Design specializes in helping organizations accelerate performance. We work with individuals, teams and the organization as a whole. We help people transform from employee to leader by partnering with you to achieve success.
 

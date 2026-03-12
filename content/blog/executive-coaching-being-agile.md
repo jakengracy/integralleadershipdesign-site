@@ -6,13 +6,11 @@ draft: false
 
 ### Helping Executives Be Agile By Engaging With Uncertainty
 
-
-
-### Executives today are caught in times of unprecedented business volatility, uncertainty, complexity and ambiguity. This unprecedented turbulence we are experiencing is the product of living in a VUCA world.
+Executives today are caught in times of unprecedented business volatility, uncertainty, complexity and ambiguity. This unprecedented turbulence we are experiencing is the product of living in a VUCA world.
 
 ### What is a VUCA World?
 
-### It is a world characterized by:
+It is a world characterized by:
 
 Volatility -&nbsp;Change in the nature, speed, volume, magnitude, and dynamics of change
 
