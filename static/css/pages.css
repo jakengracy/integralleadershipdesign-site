@@ -638,6 +638,27 @@
     font-style: italic;
 }
 
+/* Blog post pull quotes — blockquote elements within article content.
+   Narrower margins indent the quote from both sides.
+   Gold left border serves as the graphic indicator that this is a quote.
+   50% black (#808080) for the text colour — subdued vs body text.
+   Italic style reinforces the pull-quote convention. */
+.blog-post-content blockquote {
+    margin: 2rem 3rem;                          /* Narrower than full column width */
+    padding: 1.25rem 1.5rem;                    /* Internal breathing room */
+    border-left: 4px solid var(--color-accent); /* Gold left bar — quote indicator */
+    background: var(--color-bg-alt);            /* Subtle warm off-white background */
+    border-radius: 0 2px 2px 0;                /* Slight rounding on right corners only */
+}
+
+.blog-post-content blockquote p {
+    color: #808080;          /* 50% black */
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;               /* Remove default paragraph margin inside the quote */
+}
+
 /* Blog post body — larger h3 subheadings within article content */
 .blog-post-content h3 {
     font-size: 1.65rem;
