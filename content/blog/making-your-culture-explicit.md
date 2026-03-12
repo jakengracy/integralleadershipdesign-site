@@ -60,6 +60,6 @@ When decisions are made, when gaps in services are identified, and in building p
 
 > Imagine how the power of Simple Rules could transform your organization.
 
-Interested in learning more about embedding Simple Rules in your team and organization? Get Started Today.
+Interested in learning more about embedding Simple Rules in your team and organization? Simple Rules work because they surface what is actually valued — but that's also what makes them difficult. [What the Organisation Actually Rewards](/insights/c7-4/) examines the gap between stated values and revealed ones, and [Culture Is a Lagging Indicator, Not a Lever](/insights/c7-3/) explores why culture change rarely works when it's treated as a program. Get Started Today.
 
 [1] Eoyang, G. (1997). *Coping with chaos: Seven simple tools.* Cheyenne, Wyoming: Lagumo Publishing.

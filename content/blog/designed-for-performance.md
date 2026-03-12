@@ -42,4 +42,6 @@ I have seen time and time again how culture can determine success or failure. Al
 
 Culture is also about creating the kind of work environment where top talent wants to be. If you need to make some real changes, I can work with you to identify and drive the culture shift needed for success. Great plans and tactics are not enough anymore. I have seen breakthrough results happen with commitment, passion, discipline, alignment, and courage. I can help you get there.
 
+The connection between culture and performance is real — but it runs through incentives more than values. [Incentives Always Win, Even When Leaders Don't Notice](/insights/c6-1/) examines why the reward structures in an organization consistently override the culture leaders believe they're building.
+
 To get started today, contact us for more details.

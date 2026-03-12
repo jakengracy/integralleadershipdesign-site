@@ -48,6 +48,8 @@ As change leaders, we support and lead others in moving towards and not away fro
 
 If we become those three things, it looks like we will be in good company!
 
+One of the more persistent patterns in transformation is that leaders who understand the need for disruption intellectually still pull back when the personal stakes get real. [Why Leaders Experience Change as Risk, Not Engagement](/insights/c1-1/) examines that dynamic structurally — and [Why Leaders Avoid Sponsorship Behaviours They Intellectually Endorse](/insights/c3-2/) gets into why good intentions don't always translate to visible leadership during change.
+
 Contact me to learn more about how to get you, your team and your organization out of the twilight zone of the discomfort zone.
 
 Alexandra Salamis

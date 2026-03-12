@@ -32,4 +32,6 @@ Supporting senior leaders to shape the desired culture.
 
 We offer the double advantage of providing coaching and consulting to assess, design and implement culture design programs that are built to increase sustainable change-enabled organizational effectiveness. We start with understanding what the current culture is, and then outline the kind of culture that is needed to make your business successful. From there we build a desired culture roadmap designed to getting your organization to where it needs to be.
 
+The harder challenge is that culture doesn't change when you redesign it — it changes when the informal rules beneath the surface shift. [Culture Doesn't Resist Change. It Selects What Survives.](/insights/c7-1/) examines why, and [Why Informal Rules Matter More Than Formal Ones](/insights/c7-2/) gets into the mechanisms that keep the old culture in place long after the redesign is complete.
+
 Want to learn more? Contact Us

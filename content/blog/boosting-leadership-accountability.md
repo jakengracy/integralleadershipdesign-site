@@ -19,6 +19,8 @@ The executive is engaged in defining its leadership role with respect to the pro
 The executive is playing an active role in leading change related to the project.
 Employees hear consistent and strong messages from leadership about the transformation and what everyone's role is in achieving success.
 
-Are you about to launch a significant change in your organization? If so, don't assume that your leadership team has what it takes to be fully aligned and committed to leading with you. Think about conducting a leadership alignment exercise so that you can pin point what is required in terms of awareness, desire and capacity to achieve and sustain the necessary level of support, leader by leader. Interested in learning more?
+Are you about to launch a significant change in your organization? If so, don't assume that your leadership team has what it takes to be fully aligned and committed to leading with you. Think about conducting a leadership alignment exercise so that you can pin point what is required in terms of awareness, desire and capacity to achieve and sustain the necessary level of support, leader by leader.
+
+If this experience resonates, the structural reasons behind it run deeper than individual commitment. [The Sponsor Role No One Prepares Leaders For](/insights/p3-1/) examines why sponsorship behaviours need to be engineered into the change architecture, not assumed. And if accountability keeps slipping despite apparent alignment, [When Everyone Is Accountable, No One Is](/insights/c5-1/) explores what that pattern usually signals at an organizational level. Interested in learning more?
 
 <span class="post-author">— Alexandra Salamis</span>
