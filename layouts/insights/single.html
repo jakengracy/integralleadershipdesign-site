@@ -8,21 +8,20 @@
     3. Related articles nav at bottom — full set, grouped by relationship type
 
     SIDEBAR NAV (sticky):
-    Shows up to 5 plain article title links — the first item from each non-empty
-    nav_* array. No relationship labels, just titles. Gives the reader an exit
-    ramp without scrolling. Overflow links appear in the full Related Articles
-    section at the bottom.
+    Shows up to 5 plain article title links — first item from each non-empty
+    nav_* array. No relationship labels. Gives the reader an exit ramp while
+    scrolling. Overflow links appear in Related Articles at the bottom.
 
     RELATED ARTICLES (bottom):
     Full expanded list, all links, grouped and labelled by relationship type.
 
     NAV REF LOOKUP:
-    nav_* fields use file slugs (e.g. "p2-1", "c1-1"). The template resolves
-    these via .File.BaseFileName. $slugMap is built here at the top level so
-    both the article section and the sidebar can access it (Hugo variable scoping).
+    nav_* fields use file slugs (e.g. "p2-1", "c1-1"). Resolved via
+    .File.BaseFileName. $slugMap built at top-level scope so both columns
+    can access it (Hugo variable scoping).
 */}}
 
-{{/* ── BUILD SLUG MAP (top-level scope — accessible by both columns) ── */}}
+{{/* ── BUILD SLUG MAP (top-level — accessible by article and sidebar) ── */}}
 {{ $allInsights := where .Site.RegularPages "Section" "insights" }}
 {{ $slugMap := dict }}
 {{ range $allInsights }}
@@ -48,7 +47,6 @@
 {{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
 <div class="page-banner">
     <div class="page-banner-inner">
-
         <div class="page-breadcrumb">
             <a href="/">Home</a>
             <span>→</span>
@@ -56,14 +54,11 @@
             <span>→</span>
             <span>{{ .Title | truncate 40 }}</span>
         </div>
-
-        {{/* Title — appends subtitle with em dash when present */}}
         {{ with .Params.subtitle }}
         <h1>{{ $.Title }} — {{ . }}</h1>
         {{ else }}
         <h1>{{ .Title }}</h1>
         {{ end }}
-
     </div>
 </div>
 
@@ -77,8 +72,7 @@
 
             {{ .Content }}
 
-            {{/* ── RELATED ARTICLES (BOTTOM — FULL SET) ────────────── */}}
-            {{/* Define all 5 relationship types with labels */}}
+            {{/* ── RELATED ARTICLES (BOTTOM — FULL SET WITH LABELS) ── */}}
             {{ $navData := slice
                 (dict "label" "Preceding"    "refs" .Params.nav_preceding)
                 (dict "label" "Subsequent"   "refs" .Params.nav_subsequent)
@@ -86,12 +80,10 @@
                 (dict "label" "Cross-Series" "refs" .Params.nav_cross_series)
                 (dict "label" "Construct"    "refs" .Params.nav_construct)
             }}
-
             {{ $hasLinks := false }}
             {{ range $navData }}
                 {{ if .refs }}{{ $hasLinks = true }}{{ end }}
             {{ end }}
-
             <div class="insight-related">
                 <h3 class="insight-related-heading">Related Articles</h3>
                 {{ if $hasLinks }}
@@ -129,11 +121,10 @@
             {{/*
                 Related Reading — first article from each non-empty nav_* array.
                 Plain title links only, no relationship labels.
-                $sidebarLinks and $slugMap are both defined at top-level scope
-                so they're accessible here.
+                Uses .insights-sidebar-related for larger heading than base sidebar.
             */}}
             {{ if $sidebarLinks }}
-            <div class="sidebar-related">
+            <div class="sidebar-related insights-sidebar-related">
                 <h4>Related Reading</h4>
                 <ul>
                     {{ range $sidebarLinks }}
