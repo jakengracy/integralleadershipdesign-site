@@ -6,22 +6,16 @@
     1. Page banner — dark navy, title + subtitle
     2. Two-column body — article content left, sidebar right
     3. Related articles nav — 5 typed relationship links at article bottom
-       (populated via nav_* front matter fields; shows placeholder when empty)
 
-    Sidebar:
-    - Gold CTA box linking to /contact
-    - More Insights list (5 articles from insights section)
+    NAV REF LOOKUP:
+    nav_* fields in front matter use file slugs (e.g. "p2-1", "c1-1").
+    The template resolves these by matching against each page's .File.BaseFileName,
+    which is the filename without extension — this matches the slug format exactly.
 
-    Navigation link types (from front matter):
-    - nav_preceding   — sets up this article's argument (within theme)
-    - nav_subsequent  — where this article leads (within theme)
-    - nav_lateral     — same theme, different angle
-    - nav_cross_series — P-series ↔ C-series counterpart
-    - nav_construct   — shares primary construct, anywhere in the archive
-
-    Each nav_* field is a list of ref strings (e.g. ["P3.2", "C3.1"]).
-    The template looks up each ref against .Site.Pages to resolve title + URL.
-    Links are only rendered when the list is non-empty.
+    SIDEBAR:
+    The "More Insights" list filters the insights section first, then takes 5.
+    The previous approach applied `first 5` before filtering by section, which
+    meant it only checked the first 5 site pages alphabetically — now fixed.
 */}}
 
 
@@ -32,7 +26,7 @@
         <div class="page-breadcrumb">
             <a href="/">Home</a>
             <span>→</span>
-            <a href="/insights">Insight</a>
+            <a href="/insights">Insights</a>
             <span>→</span>
             <span>{{ .Title | truncate 40 }}</span>
         </div>
@@ -43,8 +37,6 @@
         {{ else }}
         <h1>{{ .Title }}</h1>
         {{ end }}
-
-        {{/* Author byline intentionally omitted from insights banner */}}
 
     </div>
 </div>
@@ -61,28 +53,26 @@
 
             {{/* ── RELATED ARTICLES ─────────────────────────────────── */}}
             {{/*
-                Build a lookup map of ref → page across the entire insights section.
-                We use this to resolve each nav_* ref string to a real page title + URL.
+                Build a lookup map of slug -> page across all insights.
+                .File.BaseFileName is the filename without extension (e.g. "p2-1"),
+                which matches the slug format used in nav_* front matter fields.
             */}}
             {{ $allInsights := where .Site.RegularPages "Section" "insights" }}
-            {{ $refMap := dict }}
+            {{ $slugMap := dict }}
             {{ range $allInsights }}
-                {{ $refMap = merge $refMap (dict (.Params.ref) .) }}
+                {{ $slugMap = merge $slugMap (dict .File.BaseFileName .) }}
             {{ end }}
 
-            {{/*
-                Helper: given a slice of ref strings and a label, render a nav group.
-                Only rendered when the slice is non-empty.
-            */}}
+            {{/* Define the 5 nav relationship types and their labels */}}
             {{ $navData := slice
-                (dict "key" "nav_preceding"   "label" "Preceding"    "refs" .Params.nav_preceding)
-                (dict "key" "nav_subsequent"  "label" "Subsequent"   "refs" .Params.nav_subsequent)
-                (dict "key" "nav_lateral"     "label" "Lateral"      "refs" .Params.nav_lateral)
+                (dict "key" "nav_preceding"    "label" "Preceding"    "refs" .Params.nav_preceding)
+                (dict "key" "nav_subsequent"   "label" "Subsequent"   "refs" .Params.nav_subsequent)
+                (dict "key" "nav_lateral"      "label" "Lateral"      "refs" .Params.nav_lateral)
                 (dict "key" "nav_cross_series" "label" "Cross-Series" "refs" .Params.nav_cross_series)
-                (dict "key" "nav_construct"   "label" "Construct"    "refs" .Params.nav_construct)
+                (dict "key" "nav_construct"    "label" "Construct"    "refs" .Params.nav_construct)
             }}
 
-            {{/* Count how many nav groups have at least one ref */}}
+            {{/* Check whether any nav group has at least one ref */}}
             {{ $hasLinks := false }}
             {{ range $navData }}
                 {{ if .refs }}{{ $hasLinks = true }}{{ end }}
@@ -92,14 +82,14 @@
                 <h3 class="insight-related-heading">Related Articles</h3>
 
                 {{ if $hasLinks }}
-
                     {{ range $navData }}
                         {{ if .refs }}
                         <div class="insight-related-group">
                             <span class="insight-related-type">{{ .label }}</span>
                             <ul class="insight-related-list">
                                 {{ range .refs }}
-                                    {{ $page := index $refMap . }}
+                                    {{/* Look up the page by its file slug */}}
+                                    {{ $page := index $slugMap . }}
                                     {{ if $page }}
                                     <li>
                                         <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
@@ -110,12 +100,8 @@
                         </div>
                         {{ end }}
                     {{ end }}
-
                 {{ else }}
-
-                    {{/* Placeholder shown while nav_* fields are being populated */}}
                     <p class="insight-related-placeholder">More articles coming.</p>
-
                 {{ end }}
             </div>
 
@@ -130,14 +116,17 @@
                 <a href="/contact" class="btn">Book a Free Call</a>
             </div>
 
-            {{/* More Insights — 5 articles from insights section, alphabetical */}}
+            {{/*
+                More Insights — filter to insights section first, THEN take 5.
+                Previous approach used `first 5` before the section filter, which
+                meant only the first 5 site-wide pages were ever checked.
+            */}}
             <div class="sidebar-related">
                 <h4>More Insights</h4>
                 <ul>
-                    {{ range first 5 (.Site.RegularPages.ByTitle) }}
-                        {{ if eq .Section "insights" }}
-                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                        {{ end }}
+                    {{ $insightPages := where .Site.RegularPages "Section" "insights" }}
+                    {{ range first 5 ($insightPages.ByTitle) }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                     {{ end }}
                 </ul>
             </div>
