@@ -51,6 +51,7 @@
     /* Fonts */
     --font-serif:    'Playfair Display', Georgia, serif;  /* Headings */
     --font-sans:     'Open Sans', sans-serif;             /* Body, nav, UI */
+    --font-heading:  'Playfair Display', Georgia, serif;  /* Explicit alias used in article h3 overrides — prevents Bodoni Moda fallback bleeding into banner h1 */
 
     /* Layout */
     --max-w:         1200px;        /* Maximum content width — content stays centred on wide screens */
