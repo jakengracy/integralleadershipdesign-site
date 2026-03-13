@@ -801,17 +801,17 @@
     font-size: 0.95rem;
 }
 
-/* Insights sidebar — Related Reading heading override.
+/* Insights sidebar — Related Insights heading override.
    The base .sidebar-related h4 is intentionally small (0.8rem, uppercase)
    for the service pages context. On insight articles the heading needs
    more visual weight to match the longer, denser sidebar content. */
 .insights-sidebar-related h4 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     text-transform: none;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     font-weight: 700;
     color: var(--color-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 0.35rem;
 }
 
 /* Insights sidebar — subhead beneath "Related Insights" heading */
