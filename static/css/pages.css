@@ -806,20 +806,20 @@
    for the service pages context. On insight articles the heading needs
    more visual weight to match the longer, denser sidebar content. */
 .insights-sidebar-related h4 {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     text-transform: none;
     letter-spacing: 0.01em;
     font-weight: 700;
     color: var(--color-dark);
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Insights sidebar — subhead beneath "Related Insights" heading */
 .sidebar-related-subhead {
     font-size: 0.8rem;
     color: var(--color-muted);
-    font-style: italic;
-    margin-top: -0.5rem;
+    font-style: normal;
+    margin-top: -0.25rem;
     margin-bottom: 1rem;
     line-height: 1.4;
 }
