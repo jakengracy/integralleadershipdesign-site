@@ -24,7 +24,7 @@
         <div class="page-breadcrumb">
             <a href="/">Home</a>
             <span>→</span>
-            <a href="/blog">Insight</a>
+            <a href="/perspectives">Perspectives</a>
             <span>→</span>
             <span>{{ .Title | truncate 40 }}</span>
         </div>
@@ -75,10 +75,10 @@
 
             {{/* More Insights — pulls 5 articles from the insight section */}}
             <div class="sidebar-related">
-                <h4>More Insights</h4>
+                <h4>More Perspectives</h4>
                 <ul>
-                    {{/* .Site.RegularPages filtered to blog section, sorted by date, limit 5 */}}
-                    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+                    {{/* .Site.RegularPages filtered to perspectives section, limit 5 */}}
+                    {{ range first 5 (where .Site.RegularPages "Section" "perspectives") }}
                     <li>
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </li>
