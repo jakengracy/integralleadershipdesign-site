@@ -85,6 +85,11 @@ title = "Integral Leadership Design"
         name = "Insights"
         url = "/insights"
         weight = 40
+    # Perspectives — short-form thought leadership, separate from the Advisory Engine Insights
+    [[menu.main]]
+        name = "Perspectives"
+        url = "/perspectives"
+        weight = 45
     [[menu.main]]
         name = "About"
         url = "/about"
