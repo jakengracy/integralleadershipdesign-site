@@ -681,17 +681,13 @@
     font-family: var(--font-heading, 'Bodoni Moda', Georgia, serif);
 }
 
-/* Bold paragraph subheadings within insight/blog article content.
-   Standalone subheads (entire paragraph is **text**) get size treatment.
-   Inline bold within a sentence is unaffected — no inline bold exists
-   in the articles after the strip pass, but the selector is safe regardless. */
+/* Bold text within article body — uses heading font for visual consistency.
+   NOTE: display:block is intentionally NOT set here. Applying block display to
+   any <strong> that is the only child of a <p> caused inline bold phrases that
+   happened to be paragraph-wrapped by the Markdown parser to render as
+   freestanding subheads, breaking sentences mid-flow across multiple articles. */
 .blog-post-content strong {
     font-family: var(--font-heading, 'Bodoni Moda', Georgia, serif);
-}
-.blog-post-content p > strong:only-child {
-    font-size: 1.25rem;     /* Larger than body text — visually distinct subhead */
-    display: block;         /* Own line, like a heading */
-    line-height: 1.4;
 }
 
 /* Bulleted and numbered lists in article body — indent a quarter inch (0.25in = 24px).
