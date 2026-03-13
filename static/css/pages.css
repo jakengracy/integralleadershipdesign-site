@@ -807,6 +807,7 @@
    more visual weight to match the longer, denser sidebar content. */
 .insights-sidebar-related h4 {
     font-size: 1.35rem;
+    font-family: var(--font-serif);         /* Lock to Playfair Display — prevents bleed from Bodoni Moda on article h3s */
     text-transform: none;
     letter-spacing: 0.01em;
     font-weight: 700;
