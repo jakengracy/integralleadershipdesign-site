@@ -5,20 +5,20 @@
     Structure:
     1. Page banner — dark navy, title + subtitle
     2. Two-column body — article content left, sidebar right
-    3. Related articles nav at bottom — full set, grouped by relationship type
+    3. Additional Related Articles at bottom — full flat list, no labels
 
-    SIDEBAR NAV (sticky):
-    Shows up to 5 plain article title links — first item from each non-empty
-    nav_* array. No relationship labels. Gives the reader an exit ramp while
-    scrolling. Overflow links appear in Related Articles at the bottom.
+    SIDEBAR (sticky):
+    "Related Insights" with subhead — first article from each non-empty nav_* array.
+    Plain title links, no relationship labels.
 
-    RELATED ARTICLES (bottom):
-    Full expanded list, all links, grouped and labelled by relationship type.
+    BOTTOM SECTION:
+    "Additional Related Articles" — full flat list across all nav_* arrays,
+    deduplicated, no relationship type labels.
 
     NAV REF LOOKUP:
     nav_* fields use file slugs (e.g. "p2-1", "c1-1"). Resolved via
     .File.BaseFileName. $slugMap built at top-level scope so both columns
-    can access it (Hugo variable scoping).
+    can access it (Hugo variable scoping requires this).
 */}}
 
 {{/* ── BUILD SLUG MAP (top-level — accessible by article and sidebar) ── */}}
@@ -43,6 +43,21 @@
     {{ end }}
 {{ end }}
 
+{{/* ── BUILD FULL BOTTOM LIST (all refs, deduplicated) ── */}}
+{{ $allLinks := slice }}
+{{ range $navArrays }}
+    {{ range . }}
+        {{ $allLinks = $allLinks | append . }}
+    {{ end }}
+{{ end }}
+{{ $seen := dict }}
+{{ $dedupedLinks := slice }}
+{{ range $allLinks }}
+    {{ if not (index $seen .) }}
+        {{ $dedupedLinks = $dedupedLinks | append . }}
+        {{ $seen = merge $seen (dict . true) }}
+    {{ end }}
+{{ end }}
 
 {{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
 <div class="page-banner">
@@ -62,7 +77,6 @@
     </div>
 </div>
 
-
 {{/* ── TWO-COLUMN BODY ─────────────────────────────────────── */}}
 <section class="service-page">
     <div class="service-page-inner">
@@ -72,38 +86,18 @@
 
             {{ .Content }}
 
-            {{/* ── RELATED ARTICLES (BOTTOM — FULL SET WITH LABELS) ── */}}
-            {{ $navData := slice
-                (dict "label" "Preceding"    "refs" .Params.nav_preceding)
-                (dict "label" "Subsequent"   "refs" .Params.nav_subsequent)
-                (dict "label" "Lateral"      "refs" .Params.nav_lateral)
-                (dict "label" "Cross-Series" "refs" .Params.nav_cross_series)
-                (dict "label" "Construct"    "refs" .Params.nav_construct)
-            }}
-            {{ $hasLinks := false }}
-            {{ range $navData }}
-                {{ if .refs }}{{ $hasLinks = true }}{{ end }}
-            {{ end }}
+            {{/* ── ADDITIONAL RELATED ARTICLES (BOTTOM — FULL FLAT LIST) ── */}}
             <div class="insight-related">
-                <h3 class="insight-related-heading">Related Articles</h3>
-                {{ if $hasLinks }}
-                    {{ range $navData }}
-                        {{ if .refs }}
-                        <div class="insight-related-group">
-                            <span class="insight-related-type">{{ .label }}</span>
-                            <ul class="insight-related-list">
-                                {{ range .refs }}
-                                    {{ $page := index $slugMap . }}
-                                    {{ if $page }}
-                                    <li><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></li>
-                                    {{ end }}
-                                {{ end }}
-                            </ul>
-                        </div>
+                {{ if $dedupedLinks }}
+                    <h3 class="insight-related-heading">Additional Related Articles</h3>
+                    <ul class="insight-related-list">
+                        {{ range $dedupedLinks }}
+                            {{ $page := index $slugMap . }}
+                            {{ if $page }}
+                            <li><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></li>
+                            {{ end }}
                         {{ end }}
-                    {{ end }}
-                {{ else }}
-                    <p class="insight-related-placeholder">More articles coming.</p>
+                    </ul>
                 {{ end }}
             </div>
 
@@ -119,13 +113,14 @@
             </div>
 
             {{/*
-                Related Reading — first article from each non-empty nav_* array.
-                Plain title links only, no relationship labels.
-                Uses .insights-sidebar-related for larger heading than base sidebar.
+                Related Insights — first article from each non-empty nav_* array.
+                Plain title links, no relationship labels.
+                Subhead explains purpose to the reader.
             */}}
             {{ if $sidebarLinks }}
             <div class="sidebar-related insights-sidebar-related">
-                <h4>Related Reading</h4>
+                <h4>Related Insights</h4>
+                <p class="sidebar-related-subhead">Further reading on the ideas in this article</p>
                 <ul>
                     {{ range $sidebarLinks }}
                         {{ $page := index $slugMap . }}
