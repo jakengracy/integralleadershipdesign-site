@@ -7,14 +7,12 @@
     
     Structure:
     - Change Management (direct link)
-    - Leadership Coaching ▾ (dropdown: Women's Program, Individual Coaching, Single Session)
-    - Corporate ▾ (dropdown: Women's Leadership, Corporate Leadership, Team Coaching)
-    - Insight (direct link)
-    - About ▾ (dropdown: Meet Alexandra, Testimonials, Contact)
-    - Book a Call (gold CTA button, links to /contact)
-    
-    Dropdown anchor links (#womens, #individual etc.) assume the target service
-    pages will have matching id="" attributes on their sections.
+    - Leadership Coaching (dropdown: Women's Program, Individual Coaching, Single Session)
+    - Corporate (dropdown: Women's Leadership, Corporate Leadership, Team Coaching)
+    - Insights (direct link — Advisory Engine articles)
+    - Perspectives (direct link — short-form thought leadership)
+    - About (dropdown: Meet Alexandra, Testimonials, Contact)
+    - Book a Call (gold CTA button)
     
     To add or remove nav items, edit this file directly.
     To change dropdown behaviour (hover vs click), update style.css nav section.
@@ -44,8 +42,11 @@
         </ul>
     </li>
 
-    {{/* Direct link — no dropdown */}}
-    <li><a href="/blog" class="nav-link">Insight</a></li>
+    {{/* Insights — Advisory Engine long-form articles */}}
+    <li><a href="/insights" class="nav-link">Insights</a></li>
+
+    {{/* Perspectives — short-form thought leadership, separate from Insights */}}
+    <li><a href="/perspectives" class="nav-link">Perspectives</a></li>
 
     {{/* About with dropdown — Testimonials and Contact live here rather than top-level
          to keep the nav uncluttered. A dedicated /testimonials page still exists. */}}
