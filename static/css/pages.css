@@ -690,6 +690,20 @@
     line-height: 1.4;
 }
 
+/* Bulleted and numbered lists in article body — indent a quarter inch (0.25in = 24px).
+   Scoped to .blog-post-content so sidebar, nav, and footer lists are unaffected. */
+.blog-post-content ul,
+.blog-post-content ol {
+    padding-left: 1.5rem;   /* ~24px — approximately 0.25in at default font size */
+    margin-bottom: 1.25rem;
+}
+
+.blog-post-content ul li,
+.blog-post-content ol li {
+    margin-bottom: 0.4rem;
+    line-height: 1.75;
+}
+
 /* Hide hr elements in article body — footnote section has its own border */
 .blog-post-content hr {
     display: none;
