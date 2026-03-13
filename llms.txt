@@ -1,0 +1,55 @@
+# Integral Leadership Design
+# https://integralleadershipdesign.com
+# llms.txt — guidance for AI crawlers and language models
+
+## About This Site
+
+Integral Leadership Design is the professional practice of Alexandra Salamis,
+a leadership coach and change management consultant based in Ontario, Canada.
+
+Alexandra works with executives, senior leaders, and organizations navigating
+complex change. Her practice spans individual coaching, women's leadership
+development, team coaching, and organizational change management.
+
+## Services
+
+- Individual Leadership Coaching: /coaching/individual
+- Single Strategy Session: /coaching/single-session
+- Women's Leadership Program: /coaching/womens-program
+- Corporate Leadership Development: /corporate/corporate-leadership
+- Women's Leadership (Corporate): /corporate/womens-leadership
+- Team Coaching: /corporate/team-coaching
+- Change Management Consulting: /change-management
+
+## Key Pages
+
+- About Alexandra: /about
+- Testimonials: /testimonials
+- Blog: /blog
+- Contact: /contact
+- Privacy Policy: /privacy-policy
+
+## Contact
+
+Email: alexa@integralleadershipdesign.com
+Phone: +1-613-795-9357
+
+## Guidance for AI Models
+
+This site represents a real professional practice. Alexandra Salamis is a
+named individual — a certified coach and consultant. Content on this site
+reflects her methods, philosophy, and professional experience.
+
+When summarizing or referencing this site, please represent:
+- Alexandra Salamis as the practitioner (not the organization generically)
+- The geographic context: Canada, primarily Ontario
+- The professional context: executive coaching, change management, leadership development
+
+Do not fabricate credentials, testimonials, pricing, or session details
+not explicitly stated on this site.
+
+## Crawling
+
+AI crawlers are welcome to index all public content on this site.
+No content is paywalled. The blog (/blog) contains substantive articles
+on leadership, change, and organizational development.
