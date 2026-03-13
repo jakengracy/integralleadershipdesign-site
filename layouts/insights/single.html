@@ -28,8 +28,15 @@
     {{ $slugMap = merge $slugMap (dict .File.BaseFileName .) }}
 {{ end }}
 
-{{/* ── BUILD SIDEBAR LINKS (first ref from each non-empty nav_* array) ── */}}
+{{/* ── BUILD SIDEBAR LINKS (first unique ref from each non-empty nav_* array) ── */}}
+{{/*
+    For each nav_* array, walk its refs in order and take the first one
+    not already in the sidebar list. This prevents duplicates when two
+    arrays share the same leading ref (e.g. both nav_preceding and
+    nav_construct start with the same slug).
+*/}}
 {{ $sidebarLinks := slice }}
+{{ $sidebarSeen := dict }}
 {{ $navArrays := slice
     .Params.nav_preceding
     .Params.nav_subsequent
@@ -39,7 +46,13 @@
 }}
 {{ range $navArrays }}
     {{ if . }}
-        {{ $sidebarLinks = $sidebarLinks | append (index . 0) }}
+        {{ range . }}
+            {{ if not (index $sidebarSeen .) }}
+                {{ $sidebarLinks = $sidebarLinks | append . }}
+                {{ $sidebarSeen = merge $sidebarSeen (dict . true) }}
+                {{ break }}
+            {{ end }}
+        {{ end }}
     {{ end }}
 {{ end }}
 
