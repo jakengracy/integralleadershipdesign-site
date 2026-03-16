@@ -899,3 +899,69 @@
     line-height: 1.6;
     padding-left: 0.5rem;
 }
+
+
+/* ------------------------------------------------------------
+   ARTICLE BYLINE
+   Appears beneath the page banner on all Advisory Engine articles.
+   Provides visible author attribution for readers and crawlers.
+   Dark navy background carries on from the banner.
+   ------------------------------------------------------------ */
+.article-byline {
+    background: var(--color-dark);         /* Extends the dark banner downward */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Subtle separator from banner */
+    padding: 0.75rem 1.5rem;
+}
+
+.article-byline-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Author name + credentials */
+.article-byline-author {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.article-byline-author a {
+    color: var(--color-accent);            /* Gold — matches other accent links */
+    font-weight: 700;
+}
+.article-byline-author a:hover {
+    color: #fff;
+}
+
+/* Credentials suffix — slightly muted, same line as name */
+.article-byline-credentials {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* Article ref code — right-aligned, muted */
+.article-byline-ref {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    /* Stack byline items on phones */
+    .article-byline-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}

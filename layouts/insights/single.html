@@ -95,6 +95,24 @@
     </div>
 </div>
 
+{{/* ── ARTICLE BYLINE ──────────────────────────────────────── */}}
+{{/*
+    Visible author attribution beneath the page banner.
+    Reinforces Alexandra as the named author for both readers and crawlers.
+    Ref code pulled from front matter .Params.ref (e.g. "C1.1", "P3.2").
+*/}}
+<div class="article-byline">
+    <div class="article-byline-inner">
+        <span class="article-byline-author">
+            By <a href="/about">Alexandra Salamis</a>
+            <span class="article-byline-credentials">M.A., M.S.W., ICF, EMCC, CEC, CCMP</span>
+        </span>
+        {{ with .Params.ref }}
+        <span class="article-byline-ref">Article {{ . }}</span>
+        {{ end }}
+    </div>
+</div>
+
 {{/* ── TWO-COLUMN BODY ─────────────────────────────────────── */}}
 <section class="service-page">
     <div class="service-page-inner">
