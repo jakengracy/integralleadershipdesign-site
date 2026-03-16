@@ -44,6 +44,6 @@ Participants consistently describe this program as more than professional develo
 
 ## Format
 
-The program is delivered via video conference and designed to be accessible regardless of your location or schedule. Alexandra works with participants individually and, where applicable, in small cohort settings that build peer connection alongside personal growth.
+The program is delivered via video conference and designed to be accessible regardless of your location or schedule. Alexandra is based in Ottawa, Ontario and works with women leaders across Canada individually and, where applicable, in small cohort settings that build peer connection alongside personal growth.
 
 Reach out to discuss what format and timeline work best for your situation.

@@ -8,7 +8,7 @@ draft: false
 
 Leadership doesn't develop on its own. Without deliberate investment, capable individual contributors become overwhelmed managers, and well-intentioned executives lead through instinct rather than skill. The gap between potential and performance is almost always a development gap.
 
-Integral Leadership Design's Corporate Leadership Development Program closes that gap — systematically, at scale, and in a way that produces lasting change rather than a temporary lift.
+Integral Leadership Design's Corporate Leadership Development Program closes that gap — systematically, at scale, and in a way that produces lasting change rather than a temporary lift. Based in Ottawa, Ontario, we design and deliver programs for organizations across Canada.
 
 ## Who This Is For
 

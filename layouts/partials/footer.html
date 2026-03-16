@@ -30,8 +30,9 @@
                 </a>
             </div>
 
-            {{/* Tagline, email, and phone pulled from hugo.toml [params] */}}
+            {{/* Tagline, location, email, and phone pulled from hugo.toml [params] */}}
             <p>{{ .Site.Params.tagline }}<br>
+            Ottawa, Ontario, Canada<br>
             {{ if .Site.Params.email }}<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>{{ end }}<br>
             {{ if .Site.Params.phone }}<a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>{{ end }}</p>
         </div>
@@ -43,7 +44,7 @@
                 <li><a href="/coaching">Leadership Coaching</a></li>
                 <li><a href="/change-management">Change Management</a></li>
                 <li><a href="/corporate">Corporate Development</a></li>
-                <li><a href="/coaching#women">Women's Leadership</a></li>
+                <li><a href="/coaching/womens-program">Women's Leadership</a></li>
             </ul>
         </div>
 
@@ -52,7 +53,8 @@
             <h4>Company</h4>
             <ul>
                 <li><a href="/about">About Alexandra</a></li>
-                <li><a href="/blog">Insight</a></li>
+                <li><a href="/insights">Insights</a></li>
+                <li><a href="/perspectives">Perspectives</a></li>
                 <li><a href="/testimonials">Testimonials</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/privacy-policy">Privacy Policy</a></li>

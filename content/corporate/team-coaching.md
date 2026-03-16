@@ -10,7 +10,7 @@ A leadership team is not just a collection of capable individuals. It is a syste
 
 Team coaching addresses the team as a whole. It works on the dynamics that either enable or undermine collective performance — and it does so in the context of the real work the team is doing, not in a workshop simulation disconnected from what actually matters.
 
-Alexandra's team coaching work was featured in Forbes, where her engagement with a senior leadership team demonstrated how targeted, sustained coaching produced measurable shifts in collaboration, accountability, and organizational culture.
+Alexandra's team coaching work was featured in Forbes, where her engagement with a senior leadership team demonstrated how targeted, sustained coaching produced measurable shifts in collaboration, accountability, and organizational culture. Based in Ottawa, Ontario, she works with executive and leadership teams across Canada.
 
 ## When Teams Need Coaching
 

@@ -8,7 +8,7 @@ draft: false
 
 In today's rapidly evolving business landscape, change is not an occasional disruption — it's a constant. Organizations that thrive are the ones that engage their people as active participants in change, rather than treating it as something to be managed at them.
 
-At Integral Leadership Design, we focus on the human side of organizational transformation. Not just addressing issues or adapting to market trends, but instilling new direction across the organization, cultivating different ways of working, and ensuring that change actually takes hold.
+At Integral Leadership Design, we focus on the human side of organizational transformation. Based in Ottawa, Ontario and working with organizations across Canada, we don't just address issues or adapt to market trends — we instil new direction across the organization, cultivate different ways of working, and ensure that change actually takes hold.
 
 ## Engage Your People
 
