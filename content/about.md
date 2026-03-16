@@ -41,11 +41,11 @@ Alexandra is particularly committed to developing women leaders. Her signature p
 
 She has worked with hundreds of women navigating the particular challenges of leadership in environments that weren't designed with them in mind. Her Governor General nomination reflects the depth of that commitment — this is not peripheral to her practice. It is central to it.
 
-## The Advisory Engine
+## The ILD Organisational Transformation Framework
 
-Alexandra is the author of the ILD Advisory Engine — a structured knowledge base of 66 in-depth, cited articles on leadership and organizational change. Organized into a C-Series (change management) and P-Series (leadership presence), the Engine represents a systematic articulation of the frameworks, research, and practical insight that underpin her work.
+Alexandra is the author of the ILD Organisational Transformation Framework — a structured body of 66 in-depth, cited articles on organisational change. Organised into a C-Series for executives and organisational leaders, and a P-Series for change practitioners and consultants, the Framework represents a systematic articulation of the constructs, research, and practical insight that underpin her work with clients.
 
-[Explore the Advisory Engine →](/insights/)
+[Explore the Framework →](/insights/)
 
 ## Recognition
 
