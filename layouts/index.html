@@ -1,95 +1,70 @@
 {{ define "main" }}
 {{/*
     index.html — Homepage layout template.
-    
-    This file defines the content of the homepage only.
-    It fills the {{ block "main" }} slot defined in baseof.html.
-    
+
     Section order:
-    1.  Hero — full-width banner with background photo and headline
-    2.  Services — four service cards on white background
-    3.  Approach — dark section with Enquire/Engage/Innovate/Impact pillars
-    4.  About — Alexandra's bio with photo
-    5.  Testimonials — three client quotes
-    6.  Recent Blog Posts — latest 3 posts pulled from /content/blog/
-    7.  CTA Band — gold strip with contact prompt
-    
-    Hugo template notes:
-    - {{ range first 3 (where .Site.RegularPages "Section" "blog") }} pulls the
-      three most recent blog posts automatically — no manual updates needed.
-    - .Summary gives the auto-generated excerpt; truncate 120 limits its length.
-    - .Permalink generates the correct URL for each post.
+    1. Hero
+    2. Services
+    3. Approach
+    4. About
+    5. Testimonials
+    6. Recent Insights (pulls from /insights/)
+    7. CTA Band
 */}}
 
 
 {{/* ============================================================
-     1. HERO SECTION
-     Background image is set in CSS (.hero-bg) pointing to /img/hero.jpg
-     Text box sits on the left; photo is visible on the right.
+     1. HERO
+     Background image set in CSS (.hero-bg → /img/hero.jpg)
+     Text box left-aligned; Alexandra visible on the right.
      ============================================================ */}}
 <section class="hero">
-
-    {{/* Background image layer — opacity and positioning handled in CSS */}}
     <div class="hero-bg"></div>
-
-    {{/* Content layer — sits above the background image via z-index */}}
     <div class="hero-content">
         <div class="hero-text">
-
-            {{/* Small gold label above the main headline */}}
-            <span class="section-label">Leadership &amp; Change Management</span>
-
-            <h1>Develop Your Talent and Realize Your Potential</h1>
-
-            {{/* Brand tagline — styled gold and uppercase via CSS */}}
+            <span class="section-label">Leadership Coaching &amp; Change Management</span>
+            <h1>Lead with Clarity. Change with Confidence.</h1>
             <p class="hero-tagline">People Focused. Growth Oriented. Results Driven.</p>
-
-            <p class="hero-description">Alexandra Salamis and her team help leaders, teams, and organizations unlock their true potential through coaching, consulting, and change leadership.</p>
-
-            {{/* Primary CTA button — links to contact/booking page */}}
-            <a href="/contact" class="btn btn-primary">Get a Free 30-Minute Consultation</a>
-
+            <p class="hero-description">Alexandra Salamis works with executives, senior leaders, and organizations across Canada to close the gap between where they are and where they're capable of going.</p>
+            <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
         </div>
     </div>
 </section>
 
 
 {{/* ============================================================
-     2. SERVICES SECTION
-     Four service cards in a responsive grid.
-     Card layout collapses from 4 → 2 → 1 columns at smaller screen widths.
+     2. SERVICES
+     Four cards. Women's Leadership links to actual subpage.
      ============================================================ */}}
 <section class="services">
     <div class="section-inner">
-
         <div class="section-header">
             <span class="section-label">What We Do</span>
-            <h2>Our Services</h2>
+            <h2>How We Work With You</h2>
         </div>
-
         <div class="services-grid">
 
             <div class="service-card">
                 <h3>Leadership Coaching</h3>
-                <p>Individual and team coaching programs designed to unlock leadership potential and drive meaningful growth.</p>
+                <p>One-on-one coaching for executives and managers ready to lead at their full potential — with greater clarity, confidence, and impact.</p>
                 <a href="/coaching" class="read-more">Learn more →</a>
             </div>
 
             <div class="service-card">
                 <h3>Change Management</h3>
-                <p>Strategic guidance for navigating organizational change with confidence, clarity, and lasting results.</p>
+                <p>Strategic consulting for organizations navigating complex change — from building the case to embedding lasting results.</p>
                 <a href="/change-management" class="read-more">Learn more →</a>
             </div>
 
             <div class="service-card">
                 <h3>Women's Leadership</h3>
-                <p>Specialized programs to leverage untapped female talent and develop the next generation of women leaders.</p>
-                <a href="/coaching#women" class="read-more">Learn more →</a>
+                <p>Alexandra's signature program — Purpose, Passion, and Presence for Women Rising — helps women lead authentically, powerfully, and on their own terms.</p>
+                <a href="/coaching/womens-program" class="read-more">Learn more →</a>
             </div>
 
             <div class="service-card">
                 <h3>Corporate Development</h3>
-                <p>Comprehensive consulting for organizations who want to excel and empower their leaders to respond to change.</p>
+                <p>Leadership development programs for organizations building pipeline, strengthening team performance, and preparing leaders for what's next.</p>
                 <a href="/corporate" class="read-more">Learn more →</a>
             </div>
 
@@ -99,40 +74,36 @@
 
 
 {{/* ============================================================
-     3. APPROACH SECTION
-     Dark navy background, two-column layout.
-     Left: headline, description, and CTA button.
-     Right: 2x2 grid of the four Enquire/Engage/Innovate/Impact pillars.
+     3. APPROACH
+     Dark navy, two-column. Left: text + CTA. Right: 2x2 pillars.
      ============================================================ */}}
 <section class="approach">
     <div class="section-inner">
 
-        {{/* Left column: text and CTA */}}
         <div class="approach-text">
             <span class="section-label" style="color: var(--color-accent);">Our Approach</span>
             <h2>Enquire. Engage. Innovate. Impact.</h2>
-            <p>The key to our approach is helping you see different perspectives and take a step back to look at the bigger picture. It's about doing the right thing — working to understand your world so we can recommend and implement the right solutions, consistently.</p>
-            <p>Let's work together to cut through the noise to find the clarity needed to get the results you're looking for.</p>
+            <p>Real change doesn't come from a template. It comes from understanding what's actually happening — in an organization, in a team, in a leader — and building from there.</p>
+            <p>Alexandra works from a whole-person, whole-system perspective. That means looking beneath the surface, asking the harder questions, and designing solutions that fit the specific context of each client rather than borrowing from someone else's playbook.</p>
             <a href="/contact" class="btn btn-outline" style="margin-top: 0.5rem;">Let's Talk</a>
         </div>
 
-        {{/* Right column: four pillar boxes in a 2x2 grid */}}
         <div class="approach-pillars">
             <div class="pillar">
                 <h4>Enquire</h4>
-                <p>Deep listening and discovery to understand what's really happening.</p>
+                <p>Deep listening and honest discovery — understanding what's really happening before recommending anything.</p>
             </div>
             <div class="pillar">
                 <h4>Engage</h4>
-                <p>Collaborative partnership built on trust and mutual accountability.</p>
+                <p>A collaborative partnership built on trust, transparency, and genuine investment in your growth.</p>
             </div>
             <div class="pillar">
                 <h4>Innovate</h4>
-                <p>Fresh perspectives and out-of-the-box solutions to complex challenges.</p>
+                <p>Solutions designed for your specific context — not recycled frameworks applied to every situation.</p>
             </div>
             <div class="pillar">
                 <h4>Impact</h4>
-                <p>Measurable results that endure long after the engagement ends.</p>
+                <p>Measurable, durable results — in how you lead, how your team performs, and how your organization changes.</p>
             </div>
         </div>
 
@@ -141,26 +112,23 @@
 
 
 {{/* ============================================================
-     4. ABOUT SECTION
-     Warm off-white background, two-column layout.
-     Left: Alexandra's photo (file: /static/img/alexandra-headshot.jpg)
-     Right: bio text and "Meet Alexandra" button linking to /about
+     4. ABOUT
+     Warm off-white. Photo left, bio right.
+     Governor General nomination and Forbes Council surfaced prominently.
      ============================================================ */}}
 <section class="about">
     <div class="section-inner">
 
-        {{/* Photo column — image cropped and sized in /static/img/ */}}
         <div class="about-photo">
-            <img src="/img/alexandra-headshot.jpg" alt="Alexandra Salamis">
+            <img src="/img/alexandra-headshot.jpg" alt="Alexandra Salamis — Leadership Coach and Change Management Consultant">
         </div>
 
-        {{/* Bio text column */}}
         <div class="about-text">
             <span class="section-label">About Alexandra</span>
-            <h2>Award-Winning Leadership Coach &amp; Change Consultant</h2>
-            <p>Alexandra Salamis is the founder of Integral Leadership Design — an award-winning leadership development and change consultant with over twenty years of experience empowering aspiring and current leaders around the world.</p>
-            <p>Nominated for Canada's Top 100 Most Powerful Women Award in 2018, Alex has been named one of the top 21 coaches in Ottawa by Influence Digest Magazine and recognized as a Top Leadership Coach by Coach Foundation.</p>
-            <p>She has dedicated herself to coaching organizations and individuals in sustainable change, ensuring the next generation of leaders is prepared to lead with conviction, empathy, and courage.</p>
+            <h2>Twenty Years at the Intersection of Leadership and Change</h2>
+            <p>Alexandra Salamis is a certified leadership coach and change management consultant — and a rare combination of both. She has spent two decades working with executives, senior leaders, and organizations across Canada, bringing deep corporate experience, rigorous coaching methodology, and genuine investment in the people she works with.</p>
+            <p>She is a member of the Forbes Coaches Council, holds the Certified Change Management Professional (CCMP) designation, and has been nominated for the Governor General's Award in Gender Equality for her lifelong work developing women in leadership.</p>
+            <p>Her clients describe her as perceptive, direct, and honest — someone who can help you see hard truths without making them feel insurmountable.</p>
             <a href="/about" class="btn btn-outline-dark">Meet Alexandra</a>
         </div>
 
@@ -169,34 +137,32 @@
 
 
 {{/* ============================================================
-     5. TESTIMONIALS SECTION
-     White background, three client quote cards.
-     The decorative opening quote mark is generated by CSS ::before
-     so it doesn't clutter the HTML.
+     5. TESTIMONIALS
+     White background, three cards.
      ============================================================ */}}
 <section class="testimonials">
     <div class="section-inner">
 
         <div class="section-header">
             <span class="section-label">Client Testimonials</span>
-            <h2>What Our Clients Say</h2>
+            <h2>What Clients Say</h2>
         </div>
 
         <div class="testimonials-grid">
 
             <div class="testimonial-card">
-                <p class="testimonial-text">I've worked with Alexandra on a number of projects as well as being coached by her. She is thoughtful and professional; frequently providing out of the box solutions to seemingly intractable problems. In my experience, Alexandra is the best of them all.</p>
-                <p class="testimonial-author">Chris L.</p>
+                <p class="testimonial-text">Alexandra walked into a minefield and created an atmosphere that was non-threatening, safe yet challenging. With authenticity, courage, patience and good humour, she skillfully worked with our team to turn conflict into cooperation and suspicion into trust. Her work was truly remarkable.</p>
+                <p class="testimonial-author">Nicholas M. — President, Montreal</p>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text">My work with Alexandra has increased my awareness of my environment and behaviours and helped me gain confidence in expressing my true and feminine leadership presence. Her dedication and passion are definitively contagious.</p>
+                <p class="testimonial-text">My work with Alexandra increased my awareness of my environment and behaviours and helped me gain confidence in expressing my true and feminine leadership presence. I feel empowered to lead with my best self — and supported by a network of empowered women she champions.</p>
                 <p class="testimonial-author">Chantal A.</p>
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text">Alexandra walked into a minefield and created an atmosphere from the start that was non-threatening, safe yet challenging. With authenticity, courage, patience and good humour, she skillfully worked with our team to turn conflict into cooperation and suspicion into trust.</p>
-                <p class="testimonial-author">Nicholas M.</p>
+                <p class="testimonial-text">I am more authentic and way more self-confident. My path forward is clear. Since the program, I am confidently looking for new advancement opportunities. It has been a life changer for me.</p>
+                <p class="testimonial-author">Jill S.</p>
             </div>
 
         </div>
@@ -205,35 +171,30 @@
 
 
 {{/* ============================================================
-     6. INSIGHT SECTION
-     Warm off-white background, three-column card grid.
-     Articles are pulled dynamically from /content/blog/ — no manual updates needed.
-     Date is intentionally not displayed — content is timeless.
-     
-     Hugo template logic:
-     - "range first 3" = loop over only the first 3 items
-     - "where .Site.RegularPages 'Section' 'blog'" = filter to blog section only
-     - .Summary = auto-generated excerpt from the article content
-     - truncate 120 = limits excerpt to 120 characters
-     - .Permalink = full URL for the article
+     6. RECENT INSIGHTS
+     Warm off-white. Pulls 3 most recent articles from /insights/.
+     Fixed from old version which pulled from /blog/ (no longer exists).
      ============================================================ */}}
 <section class="recent-posts">
     <div class="section-inner">
 
         <div class="section-header">
-            <span class="section-label">Insight</span>
-            <h2>From the Insight Archive</h2>
+            <span class="section-label">The Advisory Engine</span>
+            <h2>Insights on Leadership and Change</h2>
         </div>
 
         <div class="posts-grid">
-            {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+            {{ range first 3 (where .Site.RegularPages "Section" "insights") }}
             <article class="post-card">
                 <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                {{/* Date intentionally omitted — content is timeless */}}
-                <p>{{ .Summary | plainify | truncate 120 }}</p>
+                <p>{{ .Summary | plainify | truncate 130 }}</p>
                 <a href="{{ .Permalink }}" class="read-more">Read more →</a>
             </article>
             {{ end }}
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="/insights" class="btn btn-outline-dark">Explore All Insights</a>
         </div>
 
     </div>
@@ -242,13 +203,12 @@
 
 {{/* ============================================================
      7. CTA BAND
-     Full-width gold strip — final conversion prompt before the footer.
-     Uses .btn-outline (white border) since it sits on a gold background.
+     Gold strip — final conversion prompt before footer.
      ============================================================ */}}
 <section class="cta-band">
-    <h2>Not Sure What You Need?</h2>
-    <p>Let's talk about how we can realize your true potential together.</p>
-    <a href="/contact" class="btn btn-outline">Contact Alexandra</a>
+    <h2>Not Sure Where to Start?</h2>
+    <p>Book a free 30-minute discovery call and let's talk about what's possible.</p>
+    <a href="/contact" class="btn btn-outline">Book a Free Call</a>
 </section>
 
 {{ end }}
