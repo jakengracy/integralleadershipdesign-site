@@ -14,7 +14,7 @@ She holds two master's degrees in Human Development (M.A., M.S.W.) and is a cert
 
 Alexandra's work has been recognized at the national level and cited in major publications:
 
-- **Governor General's Award in Gender Equality** — nominated for her lifelong dedication to empowering women in leadership
+- **Governor General's Awards in Commemoration of the Persons Case** — nominated for her lifelong dedication to empowering women in leadership
 - **Canada's Top 100 Most Powerful Women Award** — nominated (2018)
 - **Forbes Coaches Council** — invited member
 - **Top 21 Coaches in Ottawa** — named by Influence Digest Magazine
@@ -46,14 +46,5 @@ She has worked with hundreds of women navigating the particular challenges of le
 Alexandra is the author of the ILD Organisational Transformation Framework — a structured body of 66 in-depth, cited articles on organisational change. Organised into a C-Series for executives and organisational leaders, and a P-Series for change practitioners and consultants, the Framework represents a systematic articulation of the constructs, research, and practical insight that underpin her work with clients.
 
 [Explore the Framework →](/insights/)
-
-## Recognition
-
-- Nominated for the Governor General's Award in Gender Equality
-- Nominated for Canada's Top 100 Most Powerful Women Award (2018)
-- Named one of the Top 21 Coaches in Ottawa — Influence Digest Magazine
-- Recognized as a Top Leadership Coach — Coach Foundation
-- Forbes Coaches Council Member
-- Featured in Forbes magazine
 
 <a href="/contact" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Work With Alexandra</a>
