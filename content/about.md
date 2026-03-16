@@ -6,36 +6,54 @@ date: 2019-01-01
 draft: false
 ---
 
-Alexandra Salamis is the founder and president of Integral Leadership Design — an award-winning leadership development and change consultant with over twenty years of experience empowering aspiring and current leaders around the world.
+Alexandra Salamis is the founder and president of Integral Leadership Design — a leadership development and change management consultancy based in Ottawa, Ontario. With over twenty years of experience working with executives, senior leaders, and organizations across Canada, she has built a practice grounded in a simple conviction: sustainable change and lasting leadership impact start from within.
 
-Her work sits at the intersection of leadership coaching, organizational change, and human potential. She brings a rare combination of deep corporate experience, certified coaching rigour, and genuine investment in the people she works with.
+She holds two master's degrees in Human Development (M.A., M.S.W.) and is a certified coach under the International Coach Federation (ICF) and the European Mentoring and Coaching Council (EMCC). She is a Certified Executive Coach (CEC) and holds the Certified Change Management Professional (CCMP) designation.
+
+## Recognition and Credentials
+
+Alexandra's work has been recognized at the national level and cited in major publications:
+
+- **Governor General's Award in Gender Equality** — nominated for her lifelong dedication to empowering women in leadership
+- **Canada's Top 100 Most Powerful Women Award** — nominated (2018)
+- **Forbes Coaches Council** — invited member
+- **Top 21 Coaches in Ottawa** — named by Influence Digest Magazine
+- **Top Leadership Coach** — recognized by Coach Foundation
+- **Featured in Forbes** — for her work transforming a C-suite leadership team through organizational conflict and into high performance
+- **Senior advisor and consultant** to the Canadian Government across multiple executive and coaching advisory roles
+- **Resource on Demand** for IBM, PwC, and EY
 
 ## Background
 
-Having built a rich corporate background before turning to coaching and consulting, Alexandra understands the pressures, politics, and possibilities of organizational life from the inside. She has held multiple senior consultant, executive, and coaching advisory roles within the Canadian Government, and serves as a trusted resource for IBM, PwC, and EY.
+Alexandra came to coaching and consulting after building a substantive corporate career — which means she understands organizational life from the inside. The politics, the pressures, the gap between a leader's intentions and their actual impact. That lived experience is part of what makes her effective. She isn't working from theory alone.
 
-She is a member of the prestigious Forbes Coaches Council and a certified member of the Association of Change Management Professionals. She holds two master's degrees in Human Development and is an International Coach Federation certified coach.
-
-In 2018, she was nominated for Canada's Top 100 Most Powerful Women Award — and in the same year, nominated for the Governor General's Award in Gender Equality for her lifelong dedication to empowering women in leadership.
+Her work sits at the intersection of leadership development, organizational change, and human potential. She draws on established frameworks — including Integral Coaching®, Simon Sinek's WHY methodology, Brené Brown's Wholehearted Living research, Helgesen and Goldsmith's work on women's leadership habits, and Amy Cuddy's Presence framework — and applies them through the lens of her own extensive practice and the specific context of each client.
 
 ## Her Approach
 
-Alexandra's coaching and consulting work is characterized by deep listening, honest challenge, and unwavering commitment to her clients' growth. She doesn't impose formulaic recipes. She builds on where each client actually is — their context, their strengths, their constraints — and works with them to move forward with clarity and confidence.
+Every engagement begins with deep listening. Not to confirm what she already thinks, but to genuinely understand where a client is — their strengths, their blind spots, the context they're navigating, and what's actually standing between them and the results they want.
 
-Her clients describe her as perceptive, direct, and genuinely funny — someone who can help you see hard truths with a soft touch.
+From there, Alexandra works with a direct style and a light touch. Clients describe her as perceptive, honest, and genuinely funny — someone who can help you see hard truths without making them feel insurmountable. She doesn't do formulaic programs. She meets people where they are and works with them to build something real.
 
 ## Passion for Women's Leadership
 
-Alexandra is particularly passionate about empowering women to step into influential, authentic leadership. Her signature program — Purpose, Passion, and Presence for Women Rising — has helped hundreds of women gain the confidence, presence, and strategic clarity to lead at their full potential.
+Alexandra is particularly committed to developing women leaders. Her signature program — **Purpose, Passion, and Presence for Women Rising** — was designed specifically for women who are ready to lead with confidence, authenticity, and real impact. The program works across five interconnected pillars: authenticity, wholeness, clarity, drive, and connection.
 
-She promotes diversity and inclusivity not as a compliance exercise, but as a genuine driver of organizational performance and human dignity.
+She has worked with hundreds of women navigating the particular challenges of leadership in environments that weren't designed with them in mind. Her Governor General nomination reflects the depth of that commitment — this is not peripheral to her practice. It is central to it.
+
+## The Advisory Engine
+
+Alexandra is the author of the ILD Advisory Engine — a structured knowledge base of 66 in-depth, cited articles on leadership and organizational change. Organized into a C-Series (change management) and P-Series (leadership presence), the Engine represents a systematic articulation of the frameworks, research, and practical insight that underpin her work.
+
+[Explore the Advisory Engine →](/insights/)
 
 ## Recognition
 
+- Nominated for the Governor General's Award in Gender Equality
 - Nominated for Canada's Top 100 Most Powerful Women Award (2018)
-- Named one of the Top 21 Coaches in Ottawa by Influence Digest Magazine
-- Recognized as a Top Leadership Coach by Coach Foundation
-- Featured in Forbes for her work transforming a C-suite leadership team
-- Member, Forbes Coaches Council
+- Named one of the Top 21 Coaches in Ottawa — Influence Digest Magazine
+- Recognized as a Top Leadership Coach — Coach Foundation
+- Forbes Coaches Council Member
+- Featured in Forbes magazine
 
 <a href="/contact" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Work With Alexandra</a>

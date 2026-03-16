@@ -24,17 +24,76 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Alexandra Salamis",
+  "honorificSuffix": "M.A., M.S.W., ICF, EMCC, CEC, CCMP",
   "jobTitle": "Leadership Coach and Change Management Consultant",
+  "description": "Award-winning leadership coach and change management consultant based in Ottawa, Ontario, Canada. Founder of Integral Leadership Design. Forbes Coaches Council member. Nominated for the Governor General's Award in Gender Equality.",
   "url": "{{ .Site.BaseURL }}about",
   "email": "{{ .Site.Params.email }}",
   "telephone": "{{ .Site.Params.phone }}",
   "image": "{{ .Site.BaseURL }}img/alexandra-headshot.jpg",
-  "sameAs": ["https://www.linkedin.com/in/alexandrasalamis/"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ottawa",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/alexandrasalamis/",
+    "https://coaches.forbes.com/profile/alexandra-salamis"
+  ],
   "worksFor": {
     "@type": "ProfessionalService",
     "name": "{{ .Site.Title }}",
     "url": "{{ .Site.BaseURL }}"
   },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "Master of Arts in Human Development"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "Master of Social Work in Human Development"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "International Coach Federation Certified Coach (ICF)"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Certified Change Management Professional (CCMP)"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Certified Executive Coach (CEC)"
+    }
+  ],
+  "award": [
+    "Nominated for the Governor General's Award in Gender Equality",
+    "Nominated for Canada's Top 100 Most Powerful Women Award (2018)",
+    "Named one of the Top 21 Coaches in Ottawa by Influence Digest Magazine",
+    "Recognized as a Top Leadership Coach by Coach Foundation",
+    "Featured in Forbes magazine for C-suite leadership transformation"
+  ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "Forbes Coaches Council"
+    },
+    {
+      "@type": "Organization",
+      "name": "Association of Change Management Professionals (ACMP)"
+    },
+    {
+      "@type": "Organization",
+      "name": "International Coach Federation (ICF)"
+    }
+  ],
   "knowsAbout": [
     "Leadership Coaching",
     "Executive Coaching",
@@ -42,7 +101,11 @@
     "Organizational Development",
     "Women's Leadership",
     "Team Coaching",
-    "Corporate Leadership Development"
+    "Corporate Leadership Development",
+    "Integral Coaching",
+    "Leadership Presence",
+    "Emotional Agility",
+    "Authentic Leadership"
   ]
 }
 </script>
