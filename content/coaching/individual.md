@@ -1,6 +1,6 @@
 ---
-title: "Individual Leadership Coaching"
-description: "One-on-one executive coaching with Alexandra Salamis — 6 to 12 month engagements for leaders who want clarity, confidence, and lasting growth."
+title: "Individual Leadership Coaching | Ottawa, Ontario"
+description: "One-on-one executive and leadership coaching with Alexandra Salamis — ICF certified coach based in Ottawa, Ontario. 6–12 month engagements for executives and senior leaders across Canada."
 layout: "service"
 date: 2019-01-01
 draft: false

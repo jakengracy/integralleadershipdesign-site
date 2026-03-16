@@ -1,6 +1,6 @@
 ---
-title: "Change Management"
-description: "Certified change management consulting that puts people at the centre — strategy, engagement, and lasting adoption for complex organizational transformation."
+title: "Change Management Consulting | Integral Leadership Design"
+description: "CCMP-certified change management consulting across Canada — organizational change strategy, stakeholder engagement, and lasting adoption. Alexandra Salamis, Ottawa, Ontario."
 layout: "service"
 date: 2019-01-01
 draft: false

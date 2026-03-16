@@ -1,6 +1,6 @@
 ---
-title: "Team Coaching"
-description: "Team coaching for leadership teams that are capable but underperforming together — building trust, accountability, and collective performance that sticks."
+title: "Team Coaching | Executive & Leadership Teams | Canada"
+description: "Team coaching for leadership teams that are capable but underperforming together. Featured in Forbes. Alexandra Salamis works with executive and senior leadership teams across Canada."
 layout: "service"
 date: 2019-01-01
 draft: false

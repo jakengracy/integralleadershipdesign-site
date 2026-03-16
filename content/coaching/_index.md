@@ -1,6 +1,6 @@
 ---
-title: "Leadership Coaching"
-description: "Leadership coaching programs for executives and managers ready to grow — individual coaching, team coaching, and women's leadership development."
+title: "Leadership Coaching | Ottawa, Ontario | Canada"
+description: "Leadership coaching programs with Alexandra Salamis — ICF certified executive coach based in Ottawa, Ontario. Individual coaching, team coaching, and women's leadership development across Canada."
 layout: "service"
 date: 2019-01-01
 draft: false

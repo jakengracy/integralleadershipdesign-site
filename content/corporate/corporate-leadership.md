@@ -1,6 +1,6 @@
 ---
-title: "Corporate Leadership Development Program"
-description: "Structured leadership development programs tailored to your organization — building pipeline, performance culture, and lasting capability at every level."
+title: "Corporate Leadership Development Program | Canada"
+description: "Action learning-based corporate leadership development programs across Canada — building pipeline, performance culture, and lasting capability at every level. Integral Leadership Design."
 layout: "service"
 date: 2019-01-01
 draft: false

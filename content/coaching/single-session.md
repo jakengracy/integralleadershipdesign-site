@@ -1,6 +1,6 @@
 ---
-title: "Single Strategy Session"
-description: "A focused 90-minute coaching session with Alexandra Salamis. Immediate clarity on a specific leadership challenge, decision, or career inflection point."
+title: "Single Strategy Session | Leadership Coaching | Canada"
+description: "A single 90-minute leadership strategy session with Alexandra Salamis — immediate clarity on a specific challenge, career decision, or leadership situation. Available across Canada via video."
 layout: "service"
 date: 2019-01-01
 draft: false
