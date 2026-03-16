@@ -965,3 +965,31 @@
         gap: 0.25rem;
     }
 }
+
+/* ------------------------------------------------------------
+   ABOUT PAGE — content refinements
+   List indentation and heading spacing within .about-page-text
+   ------------------------------------------------------------ */
+
+/* Indent bullet lists ~0.25in inside the about page text column */
+.about-page-text ul {
+    padding-left: 1.5rem;   /* ~24px ≈ 0.25in at default font size */
+    margin-bottom: 1.25rem;
+}
+
+.about-page-text ul li {
+    color: var(--color-muted);
+    line-height: 1.8;
+    margin-bottom: 0.4rem;
+}
+
+/* Extra breathing room before h2 subheads in the about page body —
+   gives more visual separation between credential list and Biography */
+.about-page-text h2 {
+    margin-top: 3rem;       /* Increased from default ~1rem */
+    margin-bottom: 1.25rem;
+}
+
+.about-page-text h2:first-child {
+    margin-top: 0;          /* No extra top margin on the very first heading */
+}
