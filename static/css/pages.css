@@ -993,3 +993,71 @@
 .about-page-text h2:first-child {
     margin-top: 0;          /* No extra top margin on the very first heading */
 }
+
+
+/* ------------------------------------------------------------
+   INSIGHT CTA BLOCK — A/B test variant CTA
+   Appears at the bottom of article content and in the sidebar
+   on all Advisory Engine articles. Variant text is injected by
+   JS in partials/insight-cta.html. Designed to look distinct
+   from the surrounding content without being visually aggressive.
+   ------------------------------------------------------------ */
+.insight-cta-block {
+    margin: 2.5rem 0 1rem;
+}
+
+.insight-cta-inner {
+    background: var(--color-dark);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 3px 3px 0;
+    padding: 1.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* The variant text — white on dark, readable */
+.insight-cta-text {
+    color: rgba(255,255,255,0.88);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+/* The CTA button — gold, consistent with site-wide btn style */
+.insight-cta-btn {
+    align-self: flex-start;
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+    font-size: 0.85rem;
+    padding: 0.6rem 1.5rem;
+    white-space: nowrap;
+}
+
+.insight-cta-btn:hover {
+    background: #fff;
+    color: var(--color-accent);
+    border-color: #fff;
+}
+
+/* Sidebar variant — slightly more compact */
+.service-sidebar .insight-cta-block {
+    margin: 0 0 2rem;
+}
+
+.service-sidebar .insight-cta-inner {
+    padding: 1.5rem;
+}
+
+.service-sidebar .insight-cta-text {
+    font-size: 0.9rem;
+}
+
+.service-sidebar .insight-cta-btn {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+}

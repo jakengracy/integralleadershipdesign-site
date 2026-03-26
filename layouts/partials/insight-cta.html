@@ -1,0 +1,208 @@
+{{/*
+    partials/insight-cta.html — A/B test CTA block for Advisory Engine articles
+
+    Detects article series from the filename prefix (c = C-Series, p = P-Series)
+    and randomly assigns one of 8 variants per series on each page load.
+
+    Measurement:
+    Each variant fires a GA4 custom event on render:
+        event: "cta_shown"
+        parameters: { cta_id: "C3", cta_series: "c", cta_text: "..." }
+
+    And on click:
+        event: "cta_click"
+        parameters: { cta_id: "C3", cta_series: "c", cta_text: "..." }
+
+    Use GA4 > Explore > Funnel or custom reports to compare click-through
+    rates by cta_id. After 2-3 weeks, drop variants below the median and
+    run survivors against each other (Round 2).
+
+    Tournament structure:
+        Round 1: 8 variants, 2-3 weeks, drop below-median performers
+        Round 2: Top 3-4 survivors, 2-3 weeks, identify winner
+        Round 3 (optional): Micro-copy tweaks on winner
+
+    To advance rounds: update the variant arrays below, keeping only
+    the surviving variant IDs. Increment the round comment.
+    Current round: Round 1
+*/}}
+
+{{ $slug := .File.BaseFileName }}
+{{ $series := "" }}
+{{ if hasPrefix $slug "c" }}
+    {{ $series = "c" }}
+{{ else if hasPrefix $slug "p" }}
+    {{ $series = "p" }}
+{{ end }}
+
+{{ if $series }}
+<div class="insight-cta-block" id="insight-cta-block">
+
+    {{/*
+        Variants are injected by JavaScript below.
+        The block is rendered empty on the server and populated on load
+        so Hugo doesn't need to know which variant was selected.
+        This also means the variant is consistent for the full page session.
+    */}}
+
+    <script>
+    (function() {
+
+        // ── C-SERIES VARIANTS (executive/organizational change audience) ──────
+        var cVariants = [
+            {
+                id: "C1",
+                text: "Change initiatives fail at the implementation layer, not the strategy layer. If you&rsquo;re navigating one, let&rsquo;s talk.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "C2",
+                text: "Alexandra has spent 20 years helping senior leaders make change stick. Book a free 30-minute conversation.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "C3",
+                text: "Is your organization in the middle of a change you&rsquo;re not sure will land? A free 30-minute call costs nothing.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "C4",
+                text: "Most change efforts lose momentum within six months. Alexandra works with leaders to close that gap.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "C5",
+                text: "You&rsquo;ve read the framework. The harder question is applying it to your organization. That&rsquo;s where Alexandra works.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "C6",
+                text: "Leading change is harder than it looks from the outside. If you&rsquo;re in it, Alexandra can help.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "C7",
+                text: "Senior leaders in Canada&rsquo;s public and private sector work with Alexandra when the stakes are high.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "C8",
+                text: "Not sure if what you&rsquo;re facing is a coaching question or a consulting question? Start with a conversation.",
+                cta: "Book a Free Call"
+            }
+        ];
+
+        // ── P-SERIES VARIANTS (practitioner/leadership development audience) ──
+        var pVariants = [
+            {
+                id: "P1",
+                text: "The frameworks in this article come from Alexandra&rsquo;s 20 years of practice. If you&rsquo;re applying them in your own work, a conversation might help.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "P2",
+                text: "You&rsquo;ve read the theory. Alexandra works with practitioners who want to put it into practice.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "P3",
+                text: "Alexandra works with coaches and leaders who want to go deeper on the ideas in the Advisory Engine.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "P4",
+                text: "These frameworks aren&rsquo;t academic &mdash; they come from real organizational work. Alexandra can help you apply them.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "P5",
+                text: "If this article raised more questions than it answered, that&rsquo;s probably worth a conversation.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "P6",
+                text: "Practitioners and leaders across Canada use Alexandra&rsquo;s frameworks in their own work. If that&rsquo;s you, let&rsquo;s talk.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "P7",
+                text: "The gap between understanding a framework and applying it is where Alexandra does her best work.",
+                cta: "Book a Free Call"
+            },
+            {
+                id: "P8",
+                text: "Is there a leadership or change challenge underneath the question that brought you here?",
+                cta: "Book a Free Call"
+            }
+        ];
+
+        // ── SELECT VARIANT ────────────────────────────────────────────────────
+        // Use sessionStorage so the same visitor sees the same variant
+        // on this page during their session (consistent experience, clean data).
+        var series = "{{ $series }}";
+        var variants = series === "c" ? cVariants : pVariants;
+        var storageKey = "ild_cta_" + window.location.pathname;
+        var selectedIndex;
+
+        try {
+            var stored = sessionStorage.getItem(storageKey);
+            if (stored !== null) {
+                selectedIndex = parseInt(stored, 10);
+            } else {
+                selectedIndex = Math.floor(Math.random() * variants.length);
+                sessionStorage.setItem(storageKey, selectedIndex);
+            }
+        } catch(e) {
+            // sessionStorage unavailable (private mode etc.) — just pick randomly
+            selectedIndex = Math.floor(Math.random() * variants.length);
+        }
+
+        var variant = variants[selectedIndex];
+
+        // ── RENDER THE CTA BLOCK ─────────────────────────────────────────────
+        var block = document.getElementById("insight-cta-block");
+        if (block) {
+            block.innerHTML =
+                '<div class="insight-cta-inner">' +
+                    '<p class="insight-cta-text">' + variant.text + '</p>' +
+                    '<a href="/contact" class="btn insight-cta-btn" ' +
+                       'data-cta-id="' + variant.id + '" ' +
+                       'data-cta-series="' + series + '">' +
+                        variant.cta +
+                    '</a>' +
+                '</div>';
+        }
+
+        // ── FIRE GA4 "cta_shown" EVENT ───────────────────────────────────────
+        // Fires when the variant is rendered, regardless of click.
+        // Used as the denominator in click-through rate calculations.
+        function fireGA4(eventName, variantObj) {
+            if (typeof gtag === "function") {
+                gtag("event", eventName, {
+                    cta_id:     variantObj.id,
+                    cta_series: series,
+                    cta_text:   variantObj.text
+                });
+            }
+        }
+
+        // Small delay to ensure GA4 is loaded before firing
+        setTimeout(function() {
+            fireGA4("cta_shown", variant);
+        }, 500);
+
+        // ── FIRE GA4 "cta_click" EVENT ───────────────────────────────────────
+        // Fires when the CTA button is clicked.
+        // Used as the numerator in click-through rate calculations.
+        document.addEventListener("click", function(e) {
+            var btn = e.target.closest("[data-cta-id]");
+            if (btn) {
+                fireGA4("cta_click", variant);
+            }
+        });
+
+    })();
+    </script>
+
+</div>
+{{ end }}

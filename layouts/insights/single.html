@@ -122,6 +122,9 @@
 
             {{ .Content }}
 
+            {{/* ── BOTTOM CTA — A/B test variant, series-aware ── */}}
+            {{ partial "insight-cta.html" . }}
+
             {{/* ── ADDITIONAL RELATED ARTICLES (BOTTOM — FULL FLAT LIST) ── */}}
             <div class="insight-related">
                 {{ if $dedupedLinks }}
@@ -142,11 +145,8 @@
         {{/* RIGHT: Sticky sidebar */}}
         <aside class="service-sidebar">
 
-            <div class="sidebar-cta">
-                <h3>Work With Alexandra</h3>
-                <p>Book a free 30-minute discovery call.</p>
-                <a href="/contact" class="btn">Book a Free Call</a>
-            </div>
+            {{/* SIDEBAR CTA — A/B test variant, series-aware */}}
+            {{ partial "insight-cta.html" . }}
 
             {{/*
                 Related Insights — first article from each non-empty nav_* array.
