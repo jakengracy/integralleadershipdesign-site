@@ -1,0 +1,1063 @@
+/*
+ * ============================================================
+ * SERVICE PAGE ADDITIONS — appended to style.css
+ * Covers: page banner (interior hero), service page layout,
+ * about page, testimonials page, contact form, blog listing
+ * ============================================================
+ */
+
+
+/* ------------------------------------------------------------
+   PAGE BANNER
+   Used on all interior pages (service pages, about, contact etc.)
+   Shorter and simpler than the homepage hero — dark navy background,
+   no photo. Orients users who arrive directly from search or links
+   without having seen the homepage first.
+   
+   Three-tier visual hierarchy:
+   1. Homepage  → full hero with photo (maximum weight)
+   2. Service pages → page banner, ~240px tall (this)
+   3. Sub-pages → minimal or no banner
+   ------------------------------------------------------------ */
+.page-banner {
+    background: var(--color-dark);
+    padding: 4rem 1.5rem;               /* Roughly half the height of the homepage hero */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle diagonal texture overlay — adds depth without a photo */
+.page-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200,151,58,0.08) 0%, transparent 60%);
+    pointer-events: none;               /* Doesn't interfere with any clicks */
+}
+
+.page-banner-inner {
+    position: relative;
+    z-index: 1;                         /* Sits above the ::before texture layer */
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/* Page title — white serif, slightly smaller than homepage h1 */
+.page-banner h1 {
+    color: #fff;
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);   /* Slightly smaller than homepage hero */
+}
+
+/* One-line gold descriptor beneath the page title */
+.page-banner-desc {
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+/* Breadcrumb trail — e.g. "Home → Leadership Coaching" */
+.page-breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+}
+.page-breadcrumb a { color: rgba(255,255,255,0.55); }
+.page-breadcrumb a:hover { color: var(--color-accent); }
+
+
+/* ------------------------------------------------------------
+   INTERIOR PAGE WRAPPER
+   Used by single.html default layout — adds top/bottom padding
+   so content doesn't start immediately below the sticky header
+   ------------------------------------------------------------ */
+.l-main {
+    min-height: 60vh;                   /* Prevents very short pages from looking sparse */
+}
+
+
+/* ------------------------------------------------------------
+   SERVICE PAGE LAYOUT
+   Two-column layout: main content left, sidebar right.
+   The sidebar holds the CTA box and related service links.
+   ------------------------------------------------------------ */
+.service-page {
+    padding: var(--section-pad);
+    background: var(--color-bg);
+}
+
+.service-page-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 320px;  /* Content column + fixed sidebar */
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Main content area */
+.service-content h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+.service-content h2:first-child { margin-top: 0; }
+
+.service-content p {
+    color: var(--color-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Styled list items within service page content */
+.service-content ul {
+    margin: 0 0 1.5rem 0;
+    padding-left: 1.25rem;
+}
+.service-content ul li {
+    color: var(--color-muted);
+    margin-bottom: 0.6rem;
+    line-height: 1.7;
+}
+
+/* Highlight box — used for key stats or callout quotes */
+.service-highlight {
+    border-left: 4px solid var(--color-accent);
+    padding: 1.25rem 1.5rem;
+    background: var(--color-bg-alt);
+    border-radius: 0 3px 3px 0;
+    margin: 2rem 0;
+}
+.service-highlight p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    font-family: var(--font-serif);
+}
+
+
+/* ------------------------------------------------------------
+   SERVICE SIDEBAR
+   Sticky sidebar that stays visible as the user scrolls through
+   long service page content. Contains the CTA box and related links.
+   ------------------------------------------------------------ */
+.service-sidebar {
+    position: sticky;
+    top: 92px;                          /* 72px header + 20px breathing room */
+}
+
+/* Primary CTA box — gold background, drives bookings */
+.sidebar-cta {
+    background: var(--color-accent);
+    padding: 2rem;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.sidebar-cta h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+.sidebar-cta p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+.sidebar-cta .btn {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    color: var(--color-accent);
+    border-color: #fff;
+    font-size: 0.85rem;
+}
+.sidebar-cta .btn:hover {
+    background: var(--color-dark);
+    color: #fff;
+    border-color: var(--color-dark);
+}
+
+/* Related services box — links to other service pages */
+.sidebar-related {
+    background: var(--color-bg-alt);
+    padding: 1.75rem;
+    border-radius: 3px;
+}
+.sidebar-related h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+.sidebar-related ul { list-style: none; }
+.sidebar-related ul li {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.6rem 0;
+}
+.sidebar-related ul li:last-child { border-bottom: none; }
+.sidebar-related ul a {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.sidebar-related ul a:hover { color: var(--color-accent); }
+
+
+/* ------------------------------------------------------------
+   TESTIMONIALS PAGE
+   Full-width testimonial cards with more detail than homepage.
+   Uses a two-column grid on wider screens.
+   ------------------------------------------------------------ */
+.testimonials-page { padding: var(--section-pad); background: var(--color-bg); }
+
+.testimonials-page-grid {
+    max-width: var(--max-w);
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+/* Full testimonial card — more padding than the homepage cards */
+.testimonial-full {
+    background: var(--color-bg-alt);
+    padding: 2.5rem;
+    border-radius: 3px;
+    position: relative;
+    border-top: 4px solid var(--color-accent);
+}
+.testimonial-full::before {
+    content: '\201C';
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    color: var(--color-accent);
+    opacity: 0.2;
+    position: absolute;
+    top: 0.5rem;
+    left: 1.5rem;
+    line-height: 1;
+}
+.testimonial-full p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.testimonial-full-author { font-weight: 700; color: var(--color-dark); font-size: 0.9rem; }
+.testimonial-full-role { color: var(--color-muted); font-size: 0.8rem; margin-top: 0.2rem; }
+
+
+/* ------------------------------------------------------------
+   CONTACT PAGE
+   Two-column layout: intro/info on left, Formspree form on right.
+   ------------------------------------------------------------ */
+.contact-page { padding: var(--section-pad); background: var(--color-bg); }
+
+.contact-page-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;    /* Equal columns: info left, form right */
+    gap: 5rem;
+    align-items: start;
+}
+
+.contact-info h2 { margin-bottom: 1rem; }
+.contact-info p { color: var(--color-muted); line-height: 1.8; }
+
+/* Contact detail lines — email, phone */
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+.contact-detail a { color: var(--color-dark); font-weight: 600; }
+.contact-detail a:hover { color: var(--color-accent); }
+
+/* The Formspree form itself */
+.contact-form { background: var(--color-bg-alt); padding: 2.5rem; border-radius: 3px; }
+.contact-form h3 { margin-bottom: 1.5rem; font-size: 1.3rem; }
+
+/* Form field groups */
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
+}
+
+/* All text inputs and textarea share this base style */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    background: #fff;
+    transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-accent);  /* Gold border highlight on focus */
+}
+.form-group textarea { min-height: 140px; resize: vertical; }
+
+/* Full-width submit button */
+.form-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
+/* ------------------------------------------------------------
+   ABOUT PAGE
+   Wider bio section with credentials, fuller photo treatment
+   ------------------------------------------------------------ */
+.about-page { padding: var(--section-pad); background: var(--color-bg); }
+
+.about-page-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 380px 1fr;  /* Slightly wider photo column than homepage */
+    gap: 5rem;
+    align-items: start;
+}
+
+.about-page-photo img {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Credentials strip below the photo */
+.about-credentials {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: var(--color-bg-alt);
+    border-radius: 3px;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.about-page-text h2 { margin-bottom: 1.25rem; }
+.about-page-text p { color: var(--color-muted); line-height: 1.85; margin-bottom: 1.25rem; }
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE — interior pages
+   ------------------------------------------------------------ */
+@media (max-width: 900px) {
+    /* Service page sidebar drops below content on tablet */
+    .service-page-inner { grid-template-columns: 1fr; }
+    .service-sidebar { position: static; }
+
+    /* Contact columns stack */
+    .contact-page-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+    /* About page photo stacks above text */
+    .about-page-inner { grid-template-columns: 1fr; }
+    .about-page-photo { max-width: 380px; }
+}
+
+@media (max-width: 600px) {
+    /* Testimonials go single column on phones */
+    .testimonials-page-grid { grid-template-columns: 1fr; }
+    .page-banner { padding: 3rem 1.5rem; }
+}
+
+
+/* ------------------------------------------------------------
+   BLOG LISTING PAGE
+   Three-column card grid on desktop, responsive down to single.
+   ------------------------------------------------------------ */
+.blog-listing {
+    padding: var(--section-pad);
+    background: var(--color-bg);
+}
+
+.blog-listing-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 columns on desktop */
+    gap: 2rem;
+}
+
+/* Individual post card */
+.blog-card {
+    background: var(--color-bg-alt);
+    border-radius: 3px;
+    border-top: 4px solid var(--color-accent); /* Gold top border — consistent with testimonial cards */
+    display: flex;
+    flex-direction: column;                    /* Footer stays pinned to bottom of card */
+    transition: box-shadow 0.2s;
+}
+.blog-card:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.blog-card-body {
+    padding: 1.75rem 1.75rem 1rem;
+    flex: 1;                                   /* Fills available space, pushing footer down */
+}
+
+/* Date line */
+.blog-card-date {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.6rem;
+}
+
+/* Post title */
+.blog-card-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0.85rem;
+    color: var(--color-dark);
+}
+.blog-card-title a {
+    color: inherit;
+}
+.blog-card-title a:hover {
+    color: var(--color-accent);
+}
+
+/* Excerpt */
+.blog-card-excerpt {
+    font-size: 0.825rem;
+    color: var(--color-muted);
+    line-height: 1.75;
+}
+
+/* Suppress headings that leak in from post body into the card excerpt.
+   The Hugo summary sometimes captures an h2 or h3 near the top of the post.
+   We demote them to match body text so they don't render as bold subheads. */
+.blog-card-excerpt h1,
+.blog-card-excerpt h2,
+.blog-card-excerpt h3,
+.blog-card-excerpt h4 {
+    font-size: 0.825rem;               /* Same as excerpt body text */
+    font-weight: 400;                  /* Strip bold weight */
+    font-family: var(--font-sans);     /* Use sans rather than serif heading style */
+    color: var(--color-muted);         /* Match surrounding text colour */
+    margin: 0 0 0.5rem;
+    line-height: 1.75;
+}
+
+/* Card footer — Read More link */
+.blog-card-footer {
+    padding: 1rem 1.75rem 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+.blog-card-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+.blog-card-link:hover {
+    color: var(--color-dark);
+}
+
+
+/* ------------------------------------------------------------
+   BLOG POST — SINGLE PAGE
+   Mostly inherits from service-content; these add blog-specific
+   typographic refinements for long-form reading.
+   ------------------------------------------------------------ */
+.blog-post-content {
+    font-family: var(--font-sans);  /* Explicitly lock body text to sans — prevents serif bleed from blockquote or heading rules */
+}
+.blog-post-content h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);   /* ~2x body text size; noticeably larger subhead */
+    line-height: 1.3;                           /* Proportional leading for larger type */
+    margin-top: 2.75rem;                        /* Slightly more space above to signal a new section */
+    margin-bottom: 0.85rem;
+}
+.blog-post-content h3 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-dark);
+}
+
+/* Pull quote style — used if blockquote appears in post */
+.blog-post-content blockquote {
+    border-left: 4px solid var(--color-accent);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--color-bg-alt);
+    border-radius: 0 3px 3px 0;
+}
+.blog-post-content blockquote p {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin: 0;
+    font-style: italic;
+}
+
+/* Post navigation — prev/next links at bottom of post */
+.blog-post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+}
+.blog-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    max-width: 45%;
+}
+.blog-nav-next { text-align: right; margin-left: auto; }
+.blog-nav-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+.blog-nav-title {
+    font-size: 0.875rem;
+    color: var(--color-dark);
+    font-weight: 600;
+    line-height: 1.4;
+}
+.blog-nav-link:hover .blog-nav-title { color: var(--color-accent); }
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE — blog
+   ------------------------------------------------------------ */
+@media (max-width: 960px) {
+    .blog-listing-inner { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .blog-listing-inner { grid-template-columns: 1fr; }
+    .blog-post-nav { flex-direction: column; }
+    .blog-nav-next { text-align: left; margin-left: 0; }
+}
+
+
+/* ------------------------------------------------------------
+   PROSE PAGE — single-column long-form layout
+   Used by privacy policy and any other standalone text-heavy pages.
+   Narrower max-width than service pages for better line length/readability.
+   ------------------------------------------------------------ */
+.prose-page {
+    padding: var(--section-pad);
+    background: var(--color-bg);
+}
+
+.prose-page-inner {
+    max-width: 780px;                   /* Optimal reading line length */
+    margin: 0 auto;
+}
+
+/* Headings within prose pages */
+.prose-page-inner h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-dark);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+.prose-page-inner h2:first-child { margin-top: 0; }
+
+.prose-page-inner h3 {
+    font-size: 1.05rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+/* Body text */
+.prose-page-inner p {
+    color: var(--color-muted);
+    line-height: 1.85;
+    margin-bottom: 1.1rem;
+}
+
+/* Lists */
+.prose-page-inner ul,
+.prose-page-inner ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.prose-page-inner li {
+    color: var(--color-muted);
+    line-height: 1.8;
+    margin-bottom: 0.4rem;
+}
+
+/* Last updated note */
+.prose-page-inner .policy-updated {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    opacity: 0.7;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* Blog post pull quotes — blockquote elements within article content.
+   Narrower margins indent the quote from both sides.
+   Gold left border serves as the graphic indicator that this is a quote.
+   50% black (#808080) for the text colour — subdued vs body text.
+   Italic style reinforces the pull-quote convention. */
+.blog-post-content blockquote {
+    margin: 2rem 3rem;                          /* Narrower than full column width */
+    padding: 1.25rem 1.5rem;                    /* Internal breathing room */
+    border-left: 4px solid var(--color-accent); /* Gold left bar — quote indicator */
+    background: var(--color-bg-alt);            /* Subtle warm off-white background */
+    border-radius: 0 2px 2px 0;                /* Slight rounding on right corners only */
+}
+
+.blog-post-content blockquote p {
+    color: #808080;          /* 50% black */
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;               /* Remove default paragraph margin inside the quote */
+}
+
+/* Blog post article sign-off — right-justified author attribution at end of post */
+.blog-post-content .post-author {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: var(--color-muted);
+    margin-top: 2rem;
+}
+
+/* Blog post body — h3 subheadings within article content */
+.blog-post-content h2,
+.blog-post-content h3 {
+    color: var(--color-body);   /* #2d2d2d warm dark grey — consistent across all article subheads */
+}
+
+.blog-post-content h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-heading, 'Bodoni Moda', Georgia, serif);
+}
+
+/* Bold text within article body — uses heading font for visual consistency.
+   NOTE: display:block is intentionally NOT set here. Applying block display to
+   any <strong> that is the only child of a <p> caused inline bold phrases that
+   happened to be paragraph-wrapped by the Markdown parser to render as
+   freestanding subheads, breaking sentences mid-flow across multiple articles. */
+.blog-post-content strong {
+    font-family: var(--font-heading, 'Bodoni Moda', Georgia, serif);
+}
+
+/* Bulleted and numbered lists in article body — indent a quarter inch (0.25in = 24px).
+   Scoped to .blog-post-content so sidebar, nav, and footer lists are unaffected. */
+.blog-post-content ul,
+.blog-post-content ol {
+    padding-left: 1.5rem;   /* ~24px — approximately 0.25in at default font size */
+    margin-bottom: 1.25rem;
+}
+
+.blog-post-content ul li,
+.blog-post-content ol li {
+    margin-bottom: 0.4rem;
+    line-height: 1.75;
+}
+
+/* Hide hr elements in article body — footnote section has its own border */
+.blog-post-content hr {
+    display: none;
+}
+
+/* Footnotes — smaller type, muted colour, tight leading */
+.blog-post-content .footnotes {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    line-height: 1.6;
+}
+
+.blog-post-content .footnotes ol {
+    padding-left: 1.25rem;
+}
+
+.blog-post-content .footnotes li {
+    margin-bottom: 0.5rem;
+}
+
+/* Hide the ↩ footnote return arrow — glyph renders as garbage in some fonts */
+.blog-post-content .footnotes .footnote-backref,
+.footnote-backref {
+    display: none !important;
+}
+
+/* Blog post author name — right-justified, appears below the date in the page banner */
+.blog-post-author {
+    text-align: right;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+
+/* ── Insights section ──────────────────────────────────────────────────────── */
+
+/* Subtitle line on insight archive cards */
+.blog-card-subtitle {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    font-style: italic;
+    margin-top: -0.25rem;   /* pull up close under the title */
+    margin-bottom: 0.5rem;
+}
+
+/* Related articles block at the bottom of each insight article */
+.insight-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    /* No border — footnotes section above already provides the rule */
+}
+
+.insight-related-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Each relationship type group (Preceding, Subsequent, etc.) */
+.insight-related-group {
+    margin-bottom: 1rem;
+}
+
+/* The relationship type label (e.g. "Preceding", "Cross-Series") */
+.insight-related-type {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: 0.35rem;
+}
+
+/* The list of linked articles within a group */
+.insight-related-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.insight-related-list li {
+    margin-bottom: 0.25rem;
+}
+
+.insight-related-list a {
+    color: var(--color-navy);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.insight-related-list a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Placeholder text shown while nav links are being populated */
+.insight-related-placeholder {
+    color: var(--color-muted);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Insights sidebar — Related Insights heading override.
+   The base .sidebar-related h4 is intentionally small (0.8rem, uppercase)
+   for the service pages context. On insight articles the heading needs
+   more visual weight to match the longer, denser sidebar content. */
+.insights-sidebar-related h4 {
+    font-size: 1.35rem;
+    font-family: var(--font-serif);         /* Lock to Playfair Display — prevents bleed from Bodoni Moda on article h3s */
+    text-transform: none;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.75rem;
+}
+
+/* Insights sidebar — subhead beneath "Related Insights" heading */
+.sidebar-related-subhead {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    font-style: normal;
+    margin-top: -0.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* ------------------------------------------------------------
+   REFRAME BLOCK — "Instead of / Say" comparison pairs
+   Used in insight articles to contrast old framing with new.
+   Each .reframe-pair wraps one Instead of + one Say line.
+   ------------------------------------------------------------ */
+.reframe-block {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reframe-pair {
+    border-left: 4px solid var(--color-border, #e5e7eb);
+    padding: 1rem 1.25rem;
+    background: var(--color-bg-alt);
+    border-radius: 0 3px 3px 0;
+    transition: border-color 0.2s;
+}
+
+.reframe-pair:hover {
+    border-left-color: var(--color-accent);
+}
+
+/* "Instead of" label + old framing — muted, struck-through feel */
+.reframe-instead {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-muted);
+    margin-bottom: 0.25rem;
+}
+
+.reframe-instead-text {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+}
+
+/* "Say" label + new framing — prominent, dark, authoritative */
+.reframe-say {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    margin-bottom: 0.25rem;
+}
+
+.reframe-say-text {
+    font-size: 1rem;
+    color: var(--color-dark);
+    font-weight: 600;
+    line-height: 1.6;
+    padding-left: 0.5rem;
+}
+
+
+/* ------------------------------------------------------------
+   ARTICLE BYLINE
+   Appears beneath the page banner on all Advisory Engine articles.
+   Provides visible author attribution for readers and crawlers.
+   Dark navy background carries on from the banner.
+   ------------------------------------------------------------ */
+.article-byline {
+    background: var(--color-dark);         /* Extends the dark banner downward */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Subtle separator from banner */
+    padding: 0.75rem 1.5rem;
+}
+
+.article-byline-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Author name + credentials */
+.article-byline-author {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.article-byline-author a {
+    color: var(--color-accent);            /* Gold — matches other accent links */
+    font-weight: 700;
+}
+.article-byline-author a:hover {
+    color: #fff;
+}
+
+/* Credentials suffix — slightly muted, same line as name */
+.article-byline-credentials {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* Article ref code — right-aligned, muted */
+.article-byline-ref {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    /* Stack byline items on phones */
+    .article-byline-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
+
+/* ------------------------------------------------------------
+   ABOUT PAGE — content refinements
+   List indentation and heading spacing within .about-page-text
+   ------------------------------------------------------------ */
+
+/* Indent bullet lists ~0.25in inside the about page text column */
+.about-page-text ul {
+    padding-left: 1.5rem;   /* ~24px ≈ 0.25in at default font size */
+    margin-bottom: 1.25rem;
+}
+
+.about-page-text ul li {
+    color: var(--color-muted);
+    line-height: 1.8;
+    margin-bottom: 0.4rem;
+}
+
+/* Extra breathing room before h2 subheads in the about page body —
+   gives more visual separation between credential list and Biography */
+.about-page-text h2 {
+    margin-top: 3rem;       /* Increased from default ~1rem */
+    margin-bottom: 1.25rem;
+}
+
+.about-page-text h2:first-child {
+    margin-top: 0;          /* No extra top margin on the very first heading */
+}
+
+
+/* ------------------------------------------------------------
+   INSIGHT CTA BLOCK — A/B test variant CTA
+   Appears at the bottom of article content and in the sidebar
+   on all Advisory Engine articles. Variant text is injected by
+   JS in partials/insight-cta.html. Designed to look distinct
+   from the surrounding content without being visually aggressive.
+   ------------------------------------------------------------ */
+.insight-cta-block {
+    margin: 2.5rem 0 1rem;
+}
+
+.insight-cta-inner {
+    background: var(--color-dark);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 3px 3px 0;
+    padding: 1.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* The variant text — white on dark, readable */
+.insight-cta-text {
+    color: rgba(255,255,255,0.88);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+/* The CTA button — gold, consistent with site-wide btn style */
+.insight-cta-btn {
+    align-self: flex-start;
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+    font-size: 0.85rem;
+    padding: 0.6rem 1.5rem;
+    white-space: nowrap;
+}
+
+.insight-cta-btn:hover {
+    background: #fff;
+    color: var(--color-accent);
+    border-color: #fff;
+}
+
+/* Sidebar variant — slightly more compact */
+.service-sidebar .insight-cta-block {
+    margin: 0 0 2rem;
+}
+
+.service-sidebar .insight-cta-inner {
+    padding: 1.5rem;
+}
+
+.service-sidebar .insight-cta-text {
+    font-size: 0.9rem;
+}
+
+.service-sidebar .insight-cta-btn {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+}

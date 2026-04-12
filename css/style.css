@@ -1,0 +1,660 @@
+/* ============================================================
+   Integral Leadership Design — Main Stylesheet
+   Design System v2 | Last updated: March 2026
+   
+   TABLE OF CONTENTS:
+   1.  Google Fonts import
+   2.  CSS custom properties (design tokens / variables)
+   3.  CSS reset and base element defaults
+   4.  Typography — headings, body text, links
+   5.  Utility classes — section labels, shared layout helpers
+   6.  Buttons
+   7.  Header and logo
+   8.  Navigation — top bar and dropdowns
+   9.  Hero section
+   10. Services section
+   11. Approach section
+   12. About section
+   13. Testimonials section
+   14. Blog / Recent Posts section
+   15. CTA Band (gold call-to-action strip)
+   16. Footer
+   17. Responsive breakpoints (tablet and mobile)
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   1. GOOGLE FONTS
+   Playfair Display = serif font used for all headings
+   Open Sans = sans-serif font used for body text and UI
+   'display=swap' means text shows immediately in fallback font
+   while the custom font loads — prevents invisible text flash
+   ------------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+/* ------------------------------------------------------------
+   2. CSS CUSTOM PROPERTIES (design tokens)
+   Defined on :root so they're available everywhere in the file.
+   Change a value here and it updates consistently site-wide.
+   ------------------------------------------------------------ */
+:root {
+    /* Colours */
+    --color-dark:    #1a1a2e;   /* Deep navy — used for header, footer, dark sections */
+    --color-accent:  #c8973a;   /* Gold — used for highlights, buttons, borders, hover states */
+    --color-body:    #2d2d2d;   /* Near-black — default body text colour */
+    --color-bg:      #ffffff;   /* White — default page background */
+    --color-bg-alt:  #f7f5f2;   /* Warm off-white — alternating section backgrounds */
+    --color-border:  #e0dbd4;   /* Light warm grey — card borders and dividers */
+    --color-muted:   #6b6460;   /* Medium grey — secondary/body text inside cards */
+
+    /* Fonts */
+    --font-serif:    'Playfair Display', Georgia, serif;  /* Headings */
+    --font-sans:     'Open Sans', sans-serif;             /* Body, nav, UI */
+    --font-heading:  'Playfair Display', Georgia, serif;  /* Explicit alias used in article h3 overrides — prevents Bodoni Moda fallback bleeding into banner h1 */
+
+    /* Layout */
+    --max-w:         1200px;        /* Maximum content width — content stays centred on wide screens */
+    --section-pad:   5rem 1.5rem;   /* Consistent top/bottom padding for all full-width sections */
+}
+
+
+/* ------------------------------------------------------------
+   3. CSS RESET AND BASE DEFAULTS
+   Removes browser inconsistencies and establishes a clean base.
+   box-sizing: border-box means padding/border are included in
+   element width calculations (much more intuitive to work with).
+   ------------------------------------------------------------ */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;          /* Base font size — rem units scale from this */
+    scroll-behavior: smooth;  /* Smooth scroll when clicking anchor links */
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-body);
+    background: var(--color-bg);
+    line-height: 1.7;  /* Comfortable reading line height */
+}
+
+/* Images never overflow their container; display:block removes
+   the small gap browsers add below inline images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Default link style — gold, no underline, smooth colour transition */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover { color: #a67a2a; }  /* Darker gold on hover */
+
+
+/* ------------------------------------------------------------
+   4. TYPOGRAPHY
+   clamp() creates fluid font sizes that scale between a minimum
+   and maximum based on viewport width — no media queries needed
+   for typography.
+   ------------------------------------------------------------ */
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.25rem); }    /* Large hero headline */
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); } /* Section headlines */
+h3 { font-size: 1.35rem; }                       /* Card titles */
+
+p { margin-bottom: 1rem; }
+
+
+/* ------------------------------------------------------------
+   5. UTILITY CLASSES
+   Reusable helpers used across multiple sections.
+   ------------------------------------------------------------ */
+
+/* Small uppercase gold label that appears above section headlines
+   e.g. "WHAT WE DO" above "Our Services" */
+.section-label {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+
+/* ------------------------------------------------------------
+   6. BUTTONS
+   Three variants: primary (gold fill), outline (white border for
+   dark backgrounds), outline-dark (dark border for light backgrounds)
+   ------------------------------------------------------------ */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Gold filled — used on hero and dark backgrounds */
+.btn-primary { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+.btn-primary:hover { background: #a67a2a; border-color: #a67a2a; color: #fff; }
+
+/* White outline — used on dark/coloured backgrounds */
+.btn-outline { background: transparent; color: #fff; border-color: #fff; }
+.btn-outline:hover { background: #fff; color: var(--color-dark); }
+
+/* Dark outline — used on light/white backgrounds */
+.btn-outline-dark { background: transparent; color: var(--color-dark); border-color: var(--color-dark); }
+.btn-outline-dark:hover { background: var(--color-dark); color: #fff; }
+
+
+/* ------------------------------------------------------------
+   7. HEADER AND LOGO
+   Sticky header stays fixed at the top as the user scrolls.
+   z-index: 100 ensures it floats above all page content.
+   ------------------------------------------------------------ */
+.l-header {
+    background: var(--color-dark);
+    position: sticky;       /* Stays at top of viewport while scrolling */
+    top: 0;
+    z-index: 100;           /* Above all page sections */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+/* Inner wrapper constrains the header content to max-width
+   and spaces the logo and nav on opposite sides */
+.header-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+/* Logo link — flex row so image and/or text sit side by side */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+}
+
+/* The ILD logo PNG is inverted to white so it shows on the dark header */
+.logo img {
+    height: 38px;
+    width: auto;
+    filter: brightness(0) invert(1);  /* Converts dark logo to white */
+    flex-shrink: 0;
+}
+
+/* Text fallback used when the logo image fails to load */
+.logo-name {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+
+/* ------------------------------------------------------------
+   8. NAVIGATION — top bar and dropdown menus
+   The nav sits inside the header on the right side.
+   Dropdowns are pure CSS — they appear on :hover using
+   display:none / display:block toggled by the parent .nav-dropdown
+   ------------------------------------------------------------ */
+
+/* Flex container that holds the hamburger button + nav menu */
+.w-nav { display: flex; align-items: center; }
+
+/* Horizontal list of top-level nav items */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    align-items: center;
+}
+
+/* Each top-level item needs position:relative so its dropdown
+   can be positioned absolutely relative to it */
+.nav-menu > li { position: relative; }
+
+/* Base style for all nav links — top-level and dropdown items */
+.nav-link {
+    display: block;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.5rem 0.7rem;
+    border-radius: 3px;
+    transition: all 0.2s;
+    white-space: nowrap;  /* Prevents nav labels from wrapping to two lines */
+}
+.nav-link:hover { color: #fff; background: rgba(255,255,255,0.08); }
+
+/* "Book a Call" button — overrides the default nav-link style with gold background */
+.nav-cta { background: var(--color-accent) !important; color: #fff !important; margin-left: 0.5rem; padding: 0.5rem 1rem !important; }
+.nav-cta:hover { background: #a67a2a !important; color: #fff !important; }
+
+/* Dropdown panel — hidden by default, shown on hover of parent li */
+.nav-dropdown .submenu {
+    display: none;                              /* Hidden until parent is hovered */
+    position: absolute;                         /* Positioned below the parent nav item */
+    top: 100%;                                  /* Sits directly below the parent link */
+    left: 0;
+    background: var(--color-dark);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    z-index: 200;                               /* Above all page content */
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+/* Show the dropdown when hovering the parent li */
+.nav-dropdown:hover .submenu { display: block; }
+
+/* Dropdown item links — slightly different padding/radius from top-level */
+.submenu .nav-link { padding: 0.6rem 1rem; border-radius: 0; font-size: 0.8rem; }
+.submenu .nav-link:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+/* Hamburger menu button — hidden on desktop, shown on mobile via media query */
+.nav-toggle {
+    display: none;           /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+}
+/* The three horizontal bars of the hamburger icon */
+.nav-toggle span { width: 24px; height: 2px; background: #fff; border-radius: 2px; display: block; }
+
+
+/* ------------------------------------------------------------
+   9. HERO SECTION
+   Full-width banner at the top of the homepage.
+   Uses a background image with a semi-transparent overlay div
+   so the image doesn't overpower the text on top.
+   ------------------------------------------------------------ */
+.hero {
+    position: relative;     /* Required so absolutely-positioned children (.hero-bg) work correctly */
+    min-height: 580px;
+    display: flex;
+    align-items: center;    /* Vertically centres the content inside the hero */
+    background: var(--color-dark);  /* Fallback colour if image fails to load */
+    overflow: hidden;
+}
+
+/* The background image layer — sits behind everything else.
+   opacity: 0.6 lets the dark background show through, making
+   the text box readable without a separate overlay element */
+.hero-bg {
+    position: absolute;
+    inset: 0;                               /* Shorthand for top/right/bottom/left: 0 */
+    background-image: url('/img/hero.jpg');
+    background-size: cover;
+    background-position: 55% center;        /* 72d photo: Alexandra is right-of-center, this keeps her face visible */
+    opacity: 0.75;                          /* Slightly higher than before so Alexandra is more visible */
+}
+
+/* The content wrapper — constrains to max-width and positions text to the left */
+.hero-content {
+    position: relative;
+    z-index: 1;                 /* Sits above the .hero-bg layer */
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+    display: flex;
+    justify-content: flex-start;  /* Text box on left, photo visible on right */
+}
+
+/* The semi-transparent dark box that contains the headline and CTA */
+.hero-text {
+    max-width: 480px;
+    background: rgba(26,26,46,0.85);  /* Dark navy at 85% opacity */
+    padding: 2.5rem;
+    border-radius: 2px;
+}
+
+.hero-text h1 { color: #fff; margin-bottom: 0.75rem; }
+
+/* "People Focused. Growth Oriented. Results Driven." — gold tagline */
+.hero-tagline {
+    color: var(--color-accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* Descriptive paragraph below the tagline */
+.hero-description { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 1.75rem; }
+
+
+/* ------------------------------------------------------------
+   10. SERVICES SECTION
+   Four-column card grid on white background.
+   auto-fit with minmax means cards reflow gracefully on smaller
+   screens without needing explicit breakpoints for this section.
+   ------------------------------------------------------------ */
+.services { padding: var(--section-pad); background: var(--color-bg); }
+
+/* Shared inner wrapper used by most sections to constrain and centre content */
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+
+/* Centred section header used by Services, Testimonials, Blog */
+.section-header { text-align: center; margin-bottom: 3rem; }
+
+/* Responsive grid — fills as many columns as fit at min 240px wide */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+
+/* Individual service card — gold top border signals the brand accent colour */
+.service-card {
+    border: 1px solid var(--color-border);
+    border-top: 4px solid var(--color-accent);  /* Distinctive gold top stripe */
+    padding: 2rem 1.75rem;
+    border-radius: 2px;
+    transition: box-shadow 0.2s;
+}
+.service-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+.service-card h3 { color: var(--color-dark); margin-bottom: 0.75rem; }
+.service-card p { color: var(--color-muted); margin-bottom: 1rem; font-size: 0.95rem; }
+.read-more { font-size: 0.875rem; font-weight: 700; color: var(--color-accent); }
+
+
+/* ------------------------------------------------------------
+   11. APPROACH SECTION
+   Dark background (navy) with two-column layout:
+   left = text and CTA button, right = 4 pillar boxes
+   ------------------------------------------------------------ */
+.approach { padding: var(--section-pad); background: var(--color-dark); }
+
+.approach .section-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Equal width left/right columns */
+    gap: 4rem;
+    align-items: center;
+}
+
+.approach h2 { color: #fff; }
+.approach p { color: rgba(255,255,255,0.8); }
+
+/* 2x2 grid of Enquire / Engage / Innovate / Impact boxes */
+.approach-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+/* Each pillar has a gold left border as its visual accent */
+.pillar { border-left: 3px solid var(--color-accent); padding-left: 1rem; }
+.pillar h4 {
+    color: var(--color-accent);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+.pillar p { color: rgba(255,255,255,0.7); font-size: 0.875rem; margin: 0; }
+
+
+/* ------------------------------------------------------------
+   12. ABOUT SECTION
+   Warm off-white background with two-column layout:
+   left = photo, right = bio text and button.
+   The 320px fixed left column keeps the photo a consistent size
+   regardless of screen width.
+   ------------------------------------------------------------ */
+.about { padding: var(--section-pad); background: var(--color-bg-alt); }
+
+.about .section-inner {
+    display: grid;
+    grid-template-columns: 320px 1fr;  /* Fixed photo column, flexible text column */
+    gap: 4rem;
+    align-items: start;  /* Aligns photo to top of text, not centre */
+}
+
+/* Photo fills its fixed-width column; box-shadow gives it depth */
+.about-photo img { width: 100%; border-radius: 2px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+.about-text h2 { margin-bottom: 1.25rem; }
+.about-text p { color: var(--color-muted); }
+.about-text .btn { margin-top: 1rem; }
+
+
+/* ------------------------------------------------------------
+   13. TESTIMONIALS SECTION
+   White background, three-column card grid.
+   The decorative opening quote mark is generated via CSS ::before
+   pseudo-element so it doesn't appear in the HTML source.
+   ------------------------------------------------------------ */
+.testimonials { padding: var(--section-pad); background: var(--color-bg); }
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.testimonial-card { background: var(--color-bg-alt); padding: 2rem; border-radius: 2px; position: relative; }
+
+/* Decorative large opening quote mark — purely cosmetic, generated by CSS */
+.testimonial-card::before {
+    content: '\201C';                   /* Unicode left double quotation mark */
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    color: var(--color-accent);
+    opacity: 0.3;
+    position: absolute;
+    top: 0.5rem;
+    left: 1.25rem;
+    line-height: 1;
+}
+
+/* padding-top pushes the text below the large decorative quote mark */
+.testimonial-text { font-size: 0.95rem; color: var(--color-muted); line-height: 1.8; margin-bottom: 1.25rem; padding-top: 1.5rem; }
+.testimonial-author { font-weight: 700; font-size: 0.875rem; color: var(--color-dark); text-align: right; }
+
+
+/* ------------------------------------------------------------
+   14. BLOG / RECENT POSTS SECTION
+   Warm off-white background, three-column card grid.
+   Cards get a gold bottom border as a design accent (inverted
+   from the service cards which have a gold top border).
+   Posts are pulled dynamically from Hugo's content pipeline.
+   ------------------------------------------------------------ */
+.recent-posts { padding: var(--section-pad); background: var(--color-bg-alt); }
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+/* Blog card — gold bottom border instead of top, for visual variety */
+.post-card {
+    background: var(--color-bg);
+    padding: 1.75rem;
+    border-radius: 2px;
+    border-bottom: 3px solid var(--color-accent);
+    transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+.post-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.post-card h3 a { color: var(--color-dark); }
+.post-card h3 a:hover { color: var(--color-accent); }
+.post-date { font-size: 0.8rem; color: var(--color-muted); margin-bottom: 0.75rem; text-align: right; }
+.post-card p { font-size: 0.9rem; color: var(--color-muted); }
+
+
+/* ------------------------------------------------------------
+   15. CTA BAND
+   Full-width gold strip between the blog section and footer.
+   Used as a final conversion prompt — "Not Sure What You Need?"
+   ------------------------------------------------------------ */
+.cta-band { padding: 4rem 1.5rem; background: var(--color-accent); text-align: center; }
+.cta-band h2 { color: #fff; margin-bottom: 0.5rem; }
+.cta-band p { color: rgba(255,255,255,0.85); margin-bottom: 1.75rem; }
+
+
+/* ------------------------------------------------------------
+   16. FOOTER
+   Dark navy background matching the header, three-column grid:
+   left = brand/logo/contact, middle = Services links, right = Company links.
+   The footer-bottom strip holds the copyright line.
+   ------------------------------------------------------------ */
+.l-footer {
+    background: var(--color-dark);
+    color: rgba(255,255,255,0.7);
+    padding: 4rem 1.5rem 0;  /* No bottom padding — footer-bottom handles that */
+}
+
+/* Three-column grid: brand column is wider (1.5fr) than the two link columns (1fr each) */
+.footer-content {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Logo in footer — same invert filter as the header logo */
+.footer-brand .logo img { height: 36px; filter: brightness(0) invert(1); margin-bottom: 1rem; }
+.footer-brand .logo-text { font-family: var(--font-serif); font-size: 1rem; color: #fff; }
+.footer-brand p { font-size: 0.875rem; line-height: 1.8; margin-top: 0.75rem; }
+.footer-brand a { color: rgba(255,255,255,0.7); }
+.footer-brand a:hover { color: var(--color-accent); }
+
+/* Column headings — small uppercase labels like "SERVICES" and "COMPANY" */
+.footer-col h4 {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+.footer-col ul a { color: rgba(255,255,255,0.6); font-size: 0.875rem; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--color-accent); }
+
+/* Thin top border separates the copyright line from the columns above */
+.footer-bottom {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+}
+
+
+/* ------------------------------------------------------------
+   17. RESPONSIVE BREAKPOINTS
+   Tablet (max 768px) — stacks multi-column layouts to single column,
+   shows the hamburger menu, hides the horizontal nav.
+   Mobile (max 480px) — service cards go single column.
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+    /* Footer columns stack vertically */
+    .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+
+    /* Approach section — stack to single column on tablet */
+    .approach .section-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    /* Hide the horizontal nav menu by default on mobile */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;              /* Sits directly below the 72px header */
+        left: 0;
+        width: 100%;
+        background: var(--color-dark);
+        padding: 1rem 0;
+    }
+
+    /* JS adds .active class when hamburger is tapped — this shows the menu */
+    .nav-menu.active { display: flex; }
+
+    /* Show the hamburger button on mobile */
+    .nav-toggle { display: flex; }
+
+    /* Dropdowns flow inline (not floating) on mobile */
+    .submenu { position: static; box-shadow: none; border: none; background: rgba(255,255,255,0.05); }
+
+    /* Hero — reduce height and tighten padding on tablet */
+    .hero { min-height: 420px; }
+    .hero-content { padding: 3rem 1.25rem; }
+
+    /* About photo and text stack vertically */
+    .about .section-inner { grid-template-columns: 1fr; }
+    .about-photo { max-width: 320px; margin: 0 auto; }
+
+    /* Services go to two columns on tablet */
+    .services-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Testimonials single column on tablet */
+    .testimonials-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+
+    /* Hero — compact on phones, smaller text */
+    .hero { min-height: 360px; padding: 0; }
+    .hero-content { padding: 2.5rem 1rem; }
+    .hero-text { max-width: 100%; }  /* Full width text box on phones */
+    .hero-text h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+    .hero-tagline { font-size: 0.8rem; letter-spacing: 0.05em; }
+    .hero-description { font-size: 0.875rem; }
+
+    /* Shift hero photo position on phones — move left to show Alexandra's face */
+    .hero-bg { background-position: 30% center; }
+
+    /* Services single column on phones */
+    .services-grid { grid-template-columns: 1fr; }
+
+    /* Approach pillars stack to single column on phones */
+    .approach-pillars { grid-template-columns: 1fr; gap: 1rem; }
+
+    /* Section padding tighter on phones */
+    :root { --section-pad: 3rem 1rem; }
+
+    /* Page banner tighter on phones */
+    .page-banner { padding: 2.5rem 1rem; }
+}
