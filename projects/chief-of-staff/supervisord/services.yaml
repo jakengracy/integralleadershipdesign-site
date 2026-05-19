@@ -1,0 +1,105 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# services.yaml — Chief of Staff service manifest
+#
+# This file is the single source of truth for every process that supervisord
+# manages. generate_conf.py reads this file and produces supervisord.conf.
+#
+# FIELD REFERENCE
+# ───────────────
+# name         : unique identifier used by supervisorctl (no spaces)
+# port         : Flask/HTTP port the service listens on; null for non-HTTP processes
+# directory    : absolute path to the project root (~ is expanded at generation time)
+# command      : command to run, relative to directory
+# always_on    : true → autostart=true, autorestart=true in supervisord config
+#                false → autostart=false (on-demand services, started by CoS)
+# health_check : full URL for health probe; null if service has no health endpoint
+#
+# PORTING NOTE (for M1 deployment)
+# ─────────────────────────────────
+# Before running generate_conf.py, verify every `directory` path below against
+# ~/Documents/claude-workspace/SERVER_REGISTRY.md. The paths here are best-guess
+# defaults based on the project brief — update any that differ from your actual
+# workspace layout.
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Always-on services ─────────────────────────────────────────────────────
+  # These start automatically when supervisord starts and restart on crash.
+
+  - name: prospect-scout
+    port: 5001
+    directory: ~/Documents/claude-workspace/projects/ProspectScout
+    command: venv/bin/python3 run.py
+    always_on: true
+    health_check: http://localhost:5001/health
+
+  - name: signal-app
+    port: 5002
+    directory: ~/Documents/claude-workspace/projects/signal-app
+    command: venv/bin/python3 run.py
+    always_on: true
+    health_check: http://localhost:5002/health
+
+  # NOTE: ports 5003–5008 are placeholders — verify against SERVER_REGISTRY.md
+  - name: reflib-agent
+    port: 5003
+    directory: ~/Documents/claude-workspace/projects/reflib-agent
+    command: venv/bin/python3 run.py
+    always_on: true
+    health_check: http://localhost:5003/health
+
+  - name: agentic-inbox
+    port: 5004
+    directory: ~/Documents/claude-workspace/projects/agentic-inbox
+    command: venv/bin/python3 run.py
+    always_on: true
+    health_check: http://localhost:5004/health
+
+  - name: task-agents
+    port: 5005
+    directory: ~/Documents/claude-workspace/projects/task-agents
+    command: venv/bin/python3 run.py
+    always_on: true
+    health_check: http://localhost:5005/health
+
+  # ── Chief of Staff (this service) ─────────────────────────────────────────
+
+  - name: chief-of-staff
+    port: 5009
+    directory: ~/Documents/claude-workspace/projects/chief-of-staff
+    command: venv/bin/python3 run.py
+    always_on: true
+    health_check: http://localhost:5009/health
+
+  - name: cos-voice
+    port: null
+    directory: ~/Documents/claude-workspace/projects/chief-of-staff
+    command: venv/bin/python3 run_voice.py
+    always_on: true
+    health_check: null
+
+  # ── On-demand services ─────────────────────────────────────────────────────
+  # These do NOT start automatically. CoS starts them when needed and stops
+  # them when the task is complete. always_on: false → autostart=false in conf.
+
+  - name: gilly-jobs
+    port: 5010
+    directory: ~/Documents/claude-workspace/projects/gilly-jobs
+    command: venv/bin/python3 run.py
+    always_on: false
+    health_check: http://localhost:5010/health
+
+  - name: corp-accounting
+    port: 5011
+    directory: ~/Documents/claude-workspace/projects/corp-accounting
+    command: venv/bin/python3 run.py
+    always_on: false
+    health_check: http://localhost:5011/health
+
+  - name: equity-thesis-tracker
+    port: 5013
+    directory: ~/Documents/claude-workspace/projects/equity-thesis-tracker
+    command: venv/bin/python3 run.py
+    always_on: false
+    health_check: http://localhost:5013/health

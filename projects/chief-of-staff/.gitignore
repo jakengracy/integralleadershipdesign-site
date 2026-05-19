@@ -1,0 +1,23 @@
+# Environment and secrets
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# supervisord runtime files
+supervisord.pid
+supervisor.sock
+supervisord/supervisord.conf   # Generated — do not commit; regenerate from services.yaml
+
+# Logs
+logs/
+
+# Whisper model cache (downloaded on first run)
+.cache/
+
+# macOS
+.DS_Store

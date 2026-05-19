@@ -1,0 +1,36 @@
+# Chief of Staff — Python dependencies
+# Install into the project venv: pip install -r requirements.txt
+#
+# macOS-only packages (rumps, pynput) are marked below.
+# On Linux/CI, install with: pip install -r requirements.txt --ignore-requires-python
+# Or maintain a requirements-linux.txt that excludes those lines.
+
+# ── Web framework ──────────────────────────────────────────────────────────────
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# ── Process management ────────────────────────────────────────────────────────
+supervisor>=4.2.5           # Provides supervisord, supervisorctl, generate_conf.py deps
+
+# ── Task scheduling ───────────────────────────────────────────────────────────
+APScheduler>=3.10.4
+pytz>=2024.1                # Timezone support for APScheduler CronTrigger
+
+# ── LLM clients ──────────────────────────────────────────────────────────────
+anthropic>=0.40.0           # Claude API (claude-sonnet-4-20250514)
+requests>=2.31.0            # Ollama HTTP API + health checks
+
+# ── Configuration ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+pyyaml>=6.0.1               # services.yaml parsing in scheduler + generate_conf.py
+
+# ── Voice layer — macOS only ──────────────────────────────────────────────────
+# Do not install these on Linux environments (they will fail or be non-functional)
+rumps>=0.4.0                # macOS menu bar app framework
+pynput>=1.7.7               # Global keyboard shortcut listener (requires Accessibility permission)
+
+# ── Speech recognition ────────────────────────────────────────────────────────
+faster-whisper>=1.0.3       # Local STT — uses CTranslate2, runs on Metal/Neural Engine on M1
+sounddevice>=0.4.6          # Microphone recording via PortAudio
+soundfile>=0.12.1           # WAV file I/O
+numpy>=1.24.0               # Audio buffer manipulation

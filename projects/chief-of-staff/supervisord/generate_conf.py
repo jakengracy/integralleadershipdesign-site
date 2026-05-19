@@ -1,0 +1,192 @@
+#!/usr/bin/env python3
+"""
+generate_conf.py — Generates supervisord.conf from services.yaml.
+
+Run this script whenever you add, remove, or modify a service in services.yaml.
+The generated supervisord.conf is written to the same directory as this script.
+
+Usage:
+    cd ~/Documents/claude-workspace/projects/chief-of-staff
+    python3 supervisord/generate_conf.py
+
+Then restart supervisord to pick up the new config:
+    supervisorctl -c supervisord/supervisord.conf reload
+"""
+
+import os
+import sys
+from pathlib import Path
+
+try:
+    import yaml
+except ImportError:
+    print("ERROR: PyYAML not installed. Run: pip install pyyaml")
+    sys.exit(1)
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
+
+# This script lives in supervisord/, project root is one level up
+SCRIPT_DIR    = Path(__file__).parent.resolve()
+PROJECT_ROOT  = SCRIPT_DIR.parent
+SERVICES_YAML = SCRIPT_DIR / "services.yaml"
+OUTPUT_CONF   = SCRIPT_DIR / "supervisord.conf"
+
+# Log and pid files go into the project's logs/ directory
+LOG_DIR = PROJECT_ROOT / "logs"
+LOG_DIR.mkdir(exist_ok=True)
+
+
+def expand(path_str: str) -> str:
+    """Expand ~ and environment variables in a path string."""
+    return str(Path(os.path.expandvars(os.path.expanduser(path_str))).resolve())
+
+
+def load_services() -> list[dict]:
+    """Load and validate the services manifest from services.yaml."""
+    if not SERVICES_YAML.exists():
+        print(f"ERROR: services.yaml not found at {SERVICES_YAML}")
+        sys.exit(1)
+
+    with open(SERVICES_YAML) as f:
+        data = yaml.safe_load(f)
+
+    services = data.get("services", [])
+    if not services:
+        print("ERROR: No services found in services.yaml")
+        sys.exit(1)
+
+    # Basic validation — catch common mistakes early
+    names = [s["name"] for s in services]
+    if len(names) != len(set(names)):
+        print("ERROR: Duplicate service names in services.yaml")
+        sys.exit(1)
+
+    return services
+
+
+def build_supervisord_section() -> str:
+    """
+    [supervisord] global section.
+    nodaemon=false means supervisord runs as a background daemon.
+    """
+    return f"""\
+[supervisord]
+logfile={LOG_DIR}/supervisord.log
+logfile_maxbytes=50MB
+logfile_backups=5
+loglevel=info
+pidfile={PROJECT_ROOT}/supervisord.pid
+nodaemon=false
+silent=false
+minfds=1024
+minprocs=200
+"""
+
+
+def build_unix_http_section() -> str:
+    """Unix socket for local supervisorctl commands (no auth needed)."""
+    return f"""\
+[unix_http_server]
+file={PROJECT_ROOT}/supervisor.sock
+chmod=0700
+"""
+
+
+def build_inet_http_section() -> str:
+    """
+    TCP interface on localhost:9001 — used by the CoS XML-RPC client
+    (cos/service_manager.py) to start/stop/query services programmatically.
+    Bound to 127.0.0.1 only; never expose this port externally.
+    """
+    return """\
+[inet_http_server]
+port=127.0.0.1:9001
+"""
+
+
+def build_supervisorctl_section() -> str:
+    """supervisorctl client configuration — matches the unix socket above."""
+    return f"""\
+[supervisorctl]
+serverurl=unix://{PROJECT_ROOT}/supervisor.sock
+"""
+
+
+def build_rpcinterface_section() -> str:
+    """Required boilerplate — enables the default XML-RPC interface."""
+    return """\
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory=supervisor.rpcinterface:make_main_rpcinterface
+"""
+
+
+def build_program_section(svc: dict) -> str:
+    """
+    Generate a [program:name] block for a single service.
+    autostart mirrors always_on; autorestart is true only for always_on services
+    so on-demand services don't restart unexpectedly after CoS stops them.
+    """
+    name       = svc["name"]
+    directory  = expand(svc["directory"])
+    command    = svc["command"]
+    always_on  = svc.get("always_on", False)
+    autostart  = "true" if always_on else "false"
+    autorestart = "true" if always_on else "false"
+
+    return f"""\
+[program:{name}]
+command={directory}/{command}
+directory={directory}
+autostart={autostart}
+autorestart={autorestart}
+startsecs=3
+startretries=3
+stopwaitsecs=10
+stdout_logfile={LOG_DIR}/{name}.stdout.log
+stdout_logfile_maxbytes=20MB
+stdout_logfile_backups=3
+stderr_logfile={LOG_DIR}/{name}.stderr.log
+stderr_logfile_maxbytes=20MB
+stderr_logfile_backups=3
+environment=HOME="{os.path.expanduser("~")}",PATH="{directory}/venv/bin:%(ENV_PATH)s"
+"""
+
+
+def generate():
+    """Main entry point — build and write the complete supervisord.conf."""
+    services = load_services()
+
+    sections = [
+        build_supervisord_section(),
+        build_unix_http_section(),
+        build_inet_http_section(),
+        build_supervisorctl_section(),
+        build_rpcinterface_section(),
+    ]
+
+    # Add one [program:] block per service
+    for svc in services:
+        sections.append(build_program_section(svc))
+
+    conf_content = "\n".join(sections)
+
+    with open(OUTPUT_CONF, "w") as f:
+        f.write(f"; supervisord.conf — generated by generate_conf.py\n")
+        f.write(f"; DO NOT EDIT BY HAND — re-run generate_conf.py after changing services.yaml\n\n")
+        f.write(conf_content)
+
+    print(f"Generated: {OUTPUT_CONF}")
+    print(f"Services configured: {len(services)}")
+
+    # Print a summary so the operator can quickly verify
+    always_on   = [s["name"] for s in services if s.get("always_on")]
+    on_demand   = [s["name"] for s in services if not s.get("always_on")]
+    print(f"\nAlways-on  ({len(always_on)}): {', '.join(always_on)}")
+    print(f"On-demand  ({len(on_demand)}): {', '.join(on_demand)}")
+    print(f"\nNext steps:")
+    print(f"  supervisord -c {OUTPUT_CONF}")
+    print(f"  supervisorctl -c {OUTPUT_CONF} status")
+
+
+if __name__ == "__main__":
+    generate()
