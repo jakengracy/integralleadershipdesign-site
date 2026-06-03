@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{/*
+    thank-you.html — Confirmation page shown after contact form submission.
+
+    Matches the visual language of the rest of the site:
+    - Page banner (dark navy, gold descriptor) consistent with all interior pages
+    - Centred confirmation section with checkmark, message, and nav links
+    - No date rendering (transactional page, not a post)
+*/}}
+
+
+{{/* ── PAGE BANNER ─────────────────────────────────────────── */}}
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <div class="page-breadcrumb">
+            <a href="/">Home</a>
+            <span>→</span>
+            <a href="/contact">Contact</a>
+            <span>→</span>
+            <span>Thank You</span>
+        </div>
+        <h1>Message Received</h1>
+        <p class="page-banner-desc">Alexandra will be in touch within one business day</p>
+    </div>
+</div>
+
+
+{{/* ── CONFIRMATION BODY ─────────────────────────────────────── */}}
+<section class="thankyou-page">
+    <div class="thankyou-inner">
+
+        <div class="thankyou-check" aria-hidden="true">✓</div>
+
+        <h2>Your message is on its way.</h2>
+        <p>Thanks for reaching out. Alexandra will review your message and respond within one business day with a link to book your free 30-minute discovery call. The call is free, confidential, and without obligation.</p>
+
+        <div class="thankyou-explore">
+            <p class="thankyou-explore-label">In the meantime, explore the work</p>
+            <div class="thankyou-links">
+                <a href="/coaching" class="thankyou-link">
+                    <span class="thankyou-link-title">Leadership Coaching</span>
+                    <span class="thankyou-link-arrow">→</span>
+                </a>
+                <a href="/change-management" class="thankyou-link">
+                    <span class="thankyou-link-title">Change Management</span>
+                    <span class="thankyou-link-arrow">→</span>
+                </a>
+                <a href="/corporate" class="thankyou-link">
+                    <span class="thankyou-link-title">Corporate Development</span>
+                    <span class="thankyou-link-arrow">→</span>
+                </a>
+                <a href="/insights" class="thankyou-link">
+                    <span class="thankyou-link-title">Insights</span>
+                    <span class="thankyou-link-arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <a href="/" class="btn btn-primary thankyou-btn">← Back to Home</a>
+
+    </div>
+</section>
+
+{{ end }}

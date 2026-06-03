@@ -58,13 +58,15 @@
             </ul>
 
             {{/* Direct contact details */}}
-            <div class="contact-detail">
-                <span>✉</span>
-                <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
-            </div>
-            <div class="contact-detail">
-                <span>☎</span>
-                <a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+            <div class="contact-details">
+                <div class="contact-detail">
+                    <span class="icon-envelope">✉</span>
+                    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+                </div>
+                <div class="contact-detail">
+                    <span>☎</span>
+                    <a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+                </div>
             </div>
         </div>
 
