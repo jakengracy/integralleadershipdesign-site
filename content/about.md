@@ -37,7 +37,7 @@ From there, Alexandra works with a direct style and a light touch. Clients descr
 
 ## Passion for Women's Leadership
 
-Alexandra is particularly committed to developing women leaders. Her signature program — **Purpose, Passion, and Presence for Women Rising** — was designed specifically for women who are ready to lead with confidence, authenticity, and real impact. The program works across five interconnected pillars: authenticity, wholeness, clarity, drive, and connection.
+Alexandra is particularly committed to developing women leaders. Her signature program — **[Purpose, Passion, and Presence for Women Rising](/coaching/womens-program)** — was designed specifically for women who are ready to lead with confidence, authenticity, and real impact. The program works across five interconnected pillars: authenticity, wholeness, clarity, drive, and connection.
 
 She has worked with hundreds of women navigating the particular challenges of leadership in environments that weren't designed with them in mind. Her Governor General nomination reflects the depth of that commitment — this is not peripheral to her practice. It is central to it.
 

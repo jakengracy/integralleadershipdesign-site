@@ -40,4 +40,4 @@ In 2018, she was also nominated for Canada's Top 100 Most Powerful Women Award, 
 
 ## A Note on Format
 
-This program can be delivered as a standalone corporate engagement or in conjunction with Integral Leadership Design's individual Women's Rising coaching program for participants who want deeper one-on-one support alongside the organizational work.
+This program can be delivered as a standalone corporate engagement or in conjunction with Integral Leadership Design's individual [Women's Rising coaching program](/coaching/womens-program) for participants who want deeper one-on-one support alongside the organizational work.

@@ -24,26 +24,26 @@ You may have wonderful ideas, but do you have the interpersonal skills to gain t
 
 Dialogue is at the heart of the process. Combined with deep listening and open-ended questions, we work together to surface what's interfering with your goals, and identify the habits and mindsets that may be standing in your way.
 
-## Individual Coaching
+## [Individual Coaching](/coaching/individual)
 
 One-on-one coaching tailored to your specific goals, context, and pace. Sessions are conducted via video conference, making it accessible regardless of where you're based.
 
 Typical individual coaching engagements run 6–12 months, with sessions every two to three weeks. The work happens between sessions as much as during them.
 
-## Team Coaching
+## [Executive & Leadership Team Coaching](/corporate/team-coaching)
 
 Teams don't automatically become high-performing just because the individuals are talented. Team coaching works on the dynamics, trust, and shared direction that turns a group of capable people into a genuinely effective unit.
 
 We work with leadership teams, project teams, and cross-functional groups to build the clarity and cohesion needed to perform at their best.
 
-## Women's Leadership Program
+## [Women's Leadership Program](/coaching/womens-program)
 
-Alexandra's signature program — **Purpose, Passion, and Presence for Women Rising** — is designed specifically for women who are ready to lead with confidence, authenticity, and impact.
+Alexandra's signature program — **[Purpose, Passion, and Presence for Women Rising](/coaching/womens-program)** — is designed specifically for women who are ready to lead with confidence, authenticity, and impact.
 
 The program works across five pillars to address the real challenges women face in leadership: building presence, finding voice, navigating organizational dynamics, developing resilience, and leading from a place of genuine values alignment.
 
 Participants consistently report that this program is not just a professional development experience — it's a turning point.
 
-## Single Session
+## [Single Strategy Session](/coaching/single-session)
 
 Not ready for a full engagement? A single 90-minute strategy session with Alexandra can provide immediate clarity on a specific challenge, a career decision, or a leadership situation you're navigating right now.
