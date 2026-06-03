@@ -43,6 +43,7 @@
         </div>
 
         <h1>{{ .Title }}</h1>
+        <p class="page-banner-brand">{{ .Site.Title }}</p>
 
         {{/* Gold descriptor line — set via 'description' in front matter */}}
         {{ with .Params.description }}

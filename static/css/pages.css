@@ -50,6 +50,18 @@
     font-size: clamp(1.75rem, 4vw, 2.75rem);   /* Slightly smaller than homepage hero */
 }
 
+/* Subdued site-name line beneath the page h1 — smaller, low-contrast */
+.page-banner-brand {
+    color: rgba(255,255,255,0.35);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+    font-family: var(--font-sans);
+}
+
 /* One-line gold descriptor beneath the page title */
 .page-banner-desc {
     color: var(--color-accent);
@@ -279,16 +291,26 @@
 .contact-info p { color: var(--color-muted); line-height: 1.8; }
 
 /* Contact detail lines — email, phone */
+.contact-details {
+    margin-top: 1.5rem;                 /* Space after the bullet list above */
+}
+
 .contact-detail {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 1.5rem;
+    margin-top: 0.4rem;                 /* Tight spacing between email and phone */
     color: var(--color-muted);
     font-size: 0.95rem;
 }
+.contact-detail:first-child { margin-top: 0; }
 .contact-detail a { color: var(--color-dark); font-weight: 600; }
 .contact-detail a:hover { color: var(--color-accent); }
+
+/* Normalise the envelope glyph (✉) to match the telephone glyph (☎) visually.
+   The envelope character renders smaller in most system fonts — bumping it up
+   to 1.2em brings it in line with the telephone character's apparent weight. */
+.contact-detail .icon-envelope { font-size: 1.2em; line-height: 1; }
 
 /* The Formspree form itself */
 .contact-form { background: var(--color-bg-alt); padding: 2.5rem; border-radius: 3px; }
@@ -1060,4 +1082,95 @@
     width: 100%;
     text-align: center;
     align-self: stretch;
+}
+
+
+/* ------------------------------------------------------------
+   THANK YOU PAGE
+   Confirmation page shown after contact form submission.
+   Centred single-column layout — warm but efficient.
+   Uses the standard page banner, then a focused confirmation block.
+   ------------------------------------------------------------ */
+.thankyou-page {
+    padding: var(--section-pad);
+    background: var(--color-bg);
+    text-align: center;
+}
+
+.thankyou-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gold circular checkmark — immediate visual confirmation */
+.thankyou-check {
+    width: 72px;
+    height: 72px;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 72px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    font-weight: 700;
+}
+
+.thankyou-inner h2 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.thankyou-inner > p {
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 2.5rem;
+}
+
+/* "Explore the work" links block */
+.thankyou-explore {
+    background: var(--color-bg-alt);
+    border-radius: 3px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.thankyou-explore-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    margin-bottom: 0.75rem !important;  /* Override the > p rule above */
+}
+
+.thankyou-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.thankyou-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+.thankyou-link:last-child { border-bottom: none; }
+.thankyou-link:hover { color: var(--color-accent); }
+
+.thankyou-link-arrow {
+    color: var(--color-accent);
+    font-weight: 400;
+}
+
+.thankyou-btn {
+    display: inline-block;
 }
