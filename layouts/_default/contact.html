@@ -122,6 +122,9 @@
                 {{/* Formspree honeypot field — hidden from humans, catches bots */}}
                 <input type="text" name="_gotcha" style="display:none">
 
+                {{/* Redirect to thank-you page after submission — required for GA4 conversion tracking */}}
+                <input type="hidden" name="_next" value="https://integralleadershipdesign.com/thank-you">
+
                 {{/* Submit */}}
                 <button type="submit" class="btn btn-primary form-submit">Send My Message</button>
 

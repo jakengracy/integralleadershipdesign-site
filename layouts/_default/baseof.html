@@ -23,6 +23,9 @@
 
     <meta name="author" content="Alexandra Salamis">
 
+    {{/* noindex — set noindex: true in front matter to exclude a page from search engines */}}
+    {{ if .Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
+
     {{/* Open Graph + Twitter Card tags — controls link previews on LinkedIn, iMessage, Slack, etc. */}}
     {{ partial "opengraph.html" . }}
 
