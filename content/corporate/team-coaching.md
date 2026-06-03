@@ -1,5 +1,5 @@
 ---
-title: "Team Coaching | Executive & Leadership Teams"
+title: "Executive & Leadership Team Coaching"
 description: "Team coaching for leadership teams that are capable but underperforming together. Featured in Forbes. Alexandra Salamis works with executive and senior leadership teams across Canada."
 layout: "service"
 date: 2019-01-01

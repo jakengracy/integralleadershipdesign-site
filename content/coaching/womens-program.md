@@ -1,6 +1,6 @@
 ---
 title: "Women's Leadership Coaching Program | Purpose, Passion & Presence"
-description: "Purpose, Passion, and Presence for Women Rising — Alexandra Salamis's signature women's leadership coaching program. For women executives and leaders across Canada ready to lead with confidence and authenticity."
+description: "Purpose, Passion, and Presence for Women Rising — Alexandra Salamis's signature women's leadership coaching program. For women executives and leaders worldwide ready to lead with confidence and authenticity."
 layout: "service"
 date: 2019-01-01
 draft: false
@@ -8,7 +8,7 @@ draft: false
 
 Women bring enormous leadership potential to their organizations. Too often, that potential goes underdeveloped — not for lack of ability, but because the environments, expectations, and support systems women navigate are genuinely different from those of their male peers.
 
-Alexandra Salamis has spent her career working at that gap. Her signature program — **Purpose, Passion, and Presence for Women Rising** — was designed specifically for women who are ready to lead with confidence, authenticity, and real impact.
+Alexandra Salamis has spent her career working at that gap. Her signature program — **Purpose, Passion, and Presence for Women Rising** — was designed specifically for women who are ready to lead with confidence, authenticity, and meaningful impact.
 
 ## What the Program Addresses
 
@@ -20,7 +20,7 @@ The program works across five interconnected pillars, each targeting a real chal
 
 **Organizational Navigation** — How to read and move through the political and cultural landscape of your organization effectively, without compromising your integrity.
 
-**Resilience** — How to manage setbacks, self-doubt, and the particular pressures women leaders absorb — and come back stronger.
+**Resilience** — How to manage setbacks, self-doubt, and the particular pressures women leaders absorb — to come back stronger.
 
 **Values Alignment** — How to lead from a place that's genuinely yours, so your leadership is sustainable and feels right, not just effective.
 
@@ -44,6 +44,6 @@ Participants consistently describe this program as more than professional develo
 
 ## Format
 
-The program is delivered via video conference and designed to be accessible regardless of your location or schedule. Alexandra is based in Ottawa, Ontario and works with women leaders across Canada individually and, where applicable, in small cohort settings that build peer connection alongside personal growth.
+The program is delivered via video conference and designed to be accessible regardless of your location or schedule. Alexandra is based in Ottawa, Ontario, Canada and works with women leaders around the world individually and, where applicable, in small cohort settings that build peer connection alongside personal growth.
 
 Reach out to discuss what format and timeline work best for your situation.
