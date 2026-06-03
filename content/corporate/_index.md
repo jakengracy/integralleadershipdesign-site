@@ -1,6 +1,6 @@
 ---
-title: "Corporate Leadership Development | Canada"
-description: "Corporate leadership development, team coaching, and women's leadership programs across Canada. Action learning approach. Integral Leadership Design — Alexandra Salamis, Ottawa, Ontario."
+title: "Corporate Leadership Development"
+description: "Corporate leadership development, team coaching, and women's leadership programs. Action learning approach. Integral Leadership Design."
 layout: "service"
 date: 2019-01-01
 draft: false

@@ -1,12 +1,12 @@
 ---
 title: "About Alexandra"
-description: "Award-winning leadership coach and change consultant Alexandra Salamis — 20+ years developing executives and organizations across Canada."
+description: "Award-winning leadership coach and change consultant Alexandra Salamis — 25 years developing executives and organizations worldwide."
 layout: "about"
 date: 2019-01-01
 draft: false
 ---
 
-Alexandra Salamis is the founder and president of Integral Leadership Design — a leadership development and change management consultancy based in Ottawa, Ontario. With over twenty years of experience working with executives, senior leaders, and organizations across Canada, she has built a practice grounded in a simple conviction: sustainable change and lasting leadership impact start from within.
+Alexandra Salamis is the founder and president of Integral Leadership Design — a leadership development and change management consultancy based in Ottawa, Ontario. With 25 years of experience working with executives, senior leaders, and organizations worldwide, she has built a practice grounded in a simple conviction: sustainable change and lasting leadership impact start from within.
 
 She holds two master's degrees in Human Development (M.A., M.S.W.) and is a certified coach under the International Coach Federation (ICF) and the European Mentoring and Coaching Council (EMCC). She is a Certified Executive Coach (CEC) and holds the Certified Change Management Professional (CCMP) designation.
 

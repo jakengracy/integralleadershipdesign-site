@@ -50,10 +50,27 @@
     font-size: clamp(1.75rem, 4vw, 2.75rem);   /* Slightly smaller than homepage hero */
 }
 
+/* Multi-line banner title — each | segment renders as its own line */
+.page-banner h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.banner-title-line {
+    display: block;
+}
+/* Secondary title lines (after the first |) — smaller and more subdued */
+.banner-title-sub {
+    font-size: 0.6em;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.01em;
+}
+
 /* Subdued site-name line beneath the page h1 — smaller, low-contrast */
 .page-banner-brand {
     color: rgba(255,255,255,0.35);
-    font-size: 0.75rem;
+    font-size: 0.94rem;    /* 0.75rem × 1.25 */
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;

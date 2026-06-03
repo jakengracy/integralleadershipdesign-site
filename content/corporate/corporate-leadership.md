@@ -1,5 +1,5 @@
 ---
-title: "Corporate Leadership Development Program | Canada"
+title: "Corporate Leadership Development Program"
 description: "Action learning-based corporate leadership development programs across Canada — building pipeline, performance culture, and lasting capability at every level. Integral Leadership Design."
 layout: "service"
 date: 2019-01-01

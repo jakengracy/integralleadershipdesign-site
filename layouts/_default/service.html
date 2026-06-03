@@ -42,7 +42,14 @@
             <span>{{ .Title }}</span>
         </div>
 
-        <h1>{{ .Title }}</h1>
+        <h1>
+            {{- range $i, $part := split .Title "|" -}}
+            {{- $trimmed := $part | strings.TrimSpace -}}
+            {{- if $trimmed -}}
+            <span class="banner-title-line{{ if gt $i 0 }} banner-title-sub{{ end }}">{{ $trimmed }}</span>
+            {{- end -}}
+            {{- end -}}
+        </h1>
         <p class="page-banner-brand">{{ .Site.Title }}</p>
 
         {{/* Gold descriptor line — set via 'description' in front matter */}}

@@ -1,6 +1,6 @@
 ---
-title: "Individual Leadership Coaching | Ottawa, Ontario"
-description: "One-on-one executive and leadership coaching with Alexandra Salamis — ICF certified coach based in Ottawa, Ontario. 6–12 month engagements for executives and senior leaders across Canada."
+title: "Individual Leadership Coaching"
+description: "One-on-one executive and leadership coaching with Alexandra Salamis — ICF certified coach. 6–12 month engagements for executives and senior leaders worldwide."
 layout: "service"
 date: 2019-01-01
 draft: false
@@ -12,7 +12,7 @@ Eighty percent of Fortune 500 companies now offer executive coaching to their le
 
 ## What Individual Coaching Looks Like
 
-One-on-one coaching with Alexandra is a sustained engagement — not a series of disconnected conversations, but a progressive journey with a clear arc. Based in Ottawa, Ontario, Alexandra works with executives and senior leaders across Canada via video conference, making it accessible regardless of where you're based.
+One-on-one coaching with Alexandra is a sustained engagement — not a series of disconnected conversations, but a progressive journey with a clear arc. Alexandra works with executives and senior leaders worldwide via video conference, making it accessible regardless of where you're based.
 
 Typical engagements run 6–12 months, with sessions every two to three weeks. The work happens between sessions as much as during them.
 

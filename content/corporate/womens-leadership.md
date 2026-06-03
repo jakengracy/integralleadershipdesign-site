@@ -1,5 +1,5 @@
 ---
-title: "Women's Corporate Leadership Development | Canada"
+title: "Women's Corporate Leadership Development"
 description: "Corporate women's leadership programs that develop and retain female talent across Canada — building individual capability and addressing the systemic factors that limit women's advancement."
 layout: "service"
 date: 2019-01-01
