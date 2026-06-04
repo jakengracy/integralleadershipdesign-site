@@ -204,9 +204,11 @@ p { margin-bottom: 1rem; }
     text-decoration: none;
 }
 
-/* The ILD logo PNG is inverted to white so it shows on the dark header */
+/* The ILD logo PNG is inverted to white so it shows on the dark header.
+   The stacked logo is near-square, so it needs more height than the old
+   wide logo did for the wordmark lines to stay legible. */
 .logo img {
-    height: 38px;
+    height: 56px;
     width: auto;
     filter: brightness(0) invert(1);  /* Converts dark logo to white */
     flex-shrink: 0;
@@ -549,8 +551,9 @@ p { margin-bottom: 1rem; }
     padding-bottom: 3rem;
 }
 
-/* Logo in footer — same invert filter as the header logo */
-.footer-brand .logo img { height: 36px; filter: brightness(0) invert(1); margin-bottom: 1rem; }
+/* Logo in footer — same invert filter as the header logo.
+   Taller than before to suit the stacked (near-square) logo. */
+.footer-brand .logo img { height: 56px; filter: brightness(0) invert(1); margin-bottom: 1rem; }
 .footer-brand .logo-text { font-family: var(--font-serif); font-size: 1rem; color: #fff; }
 .footer-brand p { font-size: 0.875rem; line-height: 1.8; margin-top: 0.75rem; }
 .footer-brand a { color: rgba(255,255,255,0.7); }
