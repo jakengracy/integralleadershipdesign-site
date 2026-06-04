@@ -553,7 +553,7 @@ p { margin-bottom: 1rem; }
 
 /* Logo in footer — same invert filter as the header logo.
    Taller than before to suit the stacked (near-square) logo. */
-.footer-brand .logo img { height: 56px; filter: brightness(0) invert(1); margin-bottom: 1rem; }
+.footer-brand .logo img { height: 70px; filter: brightness(0) invert(1); margin-bottom: 1rem; }
 .footer-brand .logo-text { font-family: var(--font-serif); font-size: 1rem; color: #fff; }
 .footer-brand p { font-size: 0.875rem; line-height: 1.8; margin-top: 0.75rem; }
 .footer-brand a { color: rgba(255,255,255,0.7); }
