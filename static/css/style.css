@@ -340,7 +340,7 @@ p { margin-bottom: 1rem; }
 
 /* The semi-transparent dark box that contains the headline and CTA */
 .hero-text {
-    max-width: 480px;
+    max-width: 560px;
     background: rgba(26,26,46,0.85);  /* Dark navy at 85% opacity */
     padding: 2.5rem;
     border-radius: 2px;

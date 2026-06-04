@@ -325,9 +325,8 @@
 .contact-detail a:hover { color: var(--color-accent); }
 
 /* Normalise the envelope glyph (✉) to match the telephone glyph (☎) visually.
-   The envelope character renders smaller in most system fonts — bumping it up
-   to 1.2em brings it in line with the telephone character's apparent weight. */
-.contact-detail .icon-envelope { font-size: 1.2em; line-height: 1; }
+   The envelope character renders significantly smaller in most system fonts. */
+.contact-detail .icon-envelope { font-size: 1.5em; line-height: 1; }
 
 /* The Formspree form itself */
 .contact-form { background: var(--color-bg-alt); padding: 2.5rem; border-radius: 3px; }
