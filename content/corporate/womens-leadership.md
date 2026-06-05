@@ -36,7 +36,7 @@ The program includes advisory support for organizational leaders who want to und
 
 Alexandra Salamis has spent her career championing women's leadership. She was nominated for the Governor General's Award in Gender Equality for her lifelong dedication to empowering women in leadership — and this work is not peripheral to what she does. It is central to it.
 
-In 2018, she was also nominated for Canada's Top 100 Most Powerful Women Award, recognizing both her own leadership and her work developing it in others.
+In 2018, she was also nominated for Canada's Top 100 Most Powerful Women Award, recognizing both her own leadership and her work developing it in others.
 
 ## A Note on Format
 

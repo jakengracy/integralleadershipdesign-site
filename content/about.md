@@ -6,7 +6,7 @@ date: 2019-01-01
 draft: false
 ---
 
-Alexandra Salamis is the founder and president of Integral Leadership Design — a leadership development and change management consultancy based in Ottawa, Ontario. With 25 years of experience working with executives, senior leaders, and organizations worldwide, she has built a practice grounded in a simple conviction: sustainable change and lasting leadership impact start from within.
+Alexandra Salamis is the founder and president of Integral Leadership Design — a leadership development and change management consultancy based in Ottawa, Ontario. With 25 years of experience working with executives, senior leaders, and organizations worldwide, she has built a practice grounded in a simple conviction: sustainable change and lasting leadership impact start from within.
 
 She holds two master's degrees in Human Development (M.A., M.S.W.) and is a certified coach under the International Coach Federation (ICF) and the European Mentoring and Coaching Council (EMCC). She is a Certified Executive Coach (CEC) and holds the Certified Change Management Professional (CCMP) designation.
 
@@ -15,9 +15,9 @@ She holds two master's degrees in Human Development (M.A., M.S.W.) and is a cert
 Alexandra's work has been recognized at the national level and cited in major publications:
 
 - **Governor General's Awards in Commemoration of the Persons Case** — nominated for her lifelong dedication to empowering women in leadership
-- **Canada's Top 100 Most Powerful Women Award** — nominated (2018)
+- **Canada's Top 100 Most Powerful Women Award** — nominated (2018)
 - **Forbes Coaches Council** — invited member
-- **Top 21 Coaches in Ottawa** — named by Influence Digest Magazine
+- **Top 21 Coaches in Ottawa** — named by Influence Digest Magazine
 - **Top Leadership Coach** — recognized by Coach Foundation
 - **Featured in Forbes** — for her work transforming a C-suite leadership team through organizational conflict and into high performance
 - **Senior advisor and consultant** to the Canadian Government across multiple executive and coaching advisory roles
@@ -43,7 +43,7 @@ She has worked with hundreds of women navigating the particular challenges of le
 
 ## The ILD Organisational Transformation Framework
 
-Alexandra is the author of the ILD Organisational Transformation Framework — a structured body of 66 in-depth, cited articles on organisational change. Organised into a C-Series for executives and organisational leaders, and a P-Series for change practitioners and consultants, the Framework represents a systematic articulation of the constructs, research, and practical insight that underpin her work with clients.
+Alexandra is the author of the ILD Organisational Transformation Framework — a structured body of 66 in-depth, cited articles on organisational change. Organised into a C-Series for executives and organisational leaders, and a P-Series for change practitioners and consultants, the Framework represents a systematic articulation of the constructs, research, and practical insight that underpin her work with clients.
 
 [Explore the Framework →](/insights/)
 

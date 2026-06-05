@@ -56,7 +56,7 @@ My work with Alex has enabled me to be an authentic leader in my growing organiz
 Alex is genuine, whip smart, perceptive, bitingly funny, empathetic, organized and always keeps the big picture in mind. I recommend her in a heartbeat.
 
 
-Before working with Alexandra difficult human resources issues with employees were popping up and I didn’t quite know how to handle them. It was affecting my health and motivation to come to work.  I actually wanted to give up and close my eyes on these issues. I was thinking to myself, “I only have 4 more years left, I can simply surf the waves!”
+Before working with Alexandra difficult human resources issues with employees were popping up and I didn’t quite know how to handle them. It was affecting my health and motivation to come to work.  I actually wanted to give up and close my eyes on these issues. I was thinking to myself, “I only have 4 more years left, I can simply surf the waves!”
 
 I didn’t quite know how to handle these difficult situations at work, and my director suggested I consider getting coached which I never did in the past. Working with Alex was the first time I had a coach, and also the first time I thought about my leadership style.  Having one-on-one conversation with someone is more efficient than attending classes. This experience was beneficial because it helped me think about my strengths and weakness in a more concrete way, with words.  I discovered what type of leader I am and want to be.
 

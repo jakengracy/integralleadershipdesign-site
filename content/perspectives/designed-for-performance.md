@@ -14,7 +14,7 @@ Disruption isn't coming, it's already here. Effective organizational change - th
 
 > Imagine what you can achieve with a highly engaged, agile and responsive organization.
 
-That is where I come in. I've been doing this work for over 25 years and specialize in three key drivers for your company's success when it comes to the people side of your organization:
+That is where I come in. I've been doing this work for over 25 years and specialize in three key drivers for your company's success when it comes to the people side of your organization:
 
 Success Through Organizational Design
 

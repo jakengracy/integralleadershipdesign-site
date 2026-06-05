@@ -8,13 +8,13 @@ draft: false
 
 Leadership doesn't develop in a vacuum. It develops through reflection, challenge, and the kind of honest conversation that's hard to have inside your organization. That's what individual coaching provides — a dedicated space to work on yourself as a leader, with someone who has no agenda other than your growth.
 
-Eighty percent of Fortune 500 companies now offer executive coaching to their leaders. The reason is straightforward: when a leader improves, their entire team and organization benefits.
+Eighty percent of Fortune 500 companies now offer executive coaching to their leaders. The reason is straightforward: when a leader improves, their entire team and organization benefits.
 
 ## What Individual Coaching Looks Like
 
 One-on-one coaching with Alexandra is a sustained engagement — not a series of disconnected conversations, but a progressive journey with a clear arc. Alexandra works with executives and senior leaders worldwide via video conference, making it accessible regardless of where you're based.
 
-Typical engagements run 6–12 months, with sessions every two to three weeks. The work happens between sessions as much as during them.
+Typical engagements run 6–12 months, with sessions every two to three weeks. The work happens between sessions as much as during them.
 
 ## The Process
 

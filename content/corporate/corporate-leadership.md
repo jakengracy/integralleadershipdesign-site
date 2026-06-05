@@ -40,7 +40,7 @@ Across our corporate programs, participants build capability in:
 
 Every engagement begins with a thorough assessment of your organization's current leadership reality — strengths, gaps, culture, and strategic context. From there, we co-design a program with clear objectives, measurable outcomes, and built-in sustainability.
 
-Programs typically run 6–12 months and include a combination of group learning, individual coaching, peer cohort work, and organizational integration support.
+Programs typically run 6–12 months and include a combination of group learning, individual coaching, peer cohort work, and organizational integration support.
 
 ## Outcomes You Can Expect
 

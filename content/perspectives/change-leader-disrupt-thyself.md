@@ -24,7 +24,7 @@ I invite you to think about how becoming more adaptive to what is coming around 
 
 ### Be Revolutionary
 
-Albert Einstein was a physicist who among other things developed the theory of relativity. In 1921 he received the Nobel Prize in Physics. Responding to the birth of the nuclear age Einstein noted:
+Albert Einstein was a physicist who among other things developed the theory of relativity. In 1921 he received the Nobel Prize in Physics. Responding to the birth of the nuclear age Einstein noted:
 
 > We have to learn to think in a new way. Applying methods from an earlier age is insufficient. We must have the courage and leadership to revolutionize our thinking and our actions.
 

@@ -12,7 +12,7 @@ draft: false
 
 Alexandra Salamis, the founder and president of Integral Leadership Design, has provided leadership coaching and change management consultation for over two decades. Her award-winning expertise has aided countless leaders, teams, and organizations to effect enduring change and transformation.
 
-Having a rich corporate background, Alex is part of the prestigious Forbes Coaches Council and a certified member of the Association of Change Management Professionals. She holds two master's degrees in Human Development and is an International Coach Federation certified coach. In 2018, she was a nominee for Canada's Top 100 Most Powerful Women Award.
+Having a rich corporate background, Alex is part of the prestigious Forbes Coaches Council and a certified member of the Association of Change Management Professionals. She holds two master's degrees in Human Development and is an International Coach Federation certified coach. In 2018, she was a nominee for Canada's Top 100 Most Powerful Women Award.
 
 From her base in Canada's capital, she holds multiple senior consultant, executive roles, and coaching advisory positions within the Canadian Government. She also serves as a trusted Resource on Demand for IBM, PwC and EY.
 
@@ -20,7 +20,7 @@ Alex collaborates with both aspiring and established leaders, as well as startup
 
 Passionate about empowering women to be influential, authentic, and feminine leaders, Alex promotes diversity and inclusivity. Her lifelong dedication to these areas earned her a nomination for the Governor General’s Award in Gender Equality.
 
-Recognized by Influence Digest Magazine as one of Ottawa, Ontario's top 21 coaches, Alex is a respected leadership coach and consultant. Reach out to Alex to understand more about her proficiency in leadership coaching, change management consultation, diversity, inclusivity, and gender equality.
+Recognized by Influence Digest Magazine as one of Ottawa, Ontario's top 21 coaches, Alex is a respected leadership coach and consultant. Reach out to Alex to understand more about her proficiency in leadership coaching, change management consultation, diversity, inclusivity, and gender equality.
 
 ### Check out my exclusive interviews on CUTV to learn more about why I became a coach and how I work with clients.
 

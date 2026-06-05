@@ -31,7 +31,7 @@ This information is submitted through Formspree, a third-party form processing s
 
 This site collects visitor analytics data through the following services:
 
-**Google Analytics 4** — We use Google Analytics to understand how visitors find and use our site. GA4 collects data including pages visited, time on site, geographic region, and device type. This data is associated with a pseudonymous identifier and processed by Google. You can opt out via [Google's opt-out tool](https://tools.google.com/dlpage/gaoptout).
+**Google Analytics 4** — We use Google Analytics to understand how visitors find and use our site. GA4 collects data including pages visited, time on site, geographic region, and device type. This data is associated with a pseudonymous identifier and processed by Google. You can opt out via [Google's opt-out tool](https://tools.google.com/dlpage/gaoptout).
 
 **Cloudflare Web Analytics** — We use Cloudflare's privacy-first analytics, which collects aggregate traffic data without cookies and without tracking you across other sites.
 

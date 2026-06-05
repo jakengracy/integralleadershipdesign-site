@@ -13,7 +13,7 @@ Adding value to your organization's leadership only makes sense because without 
 According to the Centre for Creative Leadership studies show that organizational investments in leadership development:
 
 Improve bottom-line financial performance. Superior people management is an extremely powerful predictor of an organization’s ability to outperform its competition.
-Attract and retain talent. As a result, employee retention is 20 times greater at companies with a focus on leadership development.
+Attract and retain talent. As a result, employee retention is 20 times greater at companies with a focus on leadership development.
 Drive strategy execution, creating organizational alignment for success.&nbsp;Done right, leadership development unquestionably delivers impact and success in strengthening leadership skills most important to work performance.
 Increase organizational agility and success in navigating change.&nbsp;When facing an unpredictable business environment, 86% of companies with strategic leadership development programs are able to respond rapidly, compared with 52% of companies with less mature leadership programs.
 
@@ -37,7 +37,7 @@ Broadening the scope of who gets leadership development support to maintain a pi
 
 Identify and foster teams of leaders that includes a mix of generations and perspectives.
 
-Our Leadership Development Programs are custom-designed for impact and results. They can include 360 assessments, individual coaching, team coaching, and action-learning workshops. We have helped many people in organizations, learn and apply both timeless leadership principles and new cutting-edge practices.
+Our Leadership Development Programs are custom-designed for impact and results. They can include 360 assessments, individual coaching, team coaching, and action-learning workshops. We have helped many people in organizations, learn and apply both timeless leadership principles and new cutting-edge practices.
 
 We offer the double advantage of providing coaching and consulting to assess, design and implement leadership design programs that are built to increase sustainable change-enabled organizational effectiveness. We start with understanding what leadership competencies are needed to make your business successful, then determine what the existing capability and potential is as well as where the gaps are. From there we build a leadership design roadmap designed to get your organization to where it needs to be.
 

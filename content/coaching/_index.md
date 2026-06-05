@@ -6,7 +6,7 @@ date: 2019-01-01
 draft: false
 ---
 
-Eighty percent of Fortune 500 companies now offer executive coaching to their leaders. The reason is straightforward: when a leader improves, their entire team and organization benefits.
+Eighty percent of Fortune 500 companies now offer executive coaching to their leaders. The reason is straightforward: when a leader improves, their entire team and organization benefits.
 
 In coaching, we collaborate to assess and understand you as a leader — exploring your aspirations, challenging current constraints, uncovering new possibilities, and supporting you to achieve your goals. Think of it as an accelerant to your growth, not a remediation.
 
@@ -28,7 +28,7 @@ Dialogue is at the heart of the process. Combined with deep listening and open-e
 
 One-on-one coaching tailored to your specific goals, context, and pace. Sessions are conducted via video conference, making it accessible regardless of where you're based.
 
-Typical individual coaching engagements run 6–12 months, with sessions every two to three weeks. The work happens between sessions as much as during them.
+Typical individual coaching engagements run 6–12 months, with sessions every two to three weeks. The work happens between sessions as much as during them.
 
 ## [Executive & Leadership Team Coaching](/corporate/team-coaching)
 
