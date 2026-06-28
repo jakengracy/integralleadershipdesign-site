@@ -1,0 +1,3 @@
+# Redirect /blog section to /insights
+/blog                   /insights               301
+/blog/*                 /insights               301
