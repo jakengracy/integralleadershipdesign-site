@@ -10,7 +10,7 @@ draft: false
 
 ### Alexandra Salamis M.A. M.S.W. ICF, EMCC, CEC, CCMP
 
-Alexandra Salamis, the founder and president of Integral Leadership Design, has provided leadership coaching and change management consultation for over two decades. Her award-winning expertise has aided countless leaders, teams, and organizations to effect enduring change and transformation.
+Alexandra Salamis, the founder and president of Integral Leadership Design, has provided leadership coaching and change management consultation for over twenty-five years. Her award-winning expertise has aided countless leaders, teams, and organizations to effect enduring change and transformation.
 
 Having a rich corporate background, Alex is part of the prestigious Forbes Coaches Council and a certified member of the Association of Change Management Professionals. She holds two master's degrees in Human Development and is an International Coach Federation certified coach. In 2018, she was a nominee for Canada's Top 100 Most Powerful Women Award.
 
