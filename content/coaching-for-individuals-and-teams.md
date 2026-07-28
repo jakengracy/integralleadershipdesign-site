@@ -1,7 +1,7 @@
 ---
 title: "Leadership Coaching for Individuals and Teams"
 date: 2019-01-01
-draft: false
+draft: true
 ---
 
 ### Leadership Coaching for Individuals and Teams

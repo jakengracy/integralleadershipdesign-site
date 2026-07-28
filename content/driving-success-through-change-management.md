@@ -1,7 +1,7 @@
 ---
 title: "Change Management – Integral Leadership Design"
 date: 2019-01-01
-draft: false
+draft: true
 ---
 
 ### Future-Ready Your Organization By Driving Success Through Change Management

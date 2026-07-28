@@ -1,3 +1,79 @@
-# Redirect /blog section to /insights
-/blog                   /insights               301
-/blog/*                 /insights               301
+# ──────────────────────────────────────────────────────────────
+# Cloudflare Pages _redirects
+# Last updated: 2026-07-28
+# ──────────────────────────────────────────────────────────────
+
+# ── Blog index ────────────────────────────────────────────────
+/blog                   /insights/              301
+
+# ── Blog articles → specific /perspectives/ pages ─────────────
+# Specific rules must come before the /blog/* wildcard fallback
+/blog/10-ways-to-initiate/                                                      /perspectives/10-ways-to-initiate/                                                      301
+/blog/a-very-personal-experience-that-taught-me-the-most-about-leadership/      /perspectives/a-very-personal-experience-that-taught-me-the-most-about-leadership/      301
+/blog/about-culture-design/                                                     /perspectives/about-culture-design/                                                     301
+/blog/alexandra-salamis-accepted-forbes-coaches-council/                        /perspectives/alexandra-salamis-accepted-forbes-coaches-council/                        301
+/blog/boosting-leadership-accountability/                                       /perspectives/boosting-leadership-accountability/                                       301
+/blog/change-leader-disrupt-thyself/                                            /perspectives/change-leader-disrupt-thyself/                                            301
+/blog/designed-for-performance/                                                 /perspectives/designed-for-performance/                                                 301
+/blog/developing-better-change-leaders-mckinsey-company/                        /perspectives/developing-better-change-leaders-mckinsey-company/                        301
+/blog/developing-your-people/                                                   /perspectives/developing-your-people/                                                   301
+/blog/ellen-langer-on-the-value-of-mindfulness-in-business/                     /perspectives/ellen-langer-on-the-value-of-mindfulness-in-business/                     301
+/blog/executive-coaching-being-agile/                                           /perspectives/executive-coaching-being-agile/                                           301
+/blog/leadership-and-the-four-agreements/                                       /perspectives/leadership-and-the-four-agreements/                                       301
+/blog/leadership-development-for-switched-on-leaders/                           /perspectives/leadership-development-for-switched-on-leaders/                           301
+/blog/leadership-development-that-will-successfully-drive-your-strategy/        /perspectives/leadership-development-that-will-successfully-drive-your-strategy/        301
+/blog/leadership-gap/                                                           /perspectives/leadership-gap/                                                           301
+/blog/leadership-takes-courage-revisiting-drucker/                              /perspectives/leadership-takes-courage-revisiting-drucker/                              301
+/blog/making-your-culture-explicit/                                             /perspectives/making-your-culture-explicit/                                             301
+/blog/nice-people-finish-last-or-do-they/                                       /perspectives/nice-people-finish-last-or-do-they/                                       301
+/blog/silhouette-coaching-leaders/                                              /perspectives/silhouette-coaching-leaders/                                              301
+/blog/the-coaching-and-consulting-advantage/                                    /perspectives/the-coaching-and-consulting-advantage/                                    301
+
+# ── Fallback: unmapped blog URLs → perspectives index ─────────
+/blog/*                                                                         /perspectives/                                                                          301
+
+# ── Old root-level article URLs → /perspectives/ ──────────────
+# WordPress articles that lived at / and now live at /perspectives/
+/10-ways-to-initiate/                                                           /perspectives/10-ways-to-initiate/                                                      301
+/a-very-personal-experience-that-taught-me-the-most-about-leadership/           /perspectives/a-very-personal-experience-that-taught-me-the-most-about-leadership/      301
+/about-culture-design/                                                          /perspectives/about-culture-design/                                                     301
+/alexandra-salamis-accepted-forbes-coaches-council/                             /perspectives/alexandra-salamis-accepted-forbes-coaches-council/                        301
+/boosting-leadership-accountability/                                            /perspectives/boosting-leadership-accountability/                                       301
+/change-leader-disrupt-thyself/                                                 /perspectives/change-leader-disrupt-thyself/                                            301
+/designed-for-performance/                                                      /perspectives/designed-for-performance/                                                 301
+/developing-better-change-leaders-mckinsey-company/                             /perspectives/developing-better-change-leaders-mckinsey-company/                        301
+/developing-your-people/                                                        /perspectives/developing-your-people/                                                   301
+/ellen-langer-on-the-value-of-mindfulness-in-business/                          /perspectives/ellen-langer-on-the-value-of-mindfulness-in-business/                     301
+/executive-coaching-being-agile/                                                /perspectives/executive-coaching-being-agile/                                           301
+/leadership-and-the-four-agreements/                                            /perspectives/leadership-and-the-four-agreements/                                       301
+/leadership-development-for-switched-on-leaders/                                /perspectives/leadership-development-for-switched-on-leaders/                           301
+/leadership-development-that-will-successfully-drive-your-strategy/             /perspectives/leadership-development-that-will-successfully-drive-your-strategy/        301
+/leadership-gap/                                                                /perspectives/leadership-gap/                                                           301
+/leadership-takes-courage-revisiting-drucker/                                   /perspectives/leadership-takes-courage-revisiting-drucker/                              301
+/making-your-culture-explicit/                                                  /perspectives/making-your-culture-explicit/                                             301
+/nice-people-finish-last-or-do-they/                                            /perspectives/nice-people-finish-last-or-do-they/                                       301
+/silhouette-coaching-leaders/                                                   /perspectives/silhouette-coaching-leaders/                                              301
+/the-coaching-and-consulting-advantage/                                         /perspectives/the-coaching-and-consulting-advantage/                                    301
+/the-five-pillars-of-successful-leadership/                                     /perspectives/                                                                          301
+
+# ── Old articles → best-match current pages ───────────────────
+/difference-change-management-change-leadership/                                /change-management/                                                                     301
+/mind-the-gender-gap-a-case-for-women-only-leadership-programs/                 /coaching/womens-program/                                                               301
+/want-to-become-a-fierce-female-leader-get-real-grow-your-tribe/                /coaching/womens-program/                                                               301
+/workplaces/                                                                    /corporate/                                                                             301
+
+# ── Old WordPress nested URL structures ───────────────────────
+/coaching-for-individuals-and-teams/leadership-coaching-programs-for-women/womens-leadership-program/  /coaching/womens-program/        301
+/coaching-for-individuals-and-teams/leadership-coaching-for-individuals/single-coaching-sessions/      /coaching/single-session/         301
+/corporate-leadership-and-change-management/corporate-leadership/                                       /corporate/corporate-leadership/  301
+
+# ── Old thin/duplicate content pages ──────────────────────────
+/about-alexandra-salamis/                       /about/                         301
+/coaching-for-individuals-and-teams/            /coaching/                      301
+/corporate-leadership-and-change-management/    /corporate/                     301
+/driving-success-through-change-management/     /change-management/             301
+/testimonials-from-our-clients/                 /testimonials/                  301
+
+# ── Old WordPress taxonomy & author pages ─────────────────────
+/category/*                                     /perspectives/                  301
+/author/*                                       /about/                         301

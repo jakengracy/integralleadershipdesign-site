@@ -1,7 +1,7 @@
 ---
 title: "Integral Leadership Design"
 date: 2019-01-01
-draft: false
+draft: true
 ---
 
 Sisällysluettelo
