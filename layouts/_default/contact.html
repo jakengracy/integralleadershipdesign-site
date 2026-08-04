@@ -21,7 +21,11 @@
     - Receiving the POST submission
     - Sending the email notification to Alexandra
     - Spam filtering
-    - Redirect to a thank-you confirmation
+
+    The redirect to /thank-you is NOT handled by Formspree (their _next
+    server-side redirect requires a paid plan) — it's done client-side by
+    the <script> below the form. See the SUBMISSION HANDLING comment
+    further down for the full explanation.
 */}}
 
 
@@ -79,8 +83,31 @@
                 Form action points to Formspree using the ID from hugo.toml.
                 Replace YOUR_FORM_ID in hugo.toml with your actual Formspree ID.
                 Formspree endpoint format: https://formspree.io/f/{your_id}
+
+                SUBMISSION HANDLING (updated 2026-08-04):
+                Formspree's free plan does not support its server-side
+                redirect feature (Workflow > Response > Redirect is locked
+                behind "Upgrade to Personal") — the _next hidden field this
+                form previously relied on for a post-submit redirect was
+                silently ignored, so visitors landed on Formspree's own
+                generic "Form Submitted" response and never reached
+                /thank-you. Since GA4 conversion tracking depends entirely
+                on a page_view for /thank-you, every real submission was
+                going untracked, even though Formspree itself was receiving
+                the data and emailing the notification correctly.
+
+                Fixed by submitting via fetch() with Accept: application/json
+                instead of a plain HTML POST, then redirecting to /thank-you
+                ourselves in JS on a successful response (see the <script>
+                block below). This is fully supported on Formspree's free
+                plan — only their own server-side redirect requires a paid
+                plan. The action/method attributes are kept so the form
+                still works as a plain POST if JavaScript fails to load;
+                in that fallback case it lands on Formspree's generic
+                confirmation page rather than /thank-you, same as before.
             */}}
             <form
+                id="contact-form"
                 action="https://formspree.io/f/{{ .Site.Params.formspree_id }}"
                 method="POST"
             >
@@ -124,8 +151,8 @@
                 {{/* Formspree honeypot field — hidden from humans, catches bots */}}
                 <input type="text" name="_gotcha" style="display:none">
 
-                {{/* Redirect to thank-you page after submission — required for GA4 conversion tracking */}}
-                <input type="hidden" name="_next" value="https://integralleadershipdesign.com/thank-you">
+                {{/* Inline error message — hidden by default, shown by the submit handler below if Formspree rejects the submission or the request fails */}}
+                <p id="contact-form-error" style="display:none; color:var(--color-accent); margin-top:0.75rem;"></p>
 
                 {{/* Submit */}}
                 <button type="submit" class="btn btn-primary form-submit">Send My Message</button>
@@ -135,5 +162,67 @@
 
     </div>
 </section>
+
+{{/*
+    Client-side submit handler — see the SUBMISSION HANDLING comment above
+    the <form> for why this exists. Progressive enhancement: if this script
+    fails to run, the form's native action/method still submit it as a
+    plain POST to Formspree.
+*/}}
+<script>
+(function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+
+    var errorEl = document.getElementById('contact-form-error');
+    var submitBtn = form.querySelector('.form-submit');
+    var defaultBtnText = submitBtn ? submitBtn.textContent : '';
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (errorEl) {
+            errorEl.style.display = 'none';
+            errorEl.textContent = '';
+        }
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+        }
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' },
+        })
+            .then(function (response) {
+                if (response.ok) {
+                    // Success — redirect ourselves since Formspree's free
+                    // plan won't do this server-side. This is what makes
+                    // the /thank-you page_view (and GA4 conversion
+                    // tracking) fire again.
+                    window.location.href = '/thank-you';
+                    return;
+                }
+                return response.json().then(function (data) {
+                    var message = (data && data.errors && data.errors.length)
+                        ? data.errors.map(function (e) { return e.message; }).join(' ')
+                        : 'Something went wrong sending your message. Please try again, or email directly.';
+                    throw new Error(message);
+                });
+            })
+            .catch(function (err) {
+                if (errorEl) {
+                    errorEl.textContent = err.message || 'Something went wrong sending your message. Please try again, or email directly.';
+                    errorEl.style.display = 'block';
+                }
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = defaultBtnText;
+                }
+            });
+    });
+})();
+</script>
 
 {{ end }}
