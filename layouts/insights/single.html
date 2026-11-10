@@ -118,7 +118,9 @@
     <div class="service-page-inner">
 
         {{/* LEFT: Article content */}}
-        <article class="service-content blog-post-content">
+        {{/* data-article-read marks this as the article body for read tracking;
+             data-words is Hugo's word count so the script can scale its timer. */}}
+        <article class="service-content blog-post-content" data-article-read data-words="{{ .WordCount }}">
 
             {{ .Content }}
 
@@ -141,6 +143,9 @@
             </div>
 
         </article>
+
+        {{/* Sends a Google Analytics article_read event once a real read is detected */}}
+        {{ partial "article-read-tracking.html" . }}
 
         {{/* RIGHT: Sticky sidebar */}}
         <aside class="service-sidebar">

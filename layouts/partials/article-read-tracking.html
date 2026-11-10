@@ -1,0 +1,107 @@
+{{/*
+    layouts/partials/article-read-tracking.html
+
+    PURPOSE
+    -------
+    Sends ONE Google Analytics 4 event, "article_read", when a visitor has
+    genuinely read an article. Until now the only signal was a page view, which
+    cannot tell a reader from a bounce or an automated visit. WebSignalytics
+    counts these events per page to report "most read" articles.
+
+    WHAT COUNTS AS A READ (all four must be true, checked once per second)
+    ----------------------------------------------------------------------
+    1. The visitor has scrolled at least 60% of the way down the article.
+    2. The tab has been VISIBLE for long enough (about 35% of a typical 238
+       words-per-minute reading time, clamped to 20-90 seconds). A background
+       tab or a 5-second bounce never gets there.
+    3. At least one REAL user action happened (wheel, mouse move, tap, key
+       press). Browsers mark genuine actions with event.isTrusted = true;
+       scripts that fake events get isTrusted = false, so simple bots are
+       ignored. Bots that drive a real browser with real input are not stopped;
+       this screens out casual automation, not determined automation.
+    4. It has not already fired on this page view (it fires at most once).
+
+    NOTES
+    -----
+    - Needs no Google Analytics setup: the event can be read in the Data API by
+      page path + event name. Do NOT mark it as a "key event": that would add
+      reads to the conversion count and distort the conversion reporting.
+    - Works only where the main GA4 snippet (gtag) is loaded; otherwise it exits.
+    - Included from layouts/insights/single.html. Data attributes on the
+      <article> tag carry the values Hugo knows at build time (word count).
+*/}}
+<script>
+(function () {
+    'use strict';
+
+    // ── Settings (tune here) ────────────────────────────────────────────────
+    var MIN_SCROLL_FRACTION = 0.6;   // share of the article that must have been reached
+    var MIN_SECONDS_FLOOR   = 20;    // never require less than this many visible seconds
+    var MIN_SECONDS_CEILING = 90;    // never require more than this, even for long articles
+    var READING_WPM         = 238;   // typical adult silent reading speed
+    var READ_TIME_SHARE     = 0.35;  // fraction of full reading time that counts as "read"
+
+    // ── Find the article and make sure analytics is available ───────────────
+    var article = document.querySelector('article[data-article-read]');
+    if (!article || typeof window.gtag !== 'function') { return; }
+
+    // Seconds of visible time required, scaled to the article's length.
+    // Hugo supplies the word count at build time via data-words.
+    var words = parseInt(article.getAttribute('data-words'), 10) || 0;
+    var requiredSeconds = Math.min(
+        MIN_SECONDS_CEILING,
+        Math.max(MIN_SECONDS_FLOOR, Math.round(words / READING_WPM * 60 * READ_TIME_SHARE))
+    );
+
+    // ── State for this page view ────────────────────────────────────────────
+    var fired = false;        // true once the event has been sent
+    var interacted = false;   // true after the first genuine (trusted) user action
+    var visibleSeconds = 0;   // seconds the tab has been visible
+    var maxFraction = 0;      // deepest point of the article reached (0 to 1)
+
+    // ── Genuine-interaction detection ───────────────────────────────────────
+    // Only events the browser itself created (isTrusted) count. 'scroll' is
+    // deliberately NOT in this list: a script that calls window.scrollTo()
+    // makes the browser fire a trusted scroll event, so it proves nothing.
+    // Wheel, mouse, touch and key events cannot be caused that way.
+    // Passive listeners keep scrolling smooth.
+    function markInteraction(event) {
+        if (event.isTrusted) { interacted = true; }
+    }
+    ['wheel', 'mousemove', 'touchstart', 'touchmove', 'keydown', 'pointerdown'].forEach(function (name) {
+        window.addEventListener(name, markInteraction, { passive: true });
+    });
+
+    // ── Scroll depth: how far down the article has the bottom of the screen reached? ──
+    function updateDepth() {
+        var rect = article.getBoundingClientRect();
+        var height = rect.height || 1;
+        // Bottom of the viewport measured from the top of the article, as a 0-1 share.
+        var fraction = (window.innerHeight - rect.top) / height;
+        if (fraction > maxFraction) { maxFraction = Math.min(1, Math.max(0, fraction)); }
+    }
+    window.addEventListener('scroll', updateDepth, { passive: true });
+    updateDepth(); // a short article may already be mostly on screen at load
+
+    // ── Once a second: add visible time and test the four conditions ────────
+    var timer = setInterval(function () {
+        if (document.visibilityState === 'visible') { visibleSeconds += 1; }
+        updateDepth();
+
+        if (!fired && interacted &&
+            maxFraction >= MIN_SCROLL_FRACTION &&
+            visibleSeconds >= requiredSeconds) {
+            fired = true;
+            clearInterval(timer); // nothing left to watch for
+            // The event carries context so reads can be audited later.
+            window.gtag('event', 'article_read', {
+                article_path: location.pathname,
+                article_title: document.title,
+                read_seconds: visibleSeconds,
+                scroll_percent: Math.round(maxFraction * 100),
+                required_seconds: requiredSeconds
+            });
+        }
+    }, 1000);
+})();
+</script>
